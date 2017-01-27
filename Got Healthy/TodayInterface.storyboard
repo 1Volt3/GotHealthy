@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Steps Widget-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController storyboardIdentifier="Widget" title="Steps Widget" id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Can5k" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RQx-Ui-AX6"/>
+                        <viewControllerLayoutGuide type="bottom" id="bsB-yD-R6W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqm-yt-0Ll">
+                                <rect key="frame" x="0.0" y="1" width="160" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Q7O-zO-dvk"/>
+                                    <constraint firstAttribute="width" constant="160" id="cOt-hY-n0t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5T-Rm-Pw3">
+                                <rect key="frame" x="180" y="0.0" width="140" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="8ur-4S-Oou"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwN-TY-zsK">
+                                <rect key="frame" x="0.0" y="85" width="320" height="15"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="w7k-C5-RYs"/>
+                                </constraints>
+                                <color key="trackTintColor" red="1" green="1" blue="1" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="KwN-TY-zsK" secondAttribute="centerX" id="082-VG-mGb"/>
+                            <constraint firstItem="vqm-yt-0Ll" firstAttribute="bottom" secondItem="q5T-Rm-Pw3" secondAttribute="bottom" constant="21" id="7mf-L4-gsn"/>
+                            <constraint firstAttribute="width" secondItem="KwN-TY-zsK" secondAttribute="width" id="C4q-kP-a3F"/>
+                            <constraint firstItem="q5T-Rm-Pw3" firstAttribute="trailing" secondItem="KwN-TY-zsK" secondAttribute="trailing" id="EiL-KZ-cIY"/>
+                            <constraint firstItem="bsB-yD-R6W" firstAttribute="top" secondItem="KwN-TY-zsK" secondAttribute="bottom" id="YBQ-BD-UBB"/>
+                            <constraint firstItem="q5T-Rm-Pw3" firstAttribute="leading" secondItem="vqm-yt-0Ll" secondAttribute="trailing" constant="20" id="fd9-Aw-aTO"/>
+                            <constraint firstItem="q5T-Rm-Pw3" firstAttribute="top" secondItem="RQx-Ui-AX6" secondAttribute="bottom" id="jcd-AV-TLf"/>
+                            <constraint firstItem="vqm-yt-0Ll" firstAttribute="leading" secondItem="KwN-TY-zsK" secondAttribute="leading" id="m0T-7i-7vI"/>
+                            <constraint firstItem="vqm-yt-0Ll" firstAttribute="centerY" secondItem="q5T-Rm-Pw3" secondAttribute="centerY" constant="11" id="mYT-VG-bFD"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="q5T-Rm-Pw3" id="r53-Uu-FZ2"/>
+                        <outlet property="progressView" destination="KwN-TY-zsK" id="BaS-XN-RTI"/>
+                        <outlet property="stepCountLabel" destination="vqm-yt-0Ll" id="yFb-3V-BDj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="298"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina47"/>
+    </simulatedMetricsContainer>
+</document>

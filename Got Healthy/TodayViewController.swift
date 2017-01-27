@@ -1,54 +1,88 @@
 //
-//  ViewController.swift
-//  Got Healthy
+//  TodayViewController.swift
+//  Can5k
 //
-//  Created by Josh Rosenzweig on 1/25/17.
-//  Copyright © 2017 Volt. All rights reserved.
+//  Created by Josh Rosenzweig on 1/26/17.
+//  Copyright © 2016 Volt. All rights reserved.
 //
 
-import UIKit
-import CoreData
+import Foundation
+import NotificationCenter
 import CoreMotion
 import QuartzCore
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var stepCountLabel: UILabel!
-    @IBOutlet weak var distanceLabel: UILabel!
-    var sharedDefaults: UserDefaults! = UserDefaults(suiteName: defaultsSuiteName)
-    let defaults = UserDefaults.standard
+class TodayViewController: UIViewController, NCWidgetProviding {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    // Interface
+    let widgetHeight = 78.0
+    @IBOutlet var stepCountLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var progressView: UIProgressView!
+    
+    // Defines intervals for progress bar color
+    let StepCountIntervalLow = Float(0)...Float(0.4)
+    let StepCountIntervalMed = Float(0.4)...Float(0.8)
+    
+    // User Defaults
+    var sharedDefaults: UserDefaults
+    var unitSystemType: UnitSystem? {
+        get {
+            let raw = sharedDefaults.integer(forKey: UnitTypeKey)
+            return UnitSystem(rawValue: raw)
+        }
+        set {
+            sharedDefaults.set(newValue!.rawValue, forKey: UnitTypeKey)
+            updateInterface()
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        // Dispose of any resources that can be recreated.
-        let refreshAlert = UIAlertController(title: "Memory Warning",
-                                             message: "All data cannot be saved.", preferredStyle: UIAlertControllerStyle.alert)
-        refreshAlert.addAction(UIAlertAction(title: "Ok",
-                                             style: .default, handler: { (action: UIAlertAction!) in print("Memory Warning")
-        }))
-        
-        present(refreshAlert, animated: true, completion: nil)
+    var unitDisplayType: UnitDisplay? {
+        get {
+            let raw = sharedDefaults.integer(forKey: UnitDisplayKey)
+            return UnitDisplay(rawValue: raw)
+        }
+        set {
+            sharedDefaults.set(newValue!.rawValue, forKey: UnitDisplayKey)
+            updateInterface()
+        }
     }
-
+    var userGoal: Float {
+        get {
+            return sharedDefaults.float(forKey: UserGoalKey)
+        }
+        set {
+            sharedDefaults.set(newValue, forKey: UserGoalKey)
+            updateInterface()
+        }
+    }
+    var unitSystemWord: String {
+        switch (unitSystemType!) {
+        case .imperial:
+            switch (unitDisplayType!) {
+                case .short: return UnitSystemImperialWordShort
+                case .long: return UnitSystemImperialWord
+            }
+        case .metric:
+            switch (unitDisplayType!) {
+            case .short: return UnitSystemMetricWordShort
+            case .long: return UnitSystemMetricWord
+            }
+        }
+    }
+    
     // Pedometer
     var stepCount: Int
     var distance: Double
     var pedometer: CMPedometer
     
     // MARK: - Initializers
-    
-    init() {
+	
+ 	init() {
         stepCount = 0
         distance = 0.0
         pedometer = CMPedometer()
         sharedDefaults = UserDefaults(suiteName: defaultsSuiteName)!
-        super.init(nibName: nil, bundle: nil)
+		super.init(nibName: nil, bundle: nil)
+        preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(widgetHeight))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -57,8 +91,24 @@ class ViewController: UIViewController {
         pedometer = CMPedometer()
         sharedDefaults = UserDefaults(suiteName: defaultsSuiteName)!
         super.init(coder: aDecoder)
+        preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(widgetHeight))
     }
-
+    
+    // MARK: - View lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Set user defaults
+        if userGoal == 0 {
+            userGoal = 10_000
+        }
+        
+        // Progress view appearance
+        progressView.layer.cornerRadius = 8.0
+        progressView.layer.masksToBounds = true
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -81,43 +131,6 @@ class ViewController: UIViewController {
         sharedDefaults.synchronize()
         
         NotificationCenter.default.removeObserver(self)
-    }
-    
-    var unitSystemType: UnitSystem? {
-        get {
-            let raw = sharedDefaults.integer(forKey: UnitTypeKey)
-            return UnitSystem(rawValue: raw)
-        }
-        set {
-            sharedDefaults.set(newValue!.rawValue, forKey: UnitTypeKey)
-            updateInterface()
-        }
-    }
-    
-    var unitDisplayType: UnitDisplay? {
-        get {
-            let raw = sharedDefaults.integer(forKey: UnitDisplayKey)
-            return UnitDisplay(rawValue: raw)
-        }
-        set {
-            sharedDefaults.set(newValue!.rawValue, forKey: UnitDisplayKey)
-            updateInterface()
-        }
-    }
-    
-    var unitSystemWord: String {
-        switch (unitSystemType!) {
-        case .imperial:
-            switch (unitDisplayType!) {
-            case .short: return UnitSystemImperialWordShort
-            case .long: return UnitSystemImperialWord
-            }
-        case .metric:
-            switch (unitDisplayType!) {
-            case .short: return UnitSystemMetricWordShort
-            case .long: return UnitSystemMetricWord
-            }
-        }
     }
     
     // MARK: - Widget
@@ -175,7 +188,7 @@ class ViewController: UIViewController {
             var convertedDistance = self.distance
             switch self.unitSystemType! {
             case .imperial:
-               convertedDistance /= mileInMeters
+                convertedDistance /= mileInMeters
             case .metric:
                 convertedDistance /= 1000
             }
@@ -191,11 +204,20 @@ class ViewController: UIViewController {
             });
         }
         
-    }
-
-    override var preferredStatusBarStyle : UIStatusBarStyle {
-        return .lightContent
+        // Update progress indicator
+        let percent = min(Float(self.stepCount) / Float(self.userGoal), 1.0)
+        self.progressView.setProgress(percent, animated: false)
+        switch percent {
+        case StepCountIntervalLow:
+            self.progressView.progressTintColor = UIColor.red
+        case StepCountIntervalMed:
+            self.progressView.progressTintColor = UIColor.yellow
+        default:
+            self.progressView.progressTintColor = UIColor.green
+        }
     }
     
+    func widgetMarginInsets(forProposedMarginInsets defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(15.0, 47.0, 15.0, 15.0)
+    }
 }
-

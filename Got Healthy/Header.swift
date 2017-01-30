@@ -1,9 +1,9 @@
 //
 //  Header.swift
-//  Steps
+//  Got Healthy
 //
-//  Created by Sachin Patel on 9/24/14.
-//  Copyright (c) 2014 Sachin Patel. All rights reserved.
+//  Created by Josh Rosenzweig on 1/26/17.
+//  Copyright © 2017 Volt. All rights reserved.
 //
 
 import Foundation

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5200C2251E3F91510077F623 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200C2241E3F91510077F623 /* AuthManager.swift */; };
 		52791E851E3ABECD00E1B7E5 /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */; };
 		52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */; };
 		52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E871E3AC10E00E1B7E5 /* Header.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5200C2241E3F91510077F623 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayInterface.storyboard; sourceTree = "<group>"; };
 		52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		52791E871E3AC10E00E1B7E5 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				52CAC0021E38F29700E0302F /* Main.storyboard */,
 				52CAC0051E38F29700E0302F /* Assets.xcassets */,
 				52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */,
+				5200C2241E3F91510077F623 /* AuthManager.swift */,
 				52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */,
 				52791E871E3AC10E00E1B7E5 /* Header.swift */,
 				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
+				5200C2251E3F91510077F623 /* AuthManager.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,

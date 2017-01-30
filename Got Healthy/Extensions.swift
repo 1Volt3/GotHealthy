@@ -1,9 +1,9 @@
 //
-//  UIColor+AppColors.swift
-//  Steps
+//  Extensions.swift
+//  Got Healthy
 //
-//  Created by Sachin Patel on 9/21/14.
-//  Copyright (c) 2014 Sachin Patel. All rights reserved.
+//  Created by Josh Rosenzweig on 1/28/17.
+//  Copyright © 2017 Volt. All rights reserved.
 //
 
 import Foundation

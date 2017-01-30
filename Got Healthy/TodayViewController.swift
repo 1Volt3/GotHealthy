@@ -1,9 +1,9 @@
 //
 //  TodayViewController.swift
-//  Can5k
+//  Got Healthy
 //
-//  Created by Josh Rosenzweig on 1/26/17.
-//  Copyright © 2016 Volt. All rights reserved.
+//  Created by Josh Rosenzweig on 1/28/17.
+//  Copyright © 2017 Volt. All rights reserved.
 //
 
 import Foundation

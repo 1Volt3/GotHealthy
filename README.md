@@ -12,4 +12,4 @@ From there in Xcode, to demo the project, a user will be required to select an i
 Main users of the app have the ability to directly download the app from the app store on their iOS device.
 
 The app is designed to track a users physical activty through the use of the accelerometer. This will allow the app to show a user the precise amount of calories they have lost through exercise.  
-The app initially checks to see if a user has launched the app before to get required information including wieght. 
+The app initially checks to see if a user has launched the app before to get required information including weight. 

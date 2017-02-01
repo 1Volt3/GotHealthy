@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="efA-Js-H9G">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -76,10 +76,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Name Entry-->
         <scene sceneID="mHA-Hz-ZKQ">
             <objects>
-                <viewController id="efA-Js-H9G" sceneMemberID="viewController">
+                <viewController id="efA-Js-H9G" customClass="NameEntry" customModule="Got_Healthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kmg-Zd-zaR"/>
                         <viewControllerLayoutGuide type="bottom" id="1QB-m6-Nbt"/>
@@ -87,17 +87,27 @@
                     <view key="view" contentMode="scaleToFill" id="4Ge-m9-nsz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx8-wh-e0x">
+                                <rect key="frame" x="309" y="597" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Long Arrow Right Filled"/>
+                                <connections>
+                                    <segue destination="cb0-Sg-iX0" kind="show" id="Dd2-SK-nCO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18K-wG-fWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="797"/>
+            <point key="canvasLocation" x="33" y="788"/>
         </scene>
-        <!--View Controller-->
+        <!--Age Entry-->
         <scene sceneID="8ze-kj-h8I">
             <objects>
-                <viewController id="cb0-Sg-iX0" sceneMemberID="viewController">
+                <viewController id="cb0-Sg-iX0" customClass="AgeEntry" customModule="Got_Healthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TSh-D1-tb3"/>
                         <viewControllerLayoutGuide type="bottom" id="SJz-Mh-bSv"/>
@@ -105,17 +115,42 @@
                     <view key="view" contentMode="scaleToFill" id="xkJ-He-dm9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTh-zY-8qP">
+                                <rect key="frame" x="309" y="597" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Long Arrow Right Filled"/>
+                                <connections>
+                                    <segue destination="vAW-yS-NF8" kind="show" id="hkQ-Ik-i5R"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-pr-lRm">
+                                <rect key="frame" x="0.0" y="196" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="507655317.54030699">
+                                    <!--2017-02-01 15:21:57 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPb-X8-be2">
+                                <rect key="frame" x="16" y="597" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Long Arrow Left Filled"/>
+                                <connections>
+                                    <segue destination="efA-Js-H9G" kind="show" id="r8m-6D-28V"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqV-79-zcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="797"/>
+            <point key="canvasLocation" x="810" y="788"/>
         </scene>
-        <!--View Controller-->
+        <!--Weight Entry-->
         <scene sceneID="P80-FU-puE">
             <objects>
-                <viewController id="vAW-yS-NF8" sceneMemberID="viewController">
+                <viewController id="vAW-yS-NF8" customClass="WeightEntry" customModule="Got_Healthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vwz-Wf-n24"/>
                         <viewControllerLayoutGuide type="bottom" id="gQy-yG-Ole"/>
@@ -123,17 +158,35 @@
                     <view key="view" contentMode="scaleToFill" id="cHP-tI-PSQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUw-2n-UeZ">
+                                <rect key="frame" x="16" y="597" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Long Arrow Left Filled"/>
+                                <connections>
+                                    <segue destination="cb0-Sg-iX0" kind="show" id="qOG-0p-LEk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpm-in-kF3">
+                                <rect key="frame" x="309" y="597" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Long Arrow Right Filled"/>
+                                <connections>
+                                    <segue destination="EYm-lU-zEF" kind="show" id="8DB-Bw-xlt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38c-Ic-ea3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="797"/>
+            <point key="canvasLocation" x="1572" y="788"/>
         </scene>
-        <!--View Controller-->
+        <!--Height Entry-->
         <scene sceneID="H0L-pi-L0G">
             <objects>
-                <viewController id="EYm-lU-zEF" sceneMemberID="viewController">
+                <viewController id="EYm-lU-zEF" customClass="HeightEntry" customModule="Got_Healthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IKb-zq-XI5"/>
                         <viewControllerLayoutGuide type="bottom" id="Y0a-Go-NHX"/>
@@ -141,12 +194,30 @@
                     <view key="view" contentMode="scaleToFill" id="6SY-cc-bEp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgi-WE-p9o">
+                                <rect key="frame" x="16" y="597" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Long Arrow Left Filled"/>
+                                <connections>
+                                    <segue destination="vAW-yS-NF8" kind="show" id="Rkf-vd-e0l"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrP-r1-EKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2199" y="797"/>
+            <point key="canvasLocation" x="2406" y="788"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Long Arrow Left Filled" width="50" height="50"/>
+        <image name="Long Arrow Right Filled" width="50" height="50"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hkQ-Ik-i5R"/>
+        <segue reference="qOG-0p-LEk"/>
+    </inferredMetricsTieBreakers>
 </document>

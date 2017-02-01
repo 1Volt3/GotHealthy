@@ -6,4 +6,13 @@
 //  Copyright © 2017 Volt. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class WeightEntry: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+}

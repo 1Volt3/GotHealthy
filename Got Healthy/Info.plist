@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Got Healthy would like to access your health data.</string>
 	<key>CFBundleDisplayName</key>
 	<string>Got Healthy</string>
 	<key>CFBundleExecutable</key>

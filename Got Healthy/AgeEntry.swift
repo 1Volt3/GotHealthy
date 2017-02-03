@@ -9,10 +9,12 @@
 import UIKit
 
 class AgeEntry: UIViewController {
+    @IBOutlet weak var dateOfBirthPicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        dateOfBirthPicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
 }

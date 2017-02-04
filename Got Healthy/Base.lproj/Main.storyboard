@@ -91,7 +91,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FL9-81-fHR">
                                 <rect key="frame" x="16" y="614" width="343" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Get Started" backgroundImage="ButtonBoxGreen">
                                     <color key="titleColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -132,11 +132,19 @@
                                     <segue destination="cb0-Sg-iX0" kind="show" id="Dd2-SK-nCO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQx-3F-fBv">
+                                <rect key="frame" x="166" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Cx8-wh-e0x" secondAttribute="bottom" constant="20" symbolic="YES" id="9iO-5B-Hi4"/>
-                            <constraint firstItem="Cx8-wh-e0x" firstAttribute="trailing" secondItem="4Ge-m9-nsz" secondAttribute="trailingMargin" id="vdY-iE-1UT"/>
+                            <constraint firstItem="Cx8-wh-e0x" firstAttribute="trailing" secondItem="4Ge-m9-nsz" secondAttribute="trailingMargin" id="9U3-Va-ruf"/>
+                            <constraint firstItem="SQx-3F-fBv" firstAttribute="centerX" secondItem="4Ge-m9-nsz" secondAttribute="centerX" id="O9q-rZ-naV"/>
+                            <constraint firstItem="SQx-3F-fBv" firstAttribute="top" secondItem="kmg-Zd-zaR" secondAttribute="bottom" constant="8" symbolic="YES" id="eyh-2W-YOe"/>
+                            <constraint firstAttribute="bottom" secondItem="Cx8-wh-e0x" secondAttribute="bottom" constant="20" symbolic="YES" id="l7v-Bc-mho"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -176,16 +184,24 @@
                                     <segue destination="efA-Js-H9G" kind="show" id="r8m-6D-28V"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UF-e7-8bw">
+                                <rect key="frame" x="166" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wVM-pr-lRm" firstAttribute="top" secondItem="TSh-D1-tb3" secondAttribute="bottom" constant="176" id="DLw-gK-hhG"/>
-                            <constraint firstAttribute="trailing" secondItem="wVM-pr-lRm" secondAttribute="trailing" id="GVJ-vF-pTI"/>
-                            <constraint firstAttribute="bottom" secondItem="dPb-X8-be2" secondAttribute="bottom" constant="20" symbolic="YES" id="OkE-Uk-81u"/>
-                            <constraint firstItem="dPb-X8-be2" firstAttribute="leading" secondItem="xkJ-He-dm9" secondAttribute="leadingMargin" id="fCK-wF-MTJ"/>
-                            <constraint firstItem="dPb-X8-be2" firstAttribute="top" secondItem="RTh-zY-8qP" secondAttribute="top" id="fCY-1C-65d"/>
-                            <constraint firstItem="wVM-pr-lRm" firstAttribute="leading" secondItem="xkJ-He-dm9" secondAttribute="leading" id="grC-PP-K8g"/>
-                            <constraint firstItem="RTh-zY-8qP" firstAttribute="trailing" secondItem="xkJ-He-dm9" secondAttribute="trailingMargin" id="yMm-Yz-eYe"/>
+                            <constraint firstAttribute="trailing" secondItem="wVM-pr-lRm" secondAttribute="trailing" id="6QH-gO-yoF"/>
+                            <constraint firstItem="dPb-X8-be2" firstAttribute="top" secondItem="RTh-zY-8qP" secondAttribute="top" id="8Pq-Nf-0xg"/>
+                            <constraint firstItem="wVM-pr-lRm" firstAttribute="top" secondItem="xkJ-He-dm9" secondAttribute="top" constant="196" id="CvK-bg-UtC"/>
+                            <constraint firstAttribute="bottom" secondItem="dPb-X8-be2" secondAttribute="bottom" constant="20" symbolic="YES" id="PGU-IM-h5A"/>
+                            <constraint firstItem="wVM-pr-lRm" firstAttribute="leading" secondItem="xkJ-He-dm9" secondAttribute="leading" id="RHR-lV-9mP"/>
+                            <constraint firstItem="dPb-X8-be2" firstAttribute="leading" secondItem="xkJ-He-dm9" secondAttribute="leadingMargin" id="asx-DI-4j3"/>
+                            <constraint firstItem="5UF-e7-8bw" firstAttribute="centerX" secondItem="wVM-pr-lRm" secondAttribute="centerX" id="i0G-lI-F8u"/>
+                            <constraint firstItem="5UF-e7-8bw" firstAttribute="top" secondItem="TSh-D1-tb3" secondAttribute="bottom" constant="8" symbolic="YES" id="wv2-12-B6a"/>
+                            <constraint firstItem="RTh-zY-8qP" firstAttribute="trailing" secondItem="xkJ-He-dm9" secondAttribute="trailingMargin" id="x5E-zZ-KSF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -222,13 +238,21 @@
                                     <segue destination="EYm-lU-zEF" kind="show" id="8DB-Bw-xlt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdZ-dw-o5D">
+                                <rect key="frame" x="166" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="uUw-2n-UeZ" secondAttribute="bottom" constant="20" symbolic="YES" id="Sx3-Kh-yBv"/>
-                            <constraint firstItem="uUw-2n-UeZ" firstAttribute="leading" secondItem="cHP-tI-PSQ" secondAttribute="leadingMargin" id="tiS-W6-nbz"/>
-                            <constraint firstItem="uUw-2n-UeZ" firstAttribute="top" secondItem="mpm-in-kF3" secondAttribute="top" id="yGC-1f-8bW"/>
-                            <constraint firstItem="mpm-in-kF3" firstAttribute="trailing" secondItem="cHP-tI-PSQ" secondAttribute="trailingMargin" id="yGI-kF-ksg"/>
+                            <constraint firstItem="mpm-in-kF3" firstAttribute="trailing" secondItem="cHP-tI-PSQ" secondAttribute="trailingMargin" id="49k-Sf-Dff"/>
+                            <constraint firstItem="NdZ-dw-o5D" firstAttribute="top" secondItem="vwz-Wf-n24" secondAttribute="bottom" constant="8" symbolic="YES" id="9cl-qw-GtC"/>
+                            <constraint firstAttribute="bottom" secondItem="uUw-2n-UeZ" secondAttribute="bottom" constant="20" symbolic="YES" id="Ppv-RP-FQh"/>
+                            <constraint firstItem="uUw-2n-UeZ" firstAttribute="leading" secondItem="cHP-tI-PSQ" secondAttribute="leadingMargin" id="jqE-2U-qCf"/>
+                            <constraint firstItem="NdZ-dw-o5D" firstAttribute="centerX" secondItem="cHP-tI-PSQ" secondAttribute="centerX" id="yaQ-Nu-ZMe"/>
+                            <constraint firstItem="uUw-2n-UeZ" firstAttribute="top" secondItem="mpm-in-kF3" secondAttribute="top" id="zLj-Li-OzB"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -255,11 +279,19 @@
                                     <segue destination="vAW-yS-NF8" kind="show" id="Rkf-vd-e0l"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lc-gr-2tg">
+                                <rect key="frame" x="166" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xgi-WE-p9o" secondAttribute="bottom" constant="20" symbolic="YES" id="OA4-cd-rfj"/>
-                            <constraint firstItem="xgi-WE-p9o" firstAttribute="leading" secondItem="6SY-cc-bEp" secondAttribute="leadingMargin" id="odd-DJ-AOE"/>
+                            <constraint firstItem="7lc-gr-2tg" firstAttribute="top" secondItem="IKb-zq-XI5" secondAttribute="bottom" constant="8" symbolic="YES" id="2XU-xW-qjF"/>
+                            <constraint firstItem="7lc-gr-2tg" firstAttribute="centerX" secondItem="6SY-cc-bEp" secondAttribute="centerX" id="3ZU-rQ-4aH"/>
+                            <constraint firstAttribute="bottom" secondItem="xgi-WE-p9o" secondAttribute="bottom" constant="20" symbolic="YES" id="ALg-Ij-6Lr"/>
+                            <constraint firstItem="xgi-WE-p9o" firstAttribute="leading" secondItem="6SY-cc-bEp" secondAttribute="leadingMargin" id="iE7-nV-tW5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -274,8 +306,8 @@
         <image name="NextArrow" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hkQ-Ik-i5R"/>
+        <segue reference="7Zg-Cu-b6L"/>
         <segue reference="Dd2-SK-nCO"/>
-        <segue reference="r8m-6D-28V"/>
+        <segue reference="hkQ-Ik-i5R"/>
     </inferredMetricsTieBreakers>
 </document>

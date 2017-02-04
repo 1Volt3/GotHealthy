@@ -8,13 +8,18 @@
 
 import UIKit
 
-class AgeEntry: UIViewController {
+class AgeEntry: UIViewController, UITextFieldDelegate, KeyboardDelegate {
     @IBOutlet weak var dateOfBirthPicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         dateOfBirthPicker.setValue(UIColor.white, forKeyPath: "textColor")
+        // initialize custom keyboard
+        let keyboardView = Keyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
+        
+        // the view controller will be notified by the keyboard whenever a key is tapped
+        keyboardView.delegate = self
     }
     
 }

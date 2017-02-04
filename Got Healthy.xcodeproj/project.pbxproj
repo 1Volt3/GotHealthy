@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5200C2251E3F91510077F623 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200C2241E3F91510077F623 /* AuthManager.swift */; };
+		52041BFF1E453EED008CD4DF /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52041BFE1E453EED008CD4DF /* Keyboard.xib */; };
+		52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041C001E4541A7008CD4DF /* Keyboard.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
 		525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B91E422E2D000A8F09 /* WeightEntry.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		5200C2241E3F91510077F623 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		52041BFE1E453EED008CD4DF /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		52041C001E4541A7008CD4DF /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
 		525EB2B91E422E2D000A8F09 /* WeightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightEntry.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				52CABFFE1E38F29700E0302F /* AppDelegate.swift */,
 				52CAC0001E38F29700E0302F /* ViewController.swift */,
 				52CAC0021E38F29700E0302F /* Main.storyboard */,
+				52041BFE1E453EED008CD4DF /* Keyboard.xib */,
+				52041C001E4541A7008CD4DF /* Keyboard.swift */,
 				525EB2B51E422E0E000A8F09 /* NameEntry.swift */,
 				525EB2B71E422E21000A8F09 /* AgeEntry.swift */,
 				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
@@ -268,6 +274,7 @@
 			files = (
 				52CAC0091E38F29700E0302F /* LaunchScreen.storyboard in Resources */,
 				52CAC0061E38F29700E0302F /* Assets.xcassets in Resources */,
+				52041BFF1E453EED008CD4DF /* Keyboard.xib in Resources */,
 				52791E851E3ABECD00E1B7E5 /* TodayInterface.storyboard in Resources */,
 				52CAC0041E38F29700E0302F /* Main.storyboard in Resources */,
 			);
@@ -297,6 +304,7 @@
 				525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */,
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
 				5200C2251E3F91510077F623 /* AuthManager.swift in Sources */,
+				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-open class SkyFloatingLabelTextField: UITextField {
+open class FloatingLabelText: UITextField {
     /// A Boolean value that determines if the language displayed is LTR. Default value set automatically from the application language settings.
     var isLTRLanguage = UIApplication.shared.userInterfaceLayoutDirection == .leftToRight {
         didSet {
@@ -242,7 +242,7 @@ open class SkyFloatingLabelTextField: UITextField {
     */
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        self.init_SkyFloatingLabelTextField()
+        self.init_FloatingLabelText()
     }
 
     /**
@@ -251,10 +251,10 @@ open class SkyFloatingLabelTextField: UITextField {
      */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.init_SkyFloatingLabelTextField()
+        self.init_FloatingLabelText()
     }
 
-    fileprivate final func init_SkyFloatingLabelTextField() {
+    fileprivate final func init_FloatingLabelText() {
         self.borderStyle = .none
         self.createTitleLabel()
         self.createLineView()
@@ -264,7 +264,7 @@ open class SkyFloatingLabelTextField: UITextField {
     }
     
     fileprivate func addEditingChangedObserver() {
-        self.addTarget(self, action: #selector(SkyFloatingLabelTextField.editingChanged), for: .editingChanged)
+        self.addTarget(self, action: #selector(FloatingLabelText.editingChanged), for: .editingChanged)
     }
 
     /**

@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class SkyFloatingLabelTextFieldWithIcon: SkyFloatingLabelTextField {
+open class FloatingLabelTextIcon: FloatingLabelText {
 
     /// A UILabel value that identifies the label used to display the icon
     open var iconLabel:UILabel!

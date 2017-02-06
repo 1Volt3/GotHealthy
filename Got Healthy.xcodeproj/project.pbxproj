@@ -19,7 +19,9 @@
 		52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E871E3AC10E00E1B7E5 /* Header.swift */; };
 		52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E881E3AC10E00E1B7E5 /* Extensions.swift */; };
 		52791E901E3AC1D100E1B7E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */; };
-		529717F91E47960C001228C2 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529717F81E47960C001228C2 /* StringUtils.swift */; };
+		52B364311E48C9AA00122E21 /* FloatingLabelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3642E1E48C9AA00122E21 /* FloatingLabelText.swift */; };
+		52B364321E48C9AA00122E21 /* FloatingLabelTextIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3642F1E48C9AA00122E21 /* FloatingLabelTextIcon.swift */; };
+		52B364331E48C9AA00122E21 /* UITextPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B364301E48C9AA00122E21 /* UITextPosition.swift */; };
 		52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CABFFE1E38F29700E0302F /* AppDelegate.swift */; };
 		52CAC0011E38F29700E0302F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC0001E38F29700E0302F /* ViewController.swift */; };
 		52CAC0041E38F29700E0302F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CAC0021E38F29700E0302F /* Main.storyboard */; };
@@ -59,7 +61,9 @@
 		52791E871E3AC10E00E1B7E5 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		52791E881E3AC10E00E1B7E5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		529717F81E47960C001228C2 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		52B3642E1E48C9AA00122E21 /* FloatingLabelText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingLabelText.swift; sourceTree = "<group>"; };
+		52B3642F1E48C9AA00122E21 /* FloatingLabelTextIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextIcon.swift; sourceTree = "<group>"; };
+		52B364301E48C9AA00122E21 /* UITextPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextPosition.swift; sourceTree = "<group>"; };
 		52CABFFB1E38F29700E0302F /* Got Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Got Healthy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CABFFE1E38F29700E0302F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52CAC0001E38F29700E0302F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +138,9 @@
 				525EB2B71E422E21000A8F09 /* AgeEntry.swift */,
 				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
 				525EB2BB1E422E3A000A8F09 /* HeightEntry.swift */,
-				529717F81E47960C001228C2 /* StringUtils.swift */,
+				52B3642E1E48C9AA00122E21 /* FloatingLabelText.swift */,
+				52B3642F1E48C9AA00122E21 /* FloatingLabelTextIcon.swift */,
+				52B364301E48C9AA00122E21 /* UITextPosition.swift */,
 				52CAC0051E38F29700E0302F /* Assets.xcassets */,
 				52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */,
 				5200C2241E3F91510077F623 /* AuthManager.swift */,
@@ -304,16 +310,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				529717F91E47960C001228C2 /* StringUtils.swift in Sources */,
 				525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */,
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
 				5200C2251E3F91510077F623 /* AuthManager.swift in Sources */,
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
+				52B364321E48C9AA00122E21 /* FloatingLabelTextIcon.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
+				52B364311E48C9AA00122E21 /* FloatingLabelText.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,
+				52B364331E48C9AA00122E21 /* UITextPosition.swift in Sources */,
 				52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */,
 				525EB2BC1E422E3A000A8F09 /* HeightEntry.swift in Sources */,
 			);

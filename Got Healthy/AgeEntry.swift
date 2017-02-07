@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AgeEntry: UIViewController, UITextFieldDelegate, KeyboardDelegate {
+class AgeEntry: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateOfBirthPicker: UIDatePicker!
     
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ class AgeEntry: UIViewController, UITextFieldDelegate, KeyboardDelegate {
         let keyboardView = Keyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
         
         // the view controller will be notified by the keyboard whenever a key is tapped
-        keyboardView.delegate = self
+        //keyboardView.delegate = self
     }
     
 }

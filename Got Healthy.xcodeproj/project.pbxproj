@@ -29,6 +29,7 @@
 		52CAC0091E38F29700E0302F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CAC0071E38F29700E0302F /* LaunchScreen.storyboard */; };
 		52CAC0141E38F29700E0302F /* Got_HealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC0131E38F29700E0302F /* Got_HealthyTests.swift */; };
 		52CAC01F1E38F29700E0302F /* Got_HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC01E1E38F29700E0302F /* Got_HealthyUITests.swift */; };
+		52D79C831E4B812A007B4E58 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D79C821E4B812A007B4E58 /* Gender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		52CAC01A1E38F29700E0302F /* Got HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Got HealthyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CAC01E1E38F29700E0302F /* Got_HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Got_HealthyUITests.swift; sourceTree = "<group>"; };
 		52CAC0201E38F29700E0302F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D79C821E4B812A007B4E58 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				52041C001E4541A7008CD4DF /* Keyboard.swift */,
 				525EB2B51E422E0E000A8F09 /* NameEntry.swift */,
 				525EB2B71E422E21000A8F09 /* AgeEntry.swift */,
+				52D79C821E4B812A007B4E58 /* Gender.swift */,
 				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
 				525EB2BB1E422E3A000A8F09 /* HeightEntry.swift */,
 				52B3642E1E48C9AA00122E21 /* FloatingLabelText.swift */,
@@ -316,6 +319,7 @@
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
 				52B364321E48C9AA00122E21 /* FloatingLabelTextIcon.swift in Sources */,
+				52D79C831E4B812A007B4E58 /* Gender.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
 				52B364311E48C9AA00122E21 /* FloatingLabelText.swift in Sources */,

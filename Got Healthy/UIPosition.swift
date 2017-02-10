@@ -1,8 +1,9 @@
+//  Copyright 2016 Skyscanner Ltd
 //
-//  UITextPosition.swift
+//  UIPosition.swift
 //  Got Healthy
 //
-//  Created by Josh Rosenzweig on 2/6/17.
+//  Created by Josh Rosenzweig on 2/9/17.
 //  Copyright © 2017 Volt. All rights reserved.
 //
 

@@ -10,33 +10,17 @@ import UIKit
 
 class NameEntry: UIViewController {
     
+    @IBOutlet weak var firstNameEntry: FloatingTextField!
+    @IBOutlet weak var lastNameEntry: FloatingTextField!
+    @IBOutlet weak var nextArrow: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextArrow.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let overcastBlueColor = UIColor(red: 0, green: 190/255, blue: 240/255, alpha: 1.0)
-        let lightGreyColor = UIColor(red: 197/255, green: 205/255, blue: 205/255, alpha: 1.0)
-        let darkGreyColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
-        
-        let firstNameInput = FloatingLabelText(frame: CGRect(x: 60, y: 90, width: 220, height: 50))
-        firstNameInput.placeholder = "First"
-        firstNameInput.title = "Your First Name"
-        firstNameInput.tintColor = overcastBlueColor
-        firstNameInput.textColor = darkGreyColor
-        firstNameInput.lineColor = lightGreyColor
-        firstNameInput.selectedTitleColor = overcastBlueColor
-        firstNameInput.selectedLineColor = overcastBlueColor
-        self.view.addSubview(firstNameInput)
-        
-        let lastNameInput = FloatingLabelText(frame: CGRect(x: 60, y: 240, width: 220, height: 50))
-        lastNameInput.placeholder = "Last"
-        lastNameInput.title = "Your Last Name"
-        lastNameInput.tintColor = overcastBlueColor
-        lastNameInput.textColor = darkGreyColor
-        lastNameInput.lineColor = lightGreyColor
-        lastNameInput.selectedTitleColor = overcastBlueColor
-        lastNameInput.selectedLineColor = overcastBlueColor
-        self.view.addSubview(lastNameInput)
+        if firstNameEntry.text != "" && lastNameEntry.text != ""{
+            nextArrow.isHidden = false
+    }
     }
 
 }

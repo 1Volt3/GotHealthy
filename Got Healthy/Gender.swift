@@ -8,6 +8,8 @@
 
 import UIKit
 
+var gender = ""
+
 class Gender: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
@@ -31,5 +33,13 @@ class Gender: UIViewController {
         femaleButton.setBackgroundImage(UIImage(named: "ButtonBoxGreen.png"), for: UIControlState.normal)
         maleButton.setBackgroundImage(UIImage(named: "GrayBoxButton.png"), for: UIControlState.normal)
         nextButton.isHidden = false
+    }
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        if maleButton.backgroundImage(for: UIControlState.normal) == UIImage(named: "ButtonBoxGreen.png"){
+            gender = "Male"
+        }
+        if femaleButton.backgroundImage(for: UIControlState.normal) == UIImage(named: "ButtonBoxGreen.png"){
+            gender = "Female"
+        }
     }
 }

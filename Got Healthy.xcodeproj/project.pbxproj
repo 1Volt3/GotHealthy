@@ -13,7 +13,6 @@
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
 		525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B91E422E2D000A8F09 /* WeightEntry.swift */; };
-		525EB2BC1E422E3A000A8F09 /* HeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2BB1E422E3A000A8F09 /* HeightEntry.swift */; };
 		52791E851E3ABECD00E1B7E5 /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */; };
 		52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */; };
 		52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E871E3AC10E00E1B7E5 /* Header.swift */; };
@@ -56,7 +55,6 @@
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
 		525EB2B91E422E2D000A8F09 /* WeightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightEntry.swift; sourceTree = "<group>"; };
-		525EB2BB1E422E3A000A8F09 /* HeightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightEntry.swift; sourceTree = "<group>"; };
 		52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayInterface.storyboard; sourceTree = "<group>"; };
 		52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		52791E871E3AC10E00E1B7E5 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				525EB2B71E422E21000A8F09 /* AgeEntry.swift */,
 				52D79C821E4B812A007B4E58 /* Gender.swift */,
 				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
-				525EB2BB1E422E3A000A8F09 /* HeightEntry.swift */,
 				52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */,
 				52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */,
 				52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */,
@@ -325,7 +322,6 @@
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,
 				52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */,
-				525EB2BC1E422E3A000A8F09 /* HeightEntry.swift in Sources */,
 				52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */,
 				52F48BB31E4E3F9300E8ACCA /* FloatingTextField.swift in Sources */,
 			);

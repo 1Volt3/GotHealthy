@@ -285,7 +285,7 @@ open class FloatingTextField: UITextField {
     fileprivate func createTitleLabel() {
         let titleLabel = UILabel()
         titleLabel.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        titleLabel.font = UIFont.systemFont(ofSize: 18)
+        titleLabel.font = UIFont.systemFont(ofSize: 14)
         titleLabel.alpha = 0.0
         titleLabel.textColor = self.titleColor
         self.addSubview(titleLabel)
@@ -527,7 +527,7 @@ open class FloatingTextField: UITextField {
             let font = titleLabel.font {
                 return font.lineHeight
         }
-        return 15.0
+        return 12.0
     }
 
     /**
@@ -535,7 +535,7 @@ open class FloatingTextField: UITextField {
      -returns: the calculated height of the textfield. Override to size the textfield with a different height
      */
     open func textHeight() -> CGFloat {
-        return self.font!.lineHeight + 7.0
+        return self.font!.lineHeight + 24.0
     }
 
     // MARK: - Layout

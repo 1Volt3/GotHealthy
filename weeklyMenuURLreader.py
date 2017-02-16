@@ -22,45 +22,22 @@ writeToFile.close()
 readToFile = open(file, "r")
 
 
-weeklymenu = 0
-nonweekly = 0
-linenumber = 0
 
 for line in readToFile:
-	linenumber = linenumber + 1
 	#search in any line with a href
 	if 'href=' in line:
 		#determine if its absolute or relative
 		if "WeeklyMenu" in line:
-			weeklymenu = weeklymenu + 1
 			print "WEEKLY MENU LINK:"
 			urlLink = re.findall(r'"/(.*?)"', line)
 			print urlLink
 		else:
-			nonweekly = nonweekly + 1
+			#do nothing
 
 weeklyMenuURL = bergDiningHost + "/" + urlLink[0]
-#Final calculations printed
-print "The number of weekly menu links is:",
-print weeklymenu
-print "The number of non weekly menu links is:",
-print nonweekly
+
 
 print "WEEKLY MENU URL: " + weeklyMenuURL
-
-readToFile.close()
-
-
-
-newResponse = urllib2.urlopen(weeklyMenuURL)
-
-writeDiningToFile = open(file, "w")
-writeDiningToFile.write(newResponse.read())
-writeDiningToFile.close()
-
-readDiningToFile = open(file, "r")
-
-print readDiningToFile
 
 
 

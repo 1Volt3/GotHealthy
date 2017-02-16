@@ -14,7 +14,7 @@ html = urllib2.urlopen(url)
 for line in html:
 	# reset variables
 	servingSize = 0 
-	calories = 0 
+	servingSizeInGrams = 0 
 	# get all aData 
 	for item in re.findall('aData\[...+\);', line): 
 		# temp array to store descriptions 
@@ -27,7 +27,7 @@ for line in html:
 				if i.startswith('('):
 					a = re.findall('[A-Za-z0-9/\.\-+ ]+', i )
 					servingSize = a[0]
-					calories = a[1]
+					servingSizeInGrams = a[1]
 				# get food and description, add to array 
 				elif re.findall('[A-Z][A-Za-z\s]+', i ) and i.startswith('(') == False:
 					temp.append(i)
@@ -36,12 +36,12 @@ for line in html:
 				foodItems[temp[0]] = {}
 				foodItems[temp[0]]["Description"] = temp[1]
 				foodItems[temp[0]]["servingSize"] = servingSize
-				foodItems[temp[0]]["calories"] = calories
+				foodItems[temp[0]]["servingSizeInGrams"] = servingSizeInGrams
 			elif len(temp) == 3  and temp[0] not in foodItems: 
 				foodItems[temp[0]] = {}
 				foodItems[temp[0]]["Description"] = temp[1]
 				foodItems[temp[0]]["Special"] = temp[2]
 				foodItems[temp[0]]["servingSize"] = servingSize
-				foodItems[temp[0]]["calories"] = calories
+				foodItems[temp[0]]["servingSizeInGrams"] = servingSizeInGrams
 
 pprint.pprint(foodItems)

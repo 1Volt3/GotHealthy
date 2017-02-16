@@ -1,5 +1,4 @@
 # Jeff Remley
-# Natural Language Processes
 # weeklyMenuURLREADER.py
 
 
@@ -7,13 +6,20 @@ import urllib2
 import re
 import inspect
 
-# creates file and asks user to input the URL
+#create host name extension
 bergDiningHost = "https://dining.muhlenberg.edu"
+
+#write HTML contents to text file
 file = "bergDiningHTML.txt"
+
+#start with dining choices URL
 url = "https://dining.muhlenberg.edu/dining-choices/index.html"
+
+
+#open URL
 response = urllib2.urlopen(url)
 
-# writes HTML contents to the muhlenbergHTML file
+# writes HTML contents to the bergDiningHTML file
 writeToFile = open(file, "w")
 writeToFile.write(response.read())
 writeToFile.close()
@@ -26,25 +32,25 @@ readToFile = open(file, "r")
 for line in readToFile:
 	#search in any line with a href
 	if 'href=' in line:
-		#determine if its absolute or relative
+		
+        #find link with weeklyMenu in it!
 		if "WeeklyMenu" in line:
-			print "WEEKLY MENU LINK:"
 			urlLink = re.findall(r'"/(.*?)"', line)
-			print urlLink
-		else:
-			#do nothing
+
 
 weeklyMenuURL = bergDiningHost + "/" + urlLink[0]
+#final URL is saved as "weeklyMenuURL"!!!!!
 
 
 print "WEEKLY MENU URL: " + weeklyMenuURL
-
 
 
 ## Aliyas Code
 ##
 #######
 #######
+
+
 
 
 

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var measurmentChosen = ""
+
 class WeightEntry: UIViewController {
     
     @IBOutlet weak var firstHeightPicker: UIPickerView!

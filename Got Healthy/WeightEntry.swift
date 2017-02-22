@@ -16,7 +16,8 @@ class WeightEntry: UIViewController {
     @IBOutlet weak var secondHeightLabel: UILabel!
     @IBOutlet weak var weightPicker: UIPickerView!
     @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var measurmentSystem: UISegmentedControl!
+    @IBOutlet weak var measurementSwitchChoice: UISegmentedControl!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,4 +27,18 @@ class WeightEntry: UIViewController {
         weightPicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
+        @IBAction func measurementChoice(_ sender: Any) {
+            switch measurementSwitchChoice.selectedSegmentIndex {
+            case 0:
+                firstHeightLabel.text = "FT"
+                secondHeightLabel.text = "IN"
+                weightLabel.text = "LBS"
+            case 1:
+                firstHeightLabel.text = "."
+                secondHeightLabel.text = "M"
+                weightLabel.text = "KG"
+            default:
+                break
+            }
+    }
 }

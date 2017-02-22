@@ -877,6 +877,9 @@
                                     <segment title="Imperial"/>
                                     <segment title="Metric"/>
                                 </segments>
+                                <connections>
+                                    <action selector="measurementChoice:" destination="vAW-yS-NF8" eventType="valueChanged" id="qRF-r3-DNJ"/>
+                                </connections>
                             </segmentedControl>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9k-2g-UQ5">
                                 <rect key="frame" x="-11" y="259" width="375" height="216"/>
@@ -931,7 +934,7 @@
                     <connections>
                         <outlet property="firstHeightLabel" destination="kON-Df-WRU" id="uJq-dW-Bpj"/>
                         <outlet property="firstHeightPicker" destination="GIt-6M-wQY" id="Lk1-Ht-uhg"/>
-                        <outlet property="measurmentSystem" destination="KWg-cD-Rkp" id="C4j-7X-lMn"/>
+                        <outlet property="measurementSwitchChoice" destination="KWg-cD-Rkp" id="pHl-lb-EpX"/>
                         <outlet property="secondHeightLabel" destination="djz-ov-Aw9" id="gPd-TN-nbv"/>
                         <outlet property="secondHeightPicker" destination="02u-9i-DRo" id="fpp-Fq-LDQ"/>
                         <outlet property="weightLabel" destination="yH8-Vp-iIx" id="SFA-Eo-PMl"/>

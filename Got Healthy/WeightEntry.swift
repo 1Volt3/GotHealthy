@@ -43,4 +43,8 @@ class WeightEntry: UIViewController {
                 break
             }
     }
+    
+    @IBAction func getHealthyPressed(_ sender: Any) {
+        measurmentChosen = measurementSwitchChoice.titleForSegment(at: measurementSwitchChoice.selectedSegmentIndex)!
+    }
 }

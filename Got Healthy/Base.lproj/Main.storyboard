@@ -931,6 +931,7 @@
                     <connections>
                         <outlet property="firstHeightLabel" destination="kON-Df-WRU" id="uJq-dW-Bpj"/>
                         <outlet property="firstHeightPicker" destination="GIt-6M-wQY" id="Lk1-Ht-uhg"/>
+                        <outlet property="measurmentSystem" destination="KWg-cD-Rkp" id="C4j-7X-lMn"/>
                         <outlet property="secondHeightLabel" destination="djz-ov-Aw9" id="gPd-TN-nbv"/>
                         <outlet property="secondHeightPicker" destination="02u-9i-DRo" id="fpp-Fq-LDQ"/>
                         <outlet property="weightLabel" destination="yH8-Vp-iIx" id="SFA-Eo-PMl"/>
@@ -1059,8 +1060,8 @@
         <image name="NextArrow" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="cbV-O0-BaX"/>
         <segue reference="Dd2-SK-nCO"/>
         <segue reference="r8m-6D-28V"/>
-        <segue reference="cbV-O0-BaX"/>
     </inferredMetricsTieBreakers>
 </document>

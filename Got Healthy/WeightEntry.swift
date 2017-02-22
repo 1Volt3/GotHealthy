@@ -16,6 +16,7 @@ class WeightEntry: UIViewController {
     @IBOutlet weak var secondHeightLabel: UILabel!
     @IBOutlet weak var weightPicker: UIPickerView!
     @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var measurmentSystem: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,6 +23,7 @@ class NameEntry: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         firstNameEntry.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         lastNameEntry.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        firstNameEntry.keyboardType = UIKeyboardType.asciiCapable
         if let firstNameStoredBefore = nameDefaults.string(forKey: "firstNameEntered") {
             firstNameEntry.text = firstNameStoredBefore
         }

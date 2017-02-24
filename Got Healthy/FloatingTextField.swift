@@ -121,7 +121,7 @@ open class FloatingTextField: UITextField {
     }
 
     /// A CGFloat value that determines the height for the bottom line when the control is in a selected state
-    @IBInspectable open var selectedLineHeight:CGFloat = 1.0 {
+    @IBInspectable open var selectedLineHeight:CGFloat = 2.0 {
         didSet {
             self.updateLineView()
             self.setNeedsDisplay()
@@ -307,7 +307,7 @@ open class FloatingTextField: UITextField {
     fileprivate func configureDefaultLineHeight() {
         let onePixel:CGFloat = 1.0 / UIScreen.main.scale
         self.lineHeight = 2.0 * onePixel
-        self.selectedLineHeight = 2.0 * self.lineHeight
+        self.selectedLineHeight = 1.0 * self.lineHeight
     }
 
     // MARK: Responder handling
@@ -527,7 +527,7 @@ open class FloatingTextField: UITextField {
             let font = titleLabel.font {
                 return font.lineHeight
         }
-        return 12.0
+        return 8.0
     }
 
     /**
@@ -535,7 +535,7 @@ open class FloatingTextField: UITextField {
      -returns: the calculated height of the textfield. Override to size the textfield with a different height
      */
     open func textHeight() -> CGFloat {
-        return self.font!.lineHeight + 24.0
+        return self.font!.lineHeight + 2.0
     }
 
     // MARK: - Layout

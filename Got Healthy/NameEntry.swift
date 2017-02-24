@@ -11,7 +11,7 @@ import UIKit
 var firstName = ""
 var lastName = ""
 
-class NameEntry: UIViewController {
+class NameEntry: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var firstNameEntry: FloatingTextField!
     @IBOutlet weak var lastNameEntry: FloatingTextField!
@@ -38,6 +38,38 @@ class NameEntry: UIViewController {
         }
     }
 
+    // Start Editing The Text Field
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        moveTextField(textField, moveDistance: -100, up: true)
+    }
+    
+    // Finish Editing The Text Field
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        moveTextField(textField, moveDistance: -100, up: false)
+    }
+    
+    // Hide the keyboard when the return key pressed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        moveTextField(textField, moveDistance: -100, up: false)
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Move the text field in a pretty animation!
+    func moveTextField(_ textField: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
+        
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        //self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        lastNameEntry.frame = lastNameEntry.frame.offsetBy(dx: 0, dy: movement)
+        nextArrow.frame = nextArrow.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
+
+    
     func textFieldDidChange(_ textField: UITextField) {
         if firstNameEntry.text != "" && lastNameEntry.text != ""{
             nextArrow.isHidden = false

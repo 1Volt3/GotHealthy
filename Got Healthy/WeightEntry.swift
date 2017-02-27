@@ -47,9 +47,32 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         firstHeightPicker.setValue(UIColor.white, forKeyPath: "textColor")
         secondHeightPicker.setValue(UIColor.white, forKeyPath: "textColor")
         weightPicker.setValue(UIColor.white, forKeyPath: "textColor")
+        metricHeightPicker.setValue(UIColor.white, forKeyPath: "textColor")
+        secondMetricPicker.setValue(UIColor.white, forKeyPath: "textColor")
+        metricWeightPicker.setValue(UIColor.white, forKeyPath: "textColor")
         firstHeightPicker.delegate = self
         secondHeightPicker.delegate = self
         weightPicker.delegate = self
+        metricHeightPicker.delegate = self
+        secondMetricPicker.delegate = self
+        metricWeightPicker.delegate = self
+        if measurementSwitchChoice.selectedSegmentIndex == 0{
+            firstHeightPicker.isHidden = false
+            secondHeightPicker.isHidden = false
+            weightPicker.isHidden = false
+            metricHeightPicker.isHidden = true
+            secondMetricPicker.isHidden = true
+            metricWeightPicker.isHidden = true
+        }
+        if measurementSwitchChoice.selectedSegmentIndex == 1{
+            metricHeightPicker.isHidden = false
+            secondMetricPicker.isHidden = false
+            metricWeightPicker.isHidden = false
+            firstHeightPicker.isHidden = true
+            secondHeightPicker.isHidden = true
+            weightPicker.isHidden = true
+        }
+        
         print(measurementSwitchChoice.selectedSegmentIndex)
     }
     
@@ -90,19 +113,19 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         if pickerView == firstHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             firstHeightChosen = feetFirst[row]
         }
-        if pickerView == firstHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == metricHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             firstHeightChosen = meterFirst[row]
         }
         if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             secondHeightChosen = inches[row]
         }
-        if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == secondMetricPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             secondHeightChosen = meterExact[row]
         }
         if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             weightChosen = pounds[row]
         }
-        if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == metricWeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             weightChosen = kilograms[row]
         }
     }
@@ -111,19 +134,19 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         if pickerView == firstHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             return feetFirst[row]
         }
-        if pickerView == firstHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == metricHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             return meterFirst[row]
         }
         if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             return inches[row]
         }
-        if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == secondMetricPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             return meterExact[row]
         }
         if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             return pounds[row]
         }
-        if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == metricWeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             return kilograms[row]
         }
         return feetFirst[row]
@@ -141,7 +164,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         
         return pickerLabel
         }
-        if pickerView == firstHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == metricHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             let pickerLabel = UILabel()
             pickerLabel.textColor = UIColor.white
             pickerLabel.text = meterFirst[row]
@@ -159,7 +182,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             
             return pickerLabel
         }
-        if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == secondMetricPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             let pickerLabel = UILabel()
             pickerLabel.textColor = UIColor.white
             pickerLabel.text = meterExact[row]
@@ -177,7 +200,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             
             return pickerLabel
         }
-        if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == metricWeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             let pickerLabel = UILabel()
             pickerLabel.textColor = UIColor.white
             pickerLabel.text = kilograms[row]
@@ -201,19 +224,19 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         if pickerView == firstHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             return feetFirst.count
         }
-        if pickerView == firstHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == metricHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             return meterFirst.count
         }
         if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             return inches.count
         }
-        if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == secondMetricPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             return meterExact.count
         }
         if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             return pounds.count
         }
-        if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
+        if pickerView == metricWeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             return kilograms.count
         }
         return 1

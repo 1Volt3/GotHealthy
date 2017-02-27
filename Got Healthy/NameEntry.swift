@@ -41,11 +41,13 @@ class NameEntry: UIViewController, UITextFieldDelegate {
     // Start Editing The Text Field
     func textFieldDidBeginEditing(_ textField: UITextField) {
         moveTextField(textField, moveDistance: -100, up: true)
+        nextArrow.frame = nextArrow.frame.offsetBy(dx: 0, dy: -250)
     }
     
     // Finish Editing The Text Field
     func textFieldDidEndEditing(_ textField: UITextField) {
-        moveTextField(textField, moveDistance: -100, up: false)
+        moveTextField(textField, moveDistance: -100, up: true)
+        nextArrow.frame = nextArrow.frame.offsetBy(dx: 0, dy: -100)
     }
     
     // Hide the keyboard when the return key pressed

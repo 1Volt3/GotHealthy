@@ -29,6 +29,8 @@
 		52F48BB31E4E3F9300E8ACCA /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */; };
 		52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */; };
 		52F48BB51E4E3F9300E8ACCA /* UIPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */; };
+		52F8A1951E68714600EF567A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F8A1931E68714600EF567A /* FirstViewController.swift */; };
+		52F8A1961E68714600EF567A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F8A1941E68714600EF567A /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldIcon.swift; sourceTree = "<group>"; };
 		52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPosition.swift; sourceTree = "<group>"; };
+		52F8A1931E68714600EF567A /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		52F8A1941E68714600EF567A /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 				52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */,
 				52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */,
 				52C9460A1E5F4D3B00FB6515 /* StringUtils.swift */,
+				52F8A1931E68714600EF567A /* FirstViewController.swift */,
+				52F8A1941E68714600EF567A /* SecondViewController.swift */,
 				52CAC0051E38F29700E0302F /* Assets.xcassets */,
 				52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */,
 				5200C2241E3F91510077F623 /* AuthManager.swift */,
@@ -310,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */,
+				52F8A1961E68714600EF567A /* SecondViewController.swift in Sources */,
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
 				5200C2251E3F91510077F623 /* AuthManager.swift in Sources */,
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
@@ -320,6 +327,7 @@
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
+				52F8A1951E68714600EF567A /* FirstViewController.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,
 				52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */,
 				52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */,

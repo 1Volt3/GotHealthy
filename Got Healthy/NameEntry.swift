@@ -40,37 +40,17 @@ class NameEntry: UIViewController, UITextFieldDelegate {
 
     // Start Editing The Text Field
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        moveTextField(textField, moveDistance: -100, up: true)
-        nextArrow.frame = nextArrow.frame.offsetBy(dx: 0, dy: -250)
     }
     
     // Finish Editing The Text Field
     func textFieldDidEndEditing(_ textField: UITextField) {
-        moveTextField(textField, moveDistance: -100, up: true)
-        nextArrow.frame = nextArrow.frame.offsetBy(dx: 0, dy: -100)
     }
     
     // Hide the keyboard when the return key pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        moveTextField(textField, moveDistance: -100, up: false)
         textField.resignFirstResponder()
         return true
     }
-    
-    // Move the text field in a pretty animation!
-    func moveTextField(_ textField: UITextField, moveDistance: Int, up: Bool) {
-        let moveDuration = 0.3
-        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
-        
-        UIView.beginAnimations("animateTextField", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(moveDuration)
-        //self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
-        lastNameEntry.frame = lastNameEntry.frame.offsetBy(dx: 0, dy: movement)
-        nextArrow.frame = nextArrow.frame.offsetBy(dx: 0, dy: movement)
-        UIView.commitAnimations()
-    }
-
     
     func textFieldDidChange(_ textField: UITextField) {
         if firstNameEntry.text != "" && lastNameEntry.text != ""{
@@ -78,9 +58,11 @@ class NameEntry: UIViewController, UITextFieldDelegate {
     }
         else{
             nextArrow.isHidden = true
+            nextArrow.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         }
     }
-    @IBAction func nextArrowPressed(_ sender: Any) {
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
         firstName = firstNameEntry.text!
         nameDefaults.set(firstNameEntry.text!, forKey: "firstNameEntered")
         lastName = lastNameEntry.text!

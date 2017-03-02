@@ -15,12 +15,28 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var stepCountLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var nameChosen: UILabel!
+    @IBOutlet weak var ageChosen: UILabel!
+    @IBOutlet weak var birthdateChosen: UILabel!
+    @IBOutlet weak var genderChosen: UILabel!
+    @IBOutlet weak var heightChosen: UILabel!
+    @IBOutlet weak var weightChosen: UILabel!
+    @IBOutlet weak var measurementChosen: UILabel!
     var sharedDefaults: UserDefaults! = UserDefaults(suiteName: defaultsSuiteName)
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let fullName = firstName + " " + lastName
+        nameChosen.text = fullName
+        let now = NSDate()
+        let calendar : NSCalendar = NSCalendar.current as NSCalendar
+        let ageComponents = calendar.components(.year, from: birthDate, to: now as Date, options: [])
+        let age = ageComponents.year!
+        ageChosen.text = String(age)
+        genderChosen.text = gender
+        measurementChosen.text = measurmentChosen
     }
 
     override func didReceiveMemoryWarning() {

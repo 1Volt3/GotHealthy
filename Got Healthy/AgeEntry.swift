@@ -46,7 +46,12 @@ class AgeEntry: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func nextArrowPressed(_ sender: Any) {
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        birthDate = dateOfBirthPicker.date
+        ageDefaults.set(dateOfBirthPicker.date, forKey: "birthDateSelected")
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
         birthDate = dateOfBirthPicker.date
         ageDefaults.set(dateOfBirthPicker.date, forKey: "birthDateSelected")
     }

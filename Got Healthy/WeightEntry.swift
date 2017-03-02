@@ -9,6 +9,9 @@
 import UIKit
 
 var measurmentChosen = ""
+var firstHeightMeasurement = ""
+var secondHeightMeasurement = ""
+var weightMeasurement = ""
 
 class WeightEntry: UIViewController, UIPickerViewDelegate {
     
@@ -24,10 +27,14 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var metricWeightPicker: UIPickerView!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var measurementSwitchChoice: UISegmentedControl!
+    let heightWeightDefaults = UserDefaults.standard
     
     var firstHeightChosen = ""
+    var firstHeightChosenMetric = ""
     var secondHeightChosen = ""
+    var secondHeightChosenMetric = ""
     var weightChosen = ""
+    var weightChosenMetric = ""
 
     let feetFirst = ["1", "2", "3", "4", "5", "6", "7", "8"]
     
@@ -72,7 +79,9 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             secondHeightPicker.isHidden = true
             weightPicker.isHidden = true
         }
-        
+        if let measurementChoiceBefore = heightWeightDefaults.string(forKey: "measurementChoiceEntered") {
+            measurementSwitchChoice.selectedSegmentIndex = Int(measurementChoiceBefore)!
+        }
         print(measurementSwitchChoice.selectedSegmentIndex)
     }
     
@@ -91,7 +100,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 metricWeightPicker.isHidden = true
             case 1:
                 firstHeightLabel.text = "."
-                firstHeightLabel.font = firstHeightLabel.font.withSize(40)
+                firstHeightLabel.font = firstHeightLabel.font.withSize(50)
                 secondHeightLabel.text = "M"
                 weightLabel.text = "KG"
                 metricHeightPicker.isHidden = false
@@ -107,6 +116,12 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
     
     @IBAction func getHealthyPressed(_ sender: Any) {
         measurmentChosen = measurementSwitchChoice.titleForSegment(at: measurementSwitchChoice.selectedSegmentIndex)!
+        heightWeightDefaults.set(measurementSwitchChoice.selectedSegmentIndex, forKey: "measurementChoiceEntered")
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        measurmentChosen = measurementSwitchChoice.titleForSegment(at: measurementSwitchChoice.selectedSegmentIndex)!
+        heightWeightDefaults.set(measurementSwitchChoice.selectedSegmentIndex, forKey: "measurementChoiceEntered")
     }
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -114,19 +129,19 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             firstHeightChosen = feetFirst[row]
         }
         if pickerView == metricHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
-            firstHeightChosen = meterFirst[row]
+            firstHeightChosenMetric = meterFirst[row]
         }
         if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             secondHeightChosen = inches[row]
         }
         if pickerView == secondMetricPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
-            secondHeightChosen = meterExact[row]
+            secondHeightChosenMetric = meterExact[row]
         }
         if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             weightChosen = pounds[row]
         }
         if pickerView == metricWeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
-            weightChosen = kilograms[row]
+            weightChosenMetric = kilograms[row]
         }
     }
     
@@ -157,7 +172,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
     {
         if pickerView == firstHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0 {
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor.white
+        pickerLabel.textColor = UIColor(red: 0.1529, green: 0.6823, blue: 0.3764, alpha: 1.0)
         pickerLabel.text = feetFirst[row]
         pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 36)
         pickerLabel.textAlignment = NSTextAlignment.center
@@ -166,7 +181,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         }
         if pickerView == metricHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             let pickerLabel = UILabel()
-            pickerLabel.textColor = UIColor.white
+            pickerLabel.textColor = UIColor(red: 0.1529, green: 0.6823, blue: 0.3764, alpha: 1.0)
             pickerLabel.text = meterFirst[row]
             pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 36)
             pickerLabel.textAlignment = NSTextAlignment.center
@@ -175,7 +190,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         }
         if pickerView == secondHeightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             let pickerLabel = UILabel()
-            pickerLabel.textColor = UIColor.white
+            pickerLabel.textColor = UIColor(red: 0.1529, green: 0.6823, blue: 0.3764, alpha: 1.0)
             pickerLabel.text = inches[row]
             pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 36)
             pickerLabel.textAlignment = NSTextAlignment.center
@@ -184,7 +199,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         }
         if pickerView == secondMetricPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             let pickerLabel = UILabel()
-            pickerLabel.textColor = UIColor.white
+            pickerLabel.textColor = UIColor(red: 0.1529, green: 0.6823, blue: 0.3764, alpha: 1.0)
             pickerLabel.text = meterExact[row]
             pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 36)
             pickerLabel.textAlignment = NSTextAlignment.center
@@ -193,7 +208,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         }
         if pickerView == weightPicker && measurementSwitchChoice.selectedSegmentIndex == 0{
             let pickerLabel = UILabel()
-            pickerLabel.textColor = UIColor.white
+            pickerLabel.textColor = UIColor(red: 0.1529, green: 0.6823, blue: 0.3764, alpha: 1.0)
             pickerLabel.text = pounds[row]
             pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 36)
             pickerLabel.textAlignment = NSTextAlignment.center
@@ -202,7 +217,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         }
         if pickerView == metricWeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             let pickerLabel = UILabel()
-            pickerLabel.textColor = UIColor.white
+            pickerLabel.textColor = UIColor(red: 0.1529, green: 0.6823, blue: 0.3764, alpha: 1.0)
             pickerLabel.text = kilograms[row]
             pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 36)
             pickerLabel.textAlignment = NSTextAlignment.center
@@ -211,7 +226,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         }
 
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor.white
+        pickerLabel.textColor = UIColor(red: 0.1529, green: 0.6823, blue: 0.3764, alpha: 1.0)
         pickerLabel.text = feetFirst[row]
         pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 36)
         pickerLabel.textAlignment = NSTextAlignment.center

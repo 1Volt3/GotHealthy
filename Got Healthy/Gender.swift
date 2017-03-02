@@ -56,6 +56,16 @@ class Gender: UIViewController {
             gender = "Female"
             genderDefaults.set(gender, forKey: "genderFemaleSelected")
         }
-        
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        if maleButton.backgroundImage(for: UIControlState.normal) == UIImage(named: "ButtonBoxGreen.png"){
+            gender = "Male"
+            genderDefaults.set(gender, forKey: "genderMaleSelected")
+        }
+        if femaleButton.backgroundImage(for: UIControlState.normal) == UIImage(named: "ButtonBoxGreen.png"){
+            gender = "Female"
+            genderDefaults.set(gender, forKey: "genderFemaleSelected")
+        }
     }
 }

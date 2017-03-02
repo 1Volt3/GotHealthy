@@ -313,7 +313,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQx-3F-fBv">
                                 <rect key="frame" x="148" y="20" width="80" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="hLO-We-IDD"/>
+                                    <constraint firstAttribute="width" constant="80" id="zzt-Xc-I37"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -363,13 +363,13 @@
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                        <color key="value" red="0.0" green="0.85490196080000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                        <color key="value" red="0.0" green="0.85490196080000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
-                                        <color key="value" red="0.85490196080000003" green="0.16877520409999999" blue="0.84019507459999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="0.040212946620000002" blue="0.072989486000000006" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
                                         <color key="value" red="0.0049824473330000001" green="0.55344600580000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -384,14 +384,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pzT-fK-8PX" firstAttribute="leading" secondItem="4Ge-m9-nsz" secondAttribute="leadingMargin" id="3rb-eg-tB7"/>
-                            <constraint firstItem="pzT-fK-8PX" firstAttribute="leading" secondItem="qNX-G7-Ehl" secondAttribute="leading" id="6sw-2t-hrh"/>
-                            <constraint firstItem="qNX-G7-Ehl" firstAttribute="centerY" secondItem="4Ge-m9-nsz" secondAttribute="centerY" id="Zj0-LH-8TC"/>
-                            <constraint firstAttribute="bottom" secondItem="Cx8-wh-e0x" secondAttribute="bottom" constant="20" symbolic="YES" id="du8-Av-kOu"/>
-                            <constraint firstItem="pzT-fK-8PX" firstAttribute="top" secondItem="SQx-3F-fBv" secondAttribute="bottom" constant="41" id="h3c-op-MsF"/>
-                            <constraint firstItem="SQx-3F-fBv" firstAttribute="centerX" secondItem="pzT-fK-8PX" secondAttribute="centerX" id="rfo-qk-owW"/>
-                            <constraint firstItem="SQx-3F-fBv" firstAttribute="top" secondItem="kmg-Zd-zaR" secondAttribute="bottom" id="wVZ-Uu-uuN"/>
-                            <constraint firstItem="qNX-G7-Ehl" firstAttribute="trailing" secondItem="Cx8-wh-e0x" secondAttribute="trailing" id="ytr-JX-hKR"/>
+                            <constraint firstAttribute="bottom" secondItem="Cx8-wh-e0x" secondAttribute="bottom" constant="20" symbolic="YES" id="14K-cv-1Ru"/>
+                            <constraint firstItem="SQx-3F-fBv" firstAttribute="centerX" secondItem="pzT-fK-8PX" secondAttribute="centerX" id="28Y-Lg-aGe"/>
+                            <constraint firstItem="SQx-3F-fBv" firstAttribute="top" secondItem="kmg-Zd-zaR" secondAttribute="bottom" id="E0Q-vD-8k0"/>
+                            <constraint firstItem="qNX-G7-Ehl" firstAttribute="trailing" secondItem="Cx8-wh-e0x" secondAttribute="trailing" id="I82-5i-OJv"/>
+                            <constraint firstItem="pzT-fK-8PX" firstAttribute="top" secondItem="SQx-3F-fBv" secondAttribute="bottom" constant="41" id="TfY-KZ-uvN"/>
+                            <constraint firstItem="pzT-fK-8PX" firstAttribute="leading" secondItem="4Ge-m9-nsz" secondAttribute="leadingMargin" id="iYT-Jm-1hY"/>
+                            <constraint firstItem="qNX-G7-Ehl" firstAttribute="centerY" secondItem="4Ge-m9-nsz" secondAttribute="centerY" id="pzi-BK-Ftm"/>
+                            <constraint firstItem="pzT-fK-8PX" firstAttribute="leading" secondItem="qNX-G7-Ehl" secondAttribute="leading" id="zb4-7i-0HD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -507,7 +507,7 @@
                                     <segue destination="A49-ch-zq0" kind="show" id="cbV-O0-BaX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djz-ov-Aw9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djz-ov-Aw9">
                                 <rect key="frame" x="336" y="135" width="28" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -545,13 +545,13 @@
                                     <action selector="measurementChoice:" destination="vAW-yS-NF8" eventType="valueChanged" id="qRF-r3-DNJ"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LBS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH8-Vp-iIx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LBS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH8-Vp-iIx">
                                 <rect key="frame" x="287" y="351" width="47" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kON-Df-WRU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kON-Df-WRU">
                                 <rect key="frame" x="154" y="146" width="43" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="43" id="ti6-wg-pcK"/>
@@ -769,7 +769,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14f-ig-INC" id="icd-Jb-QaH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -941,9 +941,9 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dd2-SK-nCO"/>
-        <segue reference="r8m-6D-28V"/>
-        <segue reference="uLc-4u-kbG"/>
         <segue reference="muF-9j-05D"/>
+        <segue reference="cbV-O0-BaX"/>
+        <segue reference="r8m-6D-28V"/>
+        <segue reference="Dd2-SK-nCO"/>
     </inferredMetricsTieBreakers>
 </document>

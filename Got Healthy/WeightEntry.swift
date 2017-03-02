@@ -113,15 +113,35 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 break
             }
     }
-    
+        
     @IBAction func getHealthyPressed(_ sender: Any) {
         measurmentChosen = measurementSwitchChoice.titleForSegment(at: measurementSwitchChoice.selectedSegmentIndex)!
         heightWeightDefaults.set(measurementSwitchChoice.selectedSegmentIndex, forKey: "measurementChoiceEntered")
+        if measurmentChosen == "Imperial"{
+        firstHeightMeasurement = firstHeightChosen
+        secondHeightMeasurement = secondHeightChosen
+        weightMeasurement = weightChosen
+        }
+        if measurmentChosen == "Metric"{
+            firstHeightMeasurement = firstHeightChosenMetric
+            secondHeightMeasurement = secondHeightChosenMetric
+            weightMeasurement = weightChosenMetric
+        }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
         measurmentChosen = measurementSwitchChoice.titleForSegment(at: measurementSwitchChoice.selectedSegmentIndex)!
         heightWeightDefaults.set(measurementSwitchChoice.selectedSegmentIndex, forKey: "measurementChoiceEntered")
+        if measurmentChosen == "Imperial"{
+            firstHeightMeasurement = firstHeightChosen
+            secondHeightMeasurement = secondHeightChosen
+            weightMeasurement = weightChosen
+        }
+        if measurmentChosen == "Metric"{
+            firstHeightMeasurement = firstHeightChosenMetric
+            secondHeightMeasurement = secondHeightChosenMetric
+            weightMeasurement = weightChosenMetric
+        }
     }
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

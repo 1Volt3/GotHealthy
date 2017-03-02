@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var measurementChosen: UILabel!
     var sharedDefaults: UserDefaults! = UserDefaults(suiteName: defaultsSuiteName)
     let defaults = UserDefaults.standard
+    var heightValueChosen = ""
+    var weightValueChosen = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,26 @@ class ViewController: UIViewController {
         let ageComponents = calendar.components(.year, from: birthDate, to: now as Date, options: [])
         let age = ageComponents.year!
         ageChosen.text = String(age)
+        let dateCalendar = Calendar.current
+        let year = dateCalendar.component(.year, from: birthDate)
+        let month = dateCalendar.component(.month, from: birthDate)
+        let day = dateCalendar.component(.day, from: birthDate)
+        if measurmentChosen == "Metric"{
+            let dateMetricBorn = String(day) + "/" + String(month) + "/" + String(year)
+            birthdateChosen.text = dateMetricBorn
+            heightValueChosen = String(firstHeightMeasurement) + "." + String(secondHeightMeasurement)
+            weightValueChosen = String(weightMeasurement) + " kgs"
+        }
+        if measurmentChosen == "Imperial"{
+            let dateImperialBorn = String(month) + "/" + String(day) + "/" + String(year)
+            birthdateChosen.text = dateImperialBorn
+            heightValueChosen = String(firstHeightMeasurement) + "\'" + String(secondHeightMeasurement) + "\""
+            weightValueChosen = String(weightMeasurement) + " lbs"
+            
+        }
         genderChosen.text = gender
+        heightChosen.text = heightValueChosen
+        weightChosen.text = weightValueChosen
         measurementChosen.text = measurmentChosen
     }
 

@@ -22,15 +22,19 @@ class Gender: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         nextButton.isHidden = true
-        if genderDefaults.object(forKey: "genderMaleSelected") != nil{
+        if genderDefaults.object(forKey: "genderSelected") != nil{
+            if genderDefaults.string(forKey: "genderSelected") != nil {
+                if genderDefaults.string(forKey: "genderSelected") == "Male"{
             nextButton.isHidden = false
             maleButton.setBackgroundImage(UIImage(named: "ButtonBoxGreen.png"), for: UIControlState.normal)
             femaleButton.setBackgroundImage(UIImage(named: "GrayBoxButton.png"), for: UIControlState.normal)
+                }
+                if genderDefaults.string(forKey: "genderSelected") == "Female"{
+                    nextButton.isHidden = false
+                    femaleButton.setBackgroundImage(UIImage(named: "ButtonBoxGreen.png"), for: UIControlState.normal)
+                    maleButton.setBackgroundImage(UIImage(named: "GrayBoxButton.png"), for: UIControlState.normal)
+            }
         }
-        if genderDefaults.object(forKey: "genderFemaleSelected") != nil{
-            nextButton.isHidden = false
-            femaleButton.setBackgroundImage(UIImage(named: "ButtonBoxGreen.png"), for: UIControlState.normal)
-            maleButton.setBackgroundImage(UIImage(named: "GrayBoxButton.png"), for: UIControlState.normal)
         }
     }
     
@@ -50,22 +54,22 @@ class Gender: UIViewController {
     @IBAction func nextButtonPressed(_ sender: Any) {
         if maleButton.backgroundImage(for: UIControlState.normal) == UIImage(named: "ButtonBoxGreen.png"){
             gender = "Male"
-            genderDefaults.set(gender, forKey: "genderMaleSelected")
+            genderDefaults.set(gender, forKey: "genderSelected")
         }
         if femaleButton.backgroundImage(for: UIControlState.normal) == UIImage(named: "ButtonBoxGreen.png"){
             gender = "Female"
-            genderDefaults.set(gender, forKey: "genderFemaleSelected")
+            genderDefaults.set(gender, forKey: "genderSelected")
         }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
         if maleButton.backgroundImage(for: UIControlState.normal) == UIImage(named: "ButtonBoxGreen.png"){
             gender = "Male"
-            genderDefaults.set(gender, forKey: "genderMaleSelected")
+            genderDefaults.set(gender, forKey: "genderSelected")
         }
         if femaleButton.backgroundImage(for: UIControlState.normal) == UIImage(named: "ButtonBoxGreen.png"){
             gender = "Female"
-            genderDefaults.set(gender, forKey: "genderFemaleSelected")
+            genderDefaults.set(gender, forKey: "genderSelected")
         }
     }
 }

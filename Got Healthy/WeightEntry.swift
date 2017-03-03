@@ -26,6 +26,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var weightPicker: UIPickerView!
     @IBOutlet weak var metricWeightPicker: UIPickerView!
     @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var gotHealthyButton: UIButton!
     @IBOutlet weak var measurementSwitchChoice: UISegmentedControl!
     let heightWeightDefaults = UserDefaults.standard
     
@@ -63,6 +64,8 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         metricHeightPicker.delegate = self
         secondMetricPicker.delegate = self
         metricWeightPicker.delegate = self
+        gotHealthyButton.isHidden = true
+        //firstHeightPicker.
         if measurementSwitchChoice.selectedSegmentIndex == 0{
             firstHeightPicker.isHidden = false
             secondHeightPicker.isHidden = false
@@ -100,7 +103,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 metricWeightPicker.isHidden = true
             case 1:
                 firstHeightLabel.text = "."
-                firstHeightLabel.font = firstHeightLabel.font.withSize(50)
+                firstHeightLabel.font = firstHeightLabel.font.withSize(60)
                 secondHeightLabel.text = "M"
                 weightLabel.text = "KG"
                 metricHeightPicker.isHidden = false
@@ -113,7 +116,11 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 break
             }
     }
-        
+    
+    func pickerDidChange(_ Picker: UIPickerView) {
+            gotHealthyButton.isHidden = false
+    }
+    
     @IBAction func getHealthyPressed(_ sender: Any) {
         measurmentChosen = measurementSwitchChoice.titleForSegment(at: measurementSwitchChoice.selectedSegmentIndex)!
         heightWeightDefaults.set(measurementSwitchChoice.selectedSegmentIndex, forKey: "measurementChoiceEntered")
@@ -274,6 +281,6 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         if pickerView == metricWeightPicker && measurementSwitchChoice.selectedSegmentIndex == 1{
             return kilograms.count
         }
-        return 1
+        return 4
     }
 }

@@ -67,25 +67,84 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         gotHealthyButton.isHidden = true
         //firstHeightPicker.
         if measurementSwitchChoice.selectedSegmentIndex == 0{
+            firstHeightLabel.text = "FT"
+            firstHeightLabel.font = firstHeightLabel.font.withSize(26)
+            secondHeightLabel.text = "IN"
+            weightLabel.text = "LBS"
             firstHeightPicker.isHidden = false
+            self.firstHeightPicker.reloadAllComponents()
             secondHeightPicker.isHidden = false
+            self.secondHeightPicker.reloadAllComponents()
             weightPicker.isHidden = false
+            self.weightPicker.reloadAllComponents()
             metricHeightPicker.isHidden = true
+            self.metricHeightPicker.reloadAllComponents()
             secondMetricPicker.isHidden = true
+            self.secondMetricPicker.reloadAllComponents()
             metricWeightPicker.isHidden = true
+            self.secondMetricPicker.reloadAllComponents()
         }
         if measurementSwitchChoice.selectedSegmentIndex == 1{
+            firstHeightLabel.text = "."
+            firstHeightLabel.font = firstHeightLabel.font.withSize(60)
+            secondHeightLabel.text = "M"
+            weightLabel.text = "KG"
             metricHeightPicker.isHidden = false
+            self.metricHeightPicker.reloadAllComponents()
             secondMetricPicker.isHidden = false
+            self.secondMetricPicker.reloadAllComponents()
             metricWeightPicker.isHidden = false
+            self.secondMetricPicker.reloadAllComponents()
             firstHeightPicker.isHidden = true
+            self.firstHeightPicker.reloadAllComponents()
             secondHeightPicker.isHidden = true
+            self.secondHeightPicker.reloadAllComponents()
             weightPicker.isHidden = true
+            self.weightPicker.reloadAllComponents()
         }
         if let measurementChoiceBefore = heightWeightDefaults.string(forKey: "measurementChoiceEntered") {
             measurementSwitchChoice.selectedSegmentIndex = Int(measurementChoiceBefore)!
         }
         print(measurementSwitchChoice.selectedSegmentIndex)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if measurementSwitchChoice.selectedSegmentIndex == 0{
+            firstHeightLabel.text = "FT"
+            firstHeightLabel.font = firstHeightLabel.font.withSize(26)
+            secondHeightLabel.text = "IN"
+            weightLabel.text = "LBS"
+            firstHeightPicker.isHidden = false
+            self.firstHeightPicker.reloadAllComponents()
+            secondHeightPicker.isHidden = false
+            self.secondHeightPicker.reloadAllComponents()
+            weightPicker.isHidden = false
+            self.weightPicker.reloadAllComponents()
+            metricHeightPicker.isHidden = true
+            self.metricHeightPicker.reloadAllComponents()
+            secondMetricPicker.isHidden = true
+            self.secondMetricPicker.reloadAllComponents()
+            metricWeightPicker.isHidden = true
+            self.secondMetricPicker.reloadAllComponents()
+        }
+        if measurementSwitchChoice.selectedSegmentIndex == 1{
+            firstHeightLabel.text = "."
+            firstHeightLabel.font = firstHeightLabel.font.withSize(60)
+            secondHeightLabel.text = "M"
+            weightLabel.text = "KG"
+            metricHeightPicker.isHidden = false
+            self.metricHeightPicker.reloadAllComponents()
+            secondMetricPicker.isHidden = false
+            self.secondMetricPicker.reloadAllComponents()
+            metricWeightPicker.isHidden = false
+            self.secondMetricPicker.reloadAllComponents()
+            firstHeightPicker.isHidden = true
+            self.firstHeightPicker.reloadAllComponents()
+            secondHeightPicker.isHidden = true
+            self.secondHeightPicker.reloadAllComponents()
+            weightPicker.isHidden = true
+            self.weightPicker.reloadAllComponents()
+        }
     }
     
         @IBAction func measurementChoice(_ sender: Any) {
@@ -96,19 +155,26 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 secondHeightLabel.text = "IN"
                 weightLabel.text = "LBS"
                 firstHeightPicker.isHidden = false
+                self.firstHeightPicker.reloadAllComponents()
                 secondHeightPicker.isHidden = false
+                self.secondHeightPicker.reloadAllComponents()
                 weightPicker.isHidden = false
+                self.weightPicker.reloadAllComponents()
                 metricHeightPicker.isHidden = true
                 secondMetricPicker.isHidden = true
                 metricWeightPicker.isHidden = true
+
             case 1:
                 firstHeightLabel.text = "."
                 firstHeightLabel.font = firstHeightLabel.font.withSize(60)
                 secondHeightLabel.text = "M"
                 weightLabel.text = "KG"
                 metricHeightPicker.isHidden = false
+                self.metricHeightPicker.reloadAllComponents()
                 secondMetricPicker.isHidden = false
+                self.secondMetricPicker.reloadAllComponents()
                 metricWeightPicker.isHidden = false
+                self.secondMetricPicker.reloadAllComponents()
                 firstHeightPicker.isHidden = true
                 secondHeightPicker.isHidden = true
                 weightPicker.isHidden = true

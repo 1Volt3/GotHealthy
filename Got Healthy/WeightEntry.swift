@@ -64,7 +64,6 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
         metricHeightPicker.delegate = self
         secondMetricPicker.delegate = self
         metricWeightPicker.delegate = self
-        gotHealthyButton.isHidden = true
         //firstHeightPicker.
         if measurementSwitchChoice.selectedSegmentIndex == 0{
             firstHeightLabel.text = "FT"
@@ -183,21 +182,41 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             }
     }
     
-    func pickerDidChange(_ Picker: UIPickerView) {
-            gotHealthyButton.isHidden = false
-    }
-    
     @IBAction func getHealthyPressed(_ sender: Any) {
         measurmentChosen = measurementSwitchChoice.titleForSegment(at: measurementSwitchChoice.selectedSegmentIndex)!
         heightWeightDefaults.set(measurementSwitchChoice.selectedSegmentIndex, forKey: "measurementChoiceEntered")
         if measurmentChosen == "Imperial"{
+        if firstHeightChosen == ""{
+            self.firstHeightPicker.selectRow(0, inComponent: 0, animated: true)
+            self.pickerView(firstHeightPicker, didSelectRow: 0, inComponent: 0)
+            }
         firstHeightMeasurement = firstHeightChosen
+        if secondHeightChosen == ""{
+            self.secondHeightPicker.selectRow(0, inComponent: 0, animated: true)
+            self.pickerView(secondHeightPicker, didSelectRow: 0, inComponent: 0)
+            }
         secondHeightMeasurement = secondHeightChosen
+        if weightChosen == ""{
+            self.weightPicker.selectRow(0, inComponent: 0, animated: true)
+            self.pickerView(weightPicker, didSelectRow: 0, inComponent: 0)
+            }
         weightMeasurement = weightChosen
         }
         if measurmentChosen == "Metric"{
+            if firstHeightChosenMetric == ""{
+                self.metricHeightPicker.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(metricHeightPicker, didSelectRow: 0, inComponent: 0)
+            }
             firstHeightMeasurement = firstHeightChosenMetric
+            if secondHeightChosenMetric == ""{
+                self.secondMetricPicker.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(secondMetricPicker, didSelectRow: 0, inComponent: 0)
+            }
             secondHeightMeasurement = secondHeightChosenMetric
+            if weightChosenMetric == ""{
+                self.metricWeightPicker.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(metricWeightPicker, didSelectRow: 0, inComponent: 0)
+            }
             weightMeasurement = weightChosenMetric
         }
     }

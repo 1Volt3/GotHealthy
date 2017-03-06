@@ -49,5 +49,3 @@ class Keyboard: UIView {
         self.delegate?.backspace()
     }
 }
-
-

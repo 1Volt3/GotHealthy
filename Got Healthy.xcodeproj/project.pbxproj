@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5200C2251E3F91510077F623 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200C2241E3F91510077F623 /* AuthManager.swift */; };
 		52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041C001E4541A7008CD4DF /* Keyboard.swift */; };
+		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
 		525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B91E422E2D000A8F09 /* WeightEntry.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		5200C2241E3F91510077F623 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		52041C001E4541A7008CD4DF /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
 		525EB2B91E422E2D000A8F09 /* WeightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightEntry.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				525EB2B71E422E21000A8F09 /* AgeEntry.swift */,
 				52D79C821E4B812A007B4E58 /* Gender.swift */,
 				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
+				525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */,
 				52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */,
 				52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */,
 				52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */,
@@ -328,6 +331,7 @@
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52F8A1951E68714600EF567A /* FirstViewController.swift in Sources */,
+				525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,
 				52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */,
 				52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */,

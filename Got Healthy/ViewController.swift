@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var genderChosen: UILabel!
     @IBOutlet weak var heightChosen: UILabel!
     @IBOutlet weak var weightChosen: UILabel!
+    @IBOutlet weak var profilePhotoChosen: UIImageView!
     @IBOutlet weak var measurementChosen: UILabel!
     var sharedDefaults: UserDefaults! = UserDefaults(suiteName: defaultsSuiteName)
     let defaults = UserDefaults.standard
@@ -58,6 +59,10 @@ class ViewController: UIViewController {
         heightChosen.text = heightValueChosen
         weightChosen.text = weightValueChosen
         measurementChosen.text = measurmentChosen
+        profilePhotoChosen.layer.cornerRadius = profilePhotoChosen.frame.size.width / 2
+        profilePhotoChosen.layer.borderWidth = 3
+        profilePhotoChosen.layer.borderColor = UIColor.black.cgColor
+        profilePhotoChosen.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

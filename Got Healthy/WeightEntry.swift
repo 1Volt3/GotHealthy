@@ -52,6 +52,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIApplication.shared.statusBarStyle = .lightContent
         firstHeightPicker.setValue(UIColor.white, forKeyPath: "textColor")
         secondHeightPicker.setValue(UIColor.white, forKeyPath: "textColor")
         weightPicker.setValue(UIColor.white, forKeyPath: "textColor")
@@ -105,6 +106,11 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             measurementSwitchChoice.selectedSegmentIndex = Int(measurementChoiceBefore)!
         }
         print(measurementSwitchChoice.selectedSegmentIndex)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     override func viewWillAppear(_ animated: Bool) {

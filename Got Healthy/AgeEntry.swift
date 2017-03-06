@@ -19,6 +19,7 @@ class AgeEntry: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIApplication.shared.statusBarStyle = .lightContent
         dateOfBirthPicker.setValue(UIColor.white, forKeyPath: "textColor")
         self.dateOfBirthPicker.maximumDate = Date()
         dateOfBirthPicker.addTarget(self, action: #selector(pickerDidChange(_:)), for: .valueChanged)
@@ -26,6 +27,11 @@ class AgeEntry: UIViewController, UITextFieldDelegate {
             dateOfBirthPicker.date = birthDateStoredBefore as! Date
         }
 
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     override func viewWillAppear(_ animated: Bool) {

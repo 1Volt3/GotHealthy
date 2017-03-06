@@ -21,6 +21,7 @@ class NameEntry: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIApplication.shared.statusBarStyle = .lightContent
         firstNameEntry.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         lastNameEntry.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         firstNameEntry.keyboardType = UIKeyboardType.asciiCapable
@@ -38,12 +39,29 @@ class NameEntry: UIViewController, UITextFieldDelegate {
         }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+    }
+    
     // Start Editing The Text Field
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        if firstNameEntry.text != "" && lastNameEntry.text != ""{
+            nextArrow.isHidden = false
+        }
+        else{
+            nextArrow.isHidden = true
+        }
     }
     
     // Finish Editing The Text Field
     func textFieldDidEndEditing(_ textField: UITextField) {
+        if firstNameEntry.text != "" && lastNameEntry.text != ""{
+            nextArrow.isHidden = false
+        }
+        else{
+            nextArrow.isHidden = true
+        }
     }
     
     // Hide the keyboard when the return key pressed
@@ -58,7 +76,6 @@ class NameEntry: UIViewController, UITextFieldDelegate {
     }
         else{
             nextArrow.isHidden = true
-            nextArrow.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         }
     }
     

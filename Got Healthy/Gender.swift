@@ -21,6 +21,7 @@ class Gender: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIApplication.shared.statusBarStyle = .lightContent
         nextButton.isHidden = true
         if genderDefaults.object(forKey: "genderSelected") != nil{
             if genderDefaults.string(forKey: "genderSelected") != nil {
@@ -36,6 +37,11 @@ class Gender: UIViewController {
             }
         }
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     @IBAction func maleButtonPressed(_ sender: Any) {

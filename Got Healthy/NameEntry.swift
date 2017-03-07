@@ -38,11 +38,6 @@ class NameEntry: UIViewController, UITextFieldDelegate {
             nextArrow.isHidden = true
         }
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
-    }
     
     // Start Editing The Text Field
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -80,6 +75,39 @@ class NameEntry: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        let characterset = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ-")
+        if firstNameEntry.text?.rangeOfCharacter(from: characterset.inverted) != nil {
+            let firstNameAlert = UIAlertController(
+                title: "First Name",
+                message: "Sorry, only letters for your first name!",
+                preferredStyle: .alert)
+            let okFirstName = UIAlertAction(
+                title: "OK",
+                style:.default,
+                handler: nil)
+            firstNameAlert.addAction(okFirstName)
+            present(
+                firstNameAlert,
+                animated: true,
+                completion: nil)
+        }
+        
+        if lastNameEntry.text?.rangeOfCharacter(from: characterset.inverted) != nil {
+            let lastNameAlert = UIAlertController(
+                title: "Last Name",
+                message: "Sorry, only letters for your last name!",
+                preferredStyle: .alert)
+            let okLastName = UIAlertAction(
+                title: "OK",
+                style:.default,
+                handler: nil)
+            lastNameAlert.addAction(okLastName)
+            present(
+                lastNameAlert,
+                animated: true,
+                completion: nil)
+        }
+        
         firstName = firstNameEntry.text!
         nameDefaults.set(firstNameEntry.text!, forKey: "firstNameEntered")
         lastName = lastNameEntry.text!

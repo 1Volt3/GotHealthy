@@ -26,7 +26,6 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var weightPicker: UIPickerView!
     @IBOutlet weak var metricWeightPicker: UIPickerView!
     @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var gotHealthyButton: UIButton!
     @IBOutlet weak var measurementSwitchChoice: UISegmentedControl!
     let heightWeightDefaults = UserDefaults.standard
     
@@ -36,6 +35,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
     var secondHeightChosenMetric = ""
     var weightChosen = ""
     var weightChosenMetric = ""
+    var middleOfPickerWeight = 0
 
     let feetFirst = ["1", "2", "3", "4", "5", "6", "7", "8"]
     
@@ -76,6 +76,9 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             secondHeightPicker.isHidden = false
             self.secondHeightPicker.reloadAllComponents()
             weightPicker.isHidden = false
+            middleOfPickerWeight = pounds.count / 2
+            self.weightPicker.selectRow(middleOfPickerWeight, inComponent: 0, animated: true)
+            self.pickerView(weightPicker, didSelectRow: middleOfPickerWeight, inComponent: 0)
             self.weightPicker.reloadAllComponents()
             metricHeightPicker.isHidden = true
             self.metricHeightPicker.reloadAllComponents()
@@ -106,11 +109,6 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             measurementSwitchChoice.selectedSegmentIndex = Int(measurementChoiceBefore)!
         }
         print(measurementSwitchChoice.selectedSegmentIndex)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -188,25 +186,25 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             }
     }
     
-    @IBAction func getHealthyPressed(_ sender: Any) {
+    @IBAction func nextButtonPressed(_ sender: Any) {
         measurmentChosen = measurementSwitchChoice.titleForSegment(at: measurementSwitchChoice.selectedSegmentIndex)!
         heightWeightDefaults.set(measurementSwitchChoice.selectedSegmentIndex, forKey: "measurementChoiceEntered")
         if measurmentChosen == "Imperial"{
-        if firstHeightChosen == ""{
-            self.firstHeightPicker.selectRow(0, inComponent: 0, animated: true)
-            self.pickerView(firstHeightPicker, didSelectRow: 0, inComponent: 0)
+            if firstHeightChosen == ""{
+                self.firstHeightPicker.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(firstHeightPicker, didSelectRow: 0, inComponent: 0)
             }
-        firstHeightMeasurement = firstHeightChosen
-        if secondHeightChosen == ""{
-            self.secondHeightPicker.selectRow(0, inComponent: 0, animated: true)
-            self.pickerView(secondHeightPicker, didSelectRow: 0, inComponent: 0)
+            firstHeightMeasurement = firstHeightChosen
+            if secondHeightChosen == ""{
+                self.secondHeightPicker.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(secondHeightPicker, didSelectRow: 0, inComponent: 0)
             }
-        secondHeightMeasurement = secondHeightChosen
-        if weightChosen == ""{
-            self.weightPicker.selectRow(0, inComponent: 0, animated: true)
-            self.pickerView(weightPicker, didSelectRow: 0, inComponent: 0)
+            secondHeightMeasurement = secondHeightChosen
+            if weightChosen == ""{
+                self.weightPicker.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(weightPicker, didSelectRow: 0, inComponent: 0)
             }
-        weightMeasurement = weightChosen
+            weightMeasurement = weightChosen
         }
         if measurmentChosen == "Metric"{
             if firstHeightChosenMetric == ""{

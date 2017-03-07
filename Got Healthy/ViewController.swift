@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIApplication.shared.statusBarStyle = .default
         let fullName = firstName + " " + lastName
         nameChosen.text = fullName
         let now = NSDate()

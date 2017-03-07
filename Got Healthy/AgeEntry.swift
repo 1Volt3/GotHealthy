@@ -28,12 +28,7 @@ class AgeEntry: UIViewController, UITextFieldDelegate {
         }
 
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
-    }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         if Date().timeIntervalSince(dateOfBirthPicker.date) > 126144000 {
             nextArrow.isHidden = false

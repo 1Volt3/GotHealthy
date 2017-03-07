@@ -39,11 +39,6 @@ class Gender: UIViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
-    }
-    
     @IBAction func maleButtonPressed(_ sender: Any) {
         maleButton.setBackgroundImage(UIImage(named: "ButtonBoxGreen.png"), for: UIControlState.normal)
         femaleButton.setBackgroundImage(UIImage(named: "GrayBoxButton.png"), for: UIControlState.normal)

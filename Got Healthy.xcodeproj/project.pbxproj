@@ -13,6 +13,7 @@
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
 		525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B91E422E2D000A8F09 /* WeightEntry.swift */; };
+		5272E99A1E6F087500F26A23 /* BeginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272E9991E6F087500F26A23 /* BeginScreen.swift */; };
 		52791E851E3ABECD00E1B7E5 /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */; };
 		52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */; };
 		52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E871E3AC10E00E1B7E5 /* Header.swift */; };
@@ -58,6 +59,7 @@
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
 		525EB2B91E422E2D000A8F09 /* WeightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightEntry.swift; sourceTree = "<group>"; };
+		5272E9991E6F087500F26A23 /* BeginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeginScreen.swift; sourceTree = "<group>"; };
 		52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayInterface.storyboard; sourceTree = "<group>"; };
 		52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		52791E871E3AC10E00E1B7E5 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				52CABFFE1E38F29700E0302F /* AppDelegate.swift */,
 				52CAC0001E38F29700E0302F /* ViewController.swift */,
 				52CAC0021E38F29700E0302F /* Main.storyboard */,
+				5272E9991E6F087500F26A23 /* BeginScreen.swift */,
 				52041C001E4541A7008CD4DF /* Keyboard.swift */,
 				525EB2B51E422E0E000A8F09 /* NameEntry.swift */,
 				525EB2B71E422E21000A8F09 /* AgeEntry.swift */,
@@ -327,6 +330,7 @@
 				52F48BB51E4E3F9300E8ACCA /* UIPosition.swift in Sources */,
 				52C9460B1E5F4D3B00FB6515 /* StringUtils.swift in Sources */,
 				52D79C831E4B812A007B4E58 /* Gender.swift in Sources */,
+				5272E99A1E6F087500F26A23 /* BeginScreen.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,

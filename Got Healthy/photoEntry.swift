@@ -25,11 +25,6 @@ UINavigationControllerDelegate  {
         profilePhotoEntry.clipsToBounds = true
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
-    }
-    
     @IBAction func photoFromLibraryPressed(_ sender: Any) {
         picker.allowsEditing = true
         picker.sourceType = .photoLibrary

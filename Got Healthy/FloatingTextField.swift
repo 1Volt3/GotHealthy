@@ -565,7 +565,7 @@ open class FloatingTextField: UITextField {
      - returns: the content size to be used for auto layout
      */
     override open var intrinsicContentSize : CGSize {
-        return CGSize(width: self.bounds.size.width, height: self.titleHeight() + self.textHeight())
+        return CGSize(width: self.bounds.size.width, height: self.titleHeight() + self.textHeight() + self.textHeight()/2)
     }
 
     // MARK: - Helpers

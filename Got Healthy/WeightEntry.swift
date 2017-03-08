@@ -15,8 +15,6 @@ var weightMeasurement = ""
 
 class WeightEntry: UIViewController, UIPickerViewDelegate {
     
-    let weightDefaults = UserDefaults.standard
-    
     @IBOutlet weak var firstHeightPicker: UIPickerView!
     @IBOutlet weak var metricHeightPicker: UIPickerView!
     @IBOutlet weak var firstHeightLabel: UILabel!
@@ -35,7 +33,12 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
     var secondHeightChosenMetric = ""
     var weightChosen = ""
     var weightChosenMetric = ""
+    var middleOfPickerHeight = 0
+    var middleOfPickerSecondHeight = 0
     var middleOfPickerWeight = 0
+    var middleOfPickerHeightMetric = 0
+    var middleOfPickerSecondHeightMetric = 0
+    var middleOfPickerWeightMetric = 0
 
     let feetFirst = ["1", "2", "3", "4", "5", "6", "7", "8"]
     
@@ -73,19 +76,34 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             weightLabel.text = "LBS"
             firstHeightPicker.isHidden = false
             self.firstHeightPicker.reloadAllComponents()
+            middleOfPickerHeight = feetFirst.count / 2
+            self.firstHeightPicker.selectRow(middleOfPickerHeight, inComponent: 0, animated: true)
+            self.pickerView(firstHeightPicker, didSelectRow: middleOfPickerHeight, inComponent: 0)
             secondHeightPicker.isHidden = false
             self.secondHeightPicker.reloadAllComponents()
+            middleOfPickerSecondHeight = inches.count / 2
+            self.secondHeightPicker.selectRow(middleOfPickerSecondHeight, inComponent: 0, animated: true)
+            self.pickerView(secondHeightPicker, didSelectRow: middleOfPickerSecondHeight, inComponent: 0)
             weightPicker.isHidden = false
+            self.weightPicker.reloadAllComponents()
             middleOfPickerWeight = pounds.count / 2
             self.weightPicker.selectRow(middleOfPickerWeight, inComponent: 0, animated: true)
             self.pickerView(weightPicker, didSelectRow: middleOfPickerWeight, inComponent: 0)
-            self.weightPicker.reloadAllComponents()
             metricHeightPicker.isHidden = true
             self.metricHeightPicker.reloadAllComponents()
+            middleOfPickerHeightMetric = meterFirst.count / 2
+            self.metricHeightPicker.selectRow(middleOfPickerHeightMetric, inComponent: 0, animated: true)
+            self.pickerView(metricHeightPicker, didSelectRow: middleOfPickerHeightMetric, inComponent: 0)
             secondMetricPicker.isHidden = true
             self.secondMetricPicker.reloadAllComponents()
+            middleOfPickerSecondHeightMetric = meterExact.count / 2
+            self.metricHeightPicker.selectRow(middleOfPickerSecondHeightMetric, inComponent: 0, animated: true)
+            self.pickerView(secondMetricPicker, didSelectRow: middleOfPickerSecondHeightMetric, inComponent: 0)
             metricWeightPicker.isHidden = true
-            self.secondMetricPicker.reloadAllComponents()
+            self.metricWeightPicker.reloadAllComponents()
+            middleOfPickerWeightMetric = kilograms.count / 2
+            self.metricWeightPicker.selectRow(middleOfPickerWeightMetric, inComponent: 0, animated: true)
+            self.pickerView(metricWeightPicker, didSelectRow: middleOfPickerWeightMetric, inComponent: 0)
         }
         if measurementSwitchChoice.selectedSegmentIndex == 1{
             firstHeightLabel.text = "."
@@ -94,21 +112,39 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             weightLabel.text = "KG"
             metricHeightPicker.isHidden = false
             self.metricHeightPicker.reloadAllComponents()
+            middleOfPickerHeightMetric = meterFirst.count / 2
+            self.metricHeightPicker.selectRow(middleOfPickerHeightMetric, inComponent: 0, animated: true)
+            self.pickerView(metricHeightPicker, didSelectRow: middleOfPickerHeightMetric, inComponent: 0)
             secondMetricPicker.isHidden = false
             self.secondMetricPicker.reloadAllComponents()
+            middleOfPickerSecondHeightMetric = meterExact.count / 2
+            self.metricHeightPicker.selectRow(middleOfPickerSecondHeightMetric, inComponent: 0, animated: true)
+            self.pickerView(secondMetricPicker, didSelectRow: middleOfPickerSecondHeightMetric, inComponent: 0)
             metricWeightPicker.isHidden = false
-            self.secondMetricPicker.reloadAllComponents()
+            self.metricWeightPicker.reloadAllComponents()
+            middleOfPickerWeightMetric = kilograms.count / 2
+            self.metricWeightPicker.selectRow(middleOfPickerWeightMetric, inComponent: 0, animated: true)
+            self.pickerView(metricWeightPicker, didSelectRow: middleOfPickerWeightMetric, inComponent: 0)
             firstHeightPicker.isHidden = true
             self.firstHeightPicker.reloadAllComponents()
+            middleOfPickerHeight = feetFirst.count / 2
+            self.firstHeightPicker.selectRow(middleOfPickerHeight, inComponent: 0, animated: true)
+            self.pickerView(firstHeightPicker, didSelectRow: middleOfPickerHeight, inComponent: 0)
             secondHeightPicker.isHidden = true
             self.secondHeightPicker.reloadAllComponents()
+            middleOfPickerSecondHeight = inches.count / 2
+            self.secondHeightPicker.selectRow(middleOfPickerSecondHeight, inComponent: 0, animated: true)
+            self.pickerView(secondHeightPicker, didSelectRow: middleOfPickerSecondHeight, inComponent: 0)
             weightPicker.isHidden = true
             self.weightPicker.reloadAllComponents()
+            middleOfPickerWeight = pounds.count / 2
+            self.weightPicker.selectRow(middleOfPickerWeight, inComponent: 0, animated: true)
+            self.pickerView(weightPicker, didSelectRow: middleOfPickerWeight, inComponent: 0)
         }
+        
         if let measurementChoiceBefore = heightWeightDefaults.string(forKey: "measurementChoiceEntered") {
             measurementSwitchChoice.selectedSegmentIndex = Int(measurementChoiceBefore)!
         }
-        print(measurementSwitchChoice.selectedSegmentIndex)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,7 +164,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             secondMetricPicker.isHidden = true
             self.secondMetricPicker.reloadAllComponents()
             metricWeightPicker.isHidden = true
-            self.secondMetricPicker.reloadAllComponents()
+            self.metricWeightPicker.reloadAllComponents()
         }
         if measurementSwitchChoice.selectedSegmentIndex == 1{
             firstHeightLabel.text = "."
@@ -140,7 +176,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             secondMetricPicker.isHidden = false
             self.secondMetricPicker.reloadAllComponents()
             metricWeightPicker.isHidden = false
-            self.secondMetricPicker.reloadAllComponents()
+            self.metricWeightPicker.reloadAllComponents()
             firstHeightPicker.isHidden = true
             self.firstHeightPicker.reloadAllComponents()
             secondHeightPicker.isHidden = true
@@ -164,8 +200,11 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 weightPicker.isHidden = false
                 self.weightPicker.reloadAllComponents()
                 metricHeightPicker.isHidden = true
+                self.metricHeightPicker.reloadAllComponents()
                 secondMetricPicker.isHidden = true
+                self.secondMetricPicker.reloadAllComponents()
                 metricWeightPicker.isHidden = true
+                self.metricWeightPicker.reloadAllComponents()
 
             case 1:
                 firstHeightLabel.text = "."
@@ -177,10 +216,13 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 secondMetricPicker.isHidden = false
                 self.secondMetricPicker.reloadAllComponents()
                 metricWeightPicker.isHidden = false
-                self.secondMetricPicker.reloadAllComponents()
+                self.metricWeightPicker.reloadAllComponents()
                 firstHeightPicker.isHidden = true
+                self.firstHeightPicker.reloadAllComponents()
                 secondHeightPicker.isHidden = true
+                self.secondHeightPicker.reloadAllComponents()
                 weightPicker.isHidden = true
+                self.weightPicker.reloadAllComponents()
             default:
                 break
             }
@@ -195,16 +237,19 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 self.pickerView(firstHeightPicker, didSelectRow: 0, inComponent: 0)
             }
             firstHeightMeasurement = firstHeightChosen
+            heightWeightDefaults.set(firstHeightChosen, forKey: "firstHeightChosen")
             if secondHeightChosen == ""{
                 self.secondHeightPicker.selectRow(0, inComponent: 0, animated: true)
                 self.pickerView(secondHeightPicker, didSelectRow: 0, inComponent: 0)
             }
             secondHeightMeasurement = secondHeightChosen
+            heightWeightDefaults.set(secondHeightChosen, forKey: "secondHeightChosen")
             if weightChosen == ""{
                 self.weightPicker.selectRow(0, inComponent: 0, animated: true)
                 self.pickerView(weightPicker, didSelectRow: 0, inComponent: 0)
             }
             weightMeasurement = weightChosen
+            heightWeightDefaults.set(weightChosen, forKey: "weightChosen")
         }
         if measurmentChosen == "Metric"{
             if firstHeightChosenMetric == ""{
@@ -212,16 +257,19 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
                 self.pickerView(metricHeightPicker, didSelectRow: 0, inComponent: 0)
             }
             firstHeightMeasurement = firstHeightChosenMetric
+            heightWeightDefaults.set(firstHeightChosenMetric, forKey: "firstHeightChosenMetric")
             if secondHeightChosenMetric == ""{
                 self.secondMetricPicker.selectRow(0, inComponent: 0, animated: true)
                 self.pickerView(secondMetricPicker, didSelectRow: 0, inComponent: 0)
             }
             secondHeightMeasurement = secondHeightChosenMetric
+            heightWeightDefaults.set(secondHeightChosenMetric, forKey: "secondHeightChosenMetric")
             if weightChosenMetric == ""{
                 self.metricWeightPicker.selectRow(0, inComponent: 0, animated: true)
                 self.pickerView(metricWeightPicker, didSelectRow: 0, inComponent: 0)
             }
             weightMeasurement = weightChosenMetric
+            heightWeightDefaults.set(weightChosenMetric, forKey: "weightChosenMetric")
         }
     }
     

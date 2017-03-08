@@ -435,7 +435,7 @@
                                     <segue destination="cb0-Sg-iX0" kind="show" id="Dd2-SK-nCO"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="EIj-Cp-RIQ">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="EIj-Cp-RIQ">
                                 <rect key="frame" x="168" y="610" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="L5K-Eq-W7h"/>
@@ -511,7 +511,7 @@
                                 <color key="textColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uux-8b-MdF">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uux-8b-MdF">
                                 <rect key="frame" x="168" y="610" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="Vjy-n3-y3a"/>
@@ -624,7 +624,7 @@
                                     <segue destination="A49-ch-zq0" kind="show" id="cbV-O0-BaX"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="bF7-3g-Z6m">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="bF7-3g-Z6m">
                                 <rect key="frame" x="169" y="610" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="5y7-Od-P7r"/>
@@ -659,7 +659,6 @@
                             <constraint firstItem="erK-Gm-2Cq" firstAttribute="trailing" secondItem="GIt-6M-wQY" secondAttribute="trailing" id="AVj-nX-DdS"/>
                             <constraint firstItem="uUw-2n-UeZ" firstAttribute="bottom" secondItem="bF7-3g-Z6m" secondAttribute="bottom" id="AWq-sx-GGX"/>
                             <constraint firstItem="kON-Df-WRU" firstAttribute="leading" secondItem="erK-Gm-2Cq" secondAttribute="trailing" constant="1" id="B4K-iu-xtx"/>
-                            <constraint firstItem="djz-ov-Aw9" firstAttribute="trailing" secondItem="Lbp-Br-Gm3" secondAttribute="trailing" id="D9R-Am-QiJ"/>
                             <constraint firstItem="gQy-yG-Ole" firstAttribute="top" secondItem="Lbp-Br-Gm3" secondAttribute="bottom" constant="21" id="DDY-8u-yQD"/>
                             <constraint firstItem="erK-Gm-2Cq" firstAttribute="leading" secondItem="GIt-6M-wQY" secondAttribute="leading" id="Dby-2x-P1c"/>
                             <constraint firstItem="KWg-cD-Rkp" firstAttribute="trailing" secondItem="YJr-Vs-yxp" secondAttribute="trailing" id="Gq0-IC-iKe"/>
@@ -675,6 +674,7 @@
                             <constraint firstAttribute="bottom" secondItem="uUw-2n-UeZ" secondAttribute="bottom" constant="20" symbolic="YES" id="ghU-nF-8jz"/>
                             <constraint firstItem="NdZ-dw-o5D" firstAttribute="top" secondItem="vwz-Wf-n24" secondAttribute="bottom" id="hVY-mv-Fcl"/>
                             <constraint firstItem="KWg-cD-Rkp" firstAttribute="leading" secondItem="erK-Gm-2Cq" secondAttribute="leading" id="jEV-di-3hV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lbp-Br-Gm3" secondAttribute="trailing" constant="-2" id="nEe-dh-I8S"/>
                             <constraint firstItem="djz-ov-Aw9" firstAttribute="leading" secondItem="02u-9i-DRo" secondAttribute="trailing" constant="2" id="osb-T6-Val"/>
                             <constraint firstItem="a9k-2g-UQ5" firstAttribute="top" secondItem="YJr-Vs-yxp" secondAttribute="top" id="qy1-Ko-3ID"/>
                             <constraint firstItem="YJr-Vs-yxp" firstAttribute="top" secondItem="Vnc-Uk-Fh3" secondAttribute="bottom" constant="8" symbolic="YES" id="wX9-Bn-r5h"/>
@@ -772,7 +772,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="9oK-Yk-Vlg"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="J4v-aL-9G3">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="J4v-aL-9G3">
                                 <rect key="frame" x="168" y="579" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="iST-qh-d31"/>
@@ -884,7 +884,7 @@
                                 <color key="textColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="QUo-2g-70p">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="QUo-2g-70p">
                                 <rect key="frame" x="168" y="610" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="MfS-ck-L81"/>
@@ -1138,8 +1138,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Onb-wB-4dC"/>
         <segue reference="9oK-Yk-Vlg"/>
-        <segue reference="cbV-O0-BaX"/>
-        <segue reference="7Zg-Cu-b6L"/>
+        <segue reference="r8m-6D-28V"/>
         <segue reference="Dd2-SK-nCO"/>
+        <segue reference="uLc-4u-kbG"/>
     </inferredMetricsTieBreakers>
 </document>

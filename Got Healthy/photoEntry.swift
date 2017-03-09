@@ -13,16 +13,31 @@ UINavigationControllerDelegate  {
     
     @IBOutlet weak var profilePhotoEntry: UIImageView!
     let picker = UIImagePickerController()
+    let profileDefaults = UserDefaults.standard
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         UIApplication.shared.statusBarStyle = .lightContent
         picker.delegate = self
+        if let imgData = profileDefaults.object(forKey: "imageChosen") as? NSData
+        {
+            if let image = UIImage(data: imgData as Data)
+            {
+                //set image in UIImageView imgSignature
+                profilePhotoEntry.image = image
+            }
+        }
         profilePhotoEntry.layer.cornerRadius = profilePhotoEntry.frame.size.width / 2
         profilePhotoEntry.layer.borderWidth = 3
         profilePhotoEntry.layer.borderColor = UIColor.white.cgColor
         profilePhotoEntry.clipsToBounds = true
+    }
+    
+    @IBAction func gotHealthyPressed(_ sender: Any) {
+        let imgData = UIImageJPEGRepresentation(profilePhotoEntry.image!, 1)
+        profileDefaults.set(imgData, forKey: "imageChosen")
     }
     
     @IBAction func photoFromLibraryPressed(_ sender: Any) {
@@ -48,8 +63,10 @@ UINavigationControllerDelegate  {
     internal func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : Any])
     {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage 
-        profilePhotoEntry.contentMode = .scaleAspectFit
+        profilePhotoEntry.contentMode = .scaleToFill
         profilePhotoEntry.image = chosenImage
+        let imgData = UIImageJPEGRepresentation(profilePhotoEntry.image!, 1)
+        profileDefaults.set(imgData, forKey: "imageChosen")
         dismiss(animated:true, completion: nil)
     }
     
@@ -72,5 +89,4 @@ UINavigationControllerDelegate  {
             animated: true,
             completion: nil)
     }
-    
 }

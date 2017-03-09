@@ -60,6 +60,14 @@ class ViewController: UIViewController {
         heightChosen.text = heightValueChosen
         weightChosen.text = weightValueChosen
         measurementChosen.text = measurmentChosen
+        if let imgData = defaults.object(forKey: "imageChosen") as? NSData
+        {
+            if let image = UIImage(data: imgData as Data)
+            {
+                //set image in UIImageView imgSignature
+                profilePhotoChosen.image = image
+            }
+        }
         profilePhotoChosen.layer.cornerRadius = profilePhotoChosen.frame.size.width / 2
         profilePhotoChosen.layer.borderWidth = 3
         profilePhotoChosen.layer.borderColor = UIColor.black.cgColor
@@ -241,4 +249,3 @@ class ViewController: UIViewController {
     }
     
 }
-

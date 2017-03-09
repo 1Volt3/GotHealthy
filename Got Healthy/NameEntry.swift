@@ -75,7 +75,7 @@ class NameEntry: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        let characterset = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ-")
+        let characterset = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ-\'")
         if firstNameEntry.text?.rangeOfCharacter(from: characterset.inverted) != nil {
             let firstNameAlert = UIAlertController(
                 title: "First Name",

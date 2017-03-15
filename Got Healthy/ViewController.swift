@@ -15,12 +15,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var stepCountLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var nameChosen: UILabel!
-    @IBOutlet weak var ageChosen: UILabel!
-    @IBOutlet weak var birthdateChosen: UILabel!
-    @IBOutlet weak var genderChosen: UILabel!
-    @IBOutlet weak var heightChosen: UILabel!
-    @IBOutlet weak var weightChosen: UILabel!
     @IBOutlet weak var profilePhotoChosen: UIImageView!
     @IBOutlet weak var measurementChosen: UILabel!
     @IBOutlet weak var caloriesBurned: UILabel!
@@ -35,37 +29,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         UIApplication.shared.statusBarStyle = .default
-        let fullName = firstName + " " + lastName
-        nameChosen.text = fullName
-        let now = NSDate()
-        let calendar : NSCalendar = NSCalendar.current as NSCalendar
-        let ageComponents = calendar.components(.year, from: birthDate, to: now as Date, options: [])
-        let age = ageComponents.year!
-        ageChosen.text = String(age)
-        let dateCalendar = Calendar.current
-        let year = dateCalendar.component(.year, from: birthDate)
-        let month = dateCalendar.component(.month, from: birthDate)
-        let day = dateCalendar.component(.day, from: birthDate)
-        if measurmentChosen == "Metric"{
-            let dateMetricBorn = String(day) + "/" + String(month) + "/" + String(year)
-            birthdateChosen.text = dateMetricBorn
+            if measurmentChosen == "Metric"{
             heightValueChosen = String(firstHeightMeasurement) + "." + String(secondHeightMeasurement)
             weightValueChosen = String(weightMeasurement) + " kgs"
             calculatedCentimeters = (Double(firstHeightMeasurement)! * 100.0) + Double(secondHeightMeasurement)!
             calculatedGrams = Double(weightMeasurement)!
         }
         if measurmentChosen == "Imperial"{
-            let dateImperialBorn = String(month) + "/" + String(day) + "/" + String(year)
-            birthdateChosen.text = dateImperialBorn
             heightValueChosen = String(firstHeightMeasurement) + "\'" + String(secondHeightMeasurement) + "\""
             weightValueChosen = String(weightMeasurement) + " lbs"
             let inchesCalculated = (Double(firstHeightMeasurement)! * 12.0) + Double(secondHeightMeasurement)!
             calculatedCentimeters = inchesCalculated * 2.54
             calculatedGrams = Double(weightMeasurement)! * 0.453592
         }
-        genderChosen.text = gender
-        heightChosen.text = heightValueChosen
-        weightChosen.text = weightValueChosen
         measurementChosen.text = measurmentChosen
         if let imgData = defaults.object(forKey: "imageChosen") as? NSData
         {

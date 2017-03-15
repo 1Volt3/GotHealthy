@@ -18,10 +18,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var weightChosen: UILabel!
     @IBOutlet weak var measurementChosen: UILabel!
     @IBOutlet weak var profilePhotoChosen: UIImageView!
+    @IBOutlet weak var BMIValue: UILabel!
+    @IBOutlet weak var BMIStatusValue: UILabel!
+    
     var sharedDefaults: UserDefaults! = UserDefaults(suiteName: defaultsSuiteName)
     let defaults = UserDefaults.standard
     var heightValueChosen = ""
     var weightValueChosen = ""
+    var inchesCalculated = 0.0
+    var metersCalculated = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +48,14 @@ class ProfileViewController: UIViewController {
             birthdateChosen.text = dateMetricBorn
             heightValueChosen = String(firstHeightMeasurement) + "." + String(secondHeightMeasurement)
             weightValueChosen = String(weightMeasurement) + " kgs"
+            metersCalculated = Double(heightValueChosen)!
         }
         if measurmentChosen == "Imperial"{
             let dateImperialBorn = String(month) + "/" + String(day) + "/" + String(year)
             birthdateChosen.text = dateImperialBorn
             heightValueChosen = String(firstHeightMeasurement) + "\'" + String(secondHeightMeasurement) + "\""
             weightValueChosen = String(weightMeasurement) + " lbs"
-            let inchesCalculated = (Double(firstHeightMeasurement)! * 12.0) + Double(secondHeightMeasurement)!
+            inchesCalculated = (Double(firstHeightMeasurement)! * 12.0) + Double(secondHeightMeasurement)!
         }
         genderChosen.text = gender
         heightChosen.text = heightValueChosen
@@ -84,27 +90,31 @@ class ProfileViewController: UIViewController {
     }
     
     fileprivate func calculateBMI() {
-        let height: Float = heightSlider.value
-        let weight: Float = weightSlider.value
-        let bmi: Float = (weight / (height*height)) * 703
-        
-        calculatedValue.text = "\(bmi)"
-        self.changeStatus(bmi)
+        if measurmentChosen == "Imperial"{
+            let bmi: Float = (Float(weightMeasurement)! / Float(inchesCalculated*inchesCalculated)) * 703
+            BMIValue.text = "\(bmi)"
+            self.changeStatus(bmi)
+        }
+        if measurmentChosen == "Metric"{
+            let bmi: Float = (Float(weightMeasurement)! / Float(metersCalculated*metersCalculated)) * 703
+            BMIValue.text = "\(bmi)"
+            self.changeStatus(bmi)
+        }
     }
     
     fileprivate func changeStatus(_ bmi: Float) {
         if (bmi < 18) {
-            statusLabel.text = "underweight"
-            statusLabel.textColor = UIColor.blue
+            BMIStatusValue.text = "Underweight"
+            BMIStatusValue.textColor = UIColor.blue
         } else if (bmi >= 18 && bmi < 25) {
-            statusLabel.text = "normal"
-            statusLabel.textColor = UIColor.green
+            BMIStatusValue.text = "Normal"
+            BMIStatusValue.textColor = UIColor.green
         } else if (bmi >= 25 && bmi < 30) {
-            statusLabel.text = "pre-obese"
-            statusLabel.textColor = UIColor.purple
+            BMIStatusValue.text = "Pre-obese"
+            BMIStatusValue.textColor = UIColor.purple
         } else {
-            statusLabel.text = "obese"
-            statusLabel.textColor = UIColor.red
+            BMIStatusValue.text = "Obese"
+            BMIStatusValue.textColor = UIColor.red
         }
     }
     

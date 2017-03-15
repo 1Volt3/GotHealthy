@@ -176,6 +176,16 @@
                             <constraint firstItem="3CZ-De-ZPF" firstAttribute="leading" secondItem="kNV-FD-UJv" secondAttribute="leadingMargin" constant="3" id="zlH-2v-b4M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageChosen" destination="QjO-Wx-j28" id="uAC-yc-1pk"/>
+                        <outlet property="birthdateChosen" destination="TJS-ax-WEN" id="3PT-t1-u0Q"/>
+                        <outlet property="genderChosen" destination="OfH-QY-3uC" id="cIG-w8-HCC"/>
+                        <outlet property="heightChosen" destination="POb-cT-amU" id="163-Jh-l2d"/>
+                        <outlet property="measurementChosen" destination="Thw-6d-VlZ" id="Gnx-VW-nRU"/>
+                        <outlet property="nameChosen" destination="XKC-ie-6sT" id="e8b-bV-fAh"/>
+                        <outlet property="profilePhotoChosen" destination="iyy-GS-5Sr" id="sw0-Ta-TFC"/>
+                        <outlet property="weightChosen" destination="60h-fc-OeY" id="ucU-gN-xrh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6C-ai-WBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

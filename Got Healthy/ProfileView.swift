@@ -10,6 +10,19 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var nameChosen: UILabel!
+    @IBOutlet weak var ageChosen: UILabel!
+    @IBOutlet weak var birthdateChosen: UILabel!
+    @IBOutlet weak var genderChosen: UILabel!
+    @IBOutlet weak var heightChosen: UILabel!
+    @IBOutlet weak var weightChosen: UILabel!
+    @IBOutlet weak var measurementChosen: UILabel!
+    @IBOutlet weak var profilePhotoChosen: UIImageView!
+    var sharedDefaults: UserDefaults! = UserDefaults(suiteName: defaultsSuiteName)
+    let defaults = UserDefaults.standard
+    var heightValueChosen = ""
+    var weightValueChosen = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,8 +43,6 @@ class ProfileViewController: UIViewController {
             birthdateChosen.text = dateMetricBorn
             heightValueChosen = String(firstHeightMeasurement) + "." + String(secondHeightMeasurement)
             weightValueChosen = String(weightMeasurement) + " kgs"
-            calculatedCentimeters = (Double(firstHeightMeasurement)! * 100.0) + Double(secondHeightMeasurement)!
-            calculatedGrams = Double(weightMeasurement)!
         }
         if measurmentChosen == "Imperial"{
             let dateImperialBorn = String(month) + "/" + String(day) + "/" + String(year)

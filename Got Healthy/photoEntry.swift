@@ -29,9 +29,9 @@ UINavigationControllerDelegate  {
                 profilePhotoEntry.image = image
             }
         }
-        profilePhotoEntry.layer.cornerRadius = profilePhotoEntry.frame.size.width / 2
         profilePhotoEntry.layer.borderWidth = 3
         profilePhotoEntry.layer.borderColor = UIColor.white.cgColor
+        profilePhotoEntry.layer.cornerRadius = 10.0
         profilePhotoEntry.clipsToBounds = true
     }
     
@@ -41,7 +41,7 @@ UINavigationControllerDelegate  {
     }
     
     @IBAction func photoFromLibraryPressed(_ sender: Any) {
-        picker.allowsEditing = true
+        picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         picker.modalPresentationStyle = .popover
@@ -50,7 +50,7 @@ UINavigationControllerDelegate  {
     
     @IBAction func capturePhotoPressed(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.allowsEditing = true
+            picker.allowsEditing = false
             picker.sourceType = UIImagePickerControllerSourceType.camera
             picker.cameraCaptureMode = .photo
             picker.modalPresentationStyle = .fullScreen

@@ -19,6 +19,7 @@
 		52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E871E3AC10E00E1B7E5 /* Header.swift */; };
 		52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791E881E3AC10E00E1B7E5 /* Extensions.swift */; };
 		52791E901E3AC1D100E1B7E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */; };
+		52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AECE981E79E9E4006978A9 /* ProfileView.swift */; };
 		52C9460B1E5F4D3B00FB6515 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9460A1E5F4D3B00FB6515 /* StringUtils.swift */; };
 		52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CABFFE1E38F29700E0302F /* AppDelegate.swift */; };
 		52CAC0011E38F29700E0302F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC0001E38F29700E0302F /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 		52791E871E3AC10E00E1B7E5 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		52791E881E3AC10E00E1B7E5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		52AECE981E79E9E4006978A9 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		52C9460A1E5F4D3B00FB6515 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		52CABFFB1E38F29700E0302F /* Got Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Got Healthy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CABFFE1E38F29700E0302F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */,
 				52CABFFE1E38F29700E0302F /* AppDelegate.swift */,
 				52CAC0001E38F29700E0302F /* ViewController.swift */,
+				52AECE981E79E9E4006978A9 /* ProfileView.swift */,
 				52CAC0021E38F29700E0302F /* Main.storyboard */,
 				5272E9991E6F087500F26A23 /* BeginScreen.swift */,
 				52041C001E4541A7008CD4DF /* Keyboard.swift */,
@@ -333,6 +336,7 @@
 				5272E99A1E6F087500F26A23 /* BeginScreen.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
+				52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52F8A1951E68714600EF567A /* FirstViewController.swift in Sources */,
 				525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */,

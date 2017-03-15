@@ -37,6 +37,13 @@ class NameEntry: UIViewController, UITextFieldDelegate {
         else{
             nextArrow.isHidden = true
         }
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NameEntry.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     // Start Editing The Text Field
@@ -75,7 +82,7 @@ class NameEntry: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        let characterset = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ-\'")
+        let characterset = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ-\' ")
         if firstNameEntry.text?.rangeOfCharacter(from: characterset.inverted) != nil {
             let firstNameAlert = UIAlertController(
                 title: "First Name",

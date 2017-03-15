@@ -23,10 +23,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var weightChosen: UILabel!
     @IBOutlet weak var profilePhotoChosen: UIImageView!
     @IBOutlet weak var measurementChosen: UILabel!
+    @IBOutlet weak var caloriesBurned: UILabel!
     var sharedDefaults: UserDefaults! = UserDefaults(suiteName: defaultsSuiteName)
     let defaults = UserDefaults.standard
     var heightValueChosen = ""
     var weightValueChosen = ""
+    var calculatedCentimeters = 0.0
+    var calculatedGrams = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +51,17 @@ class ViewController: UIViewController {
             birthdateChosen.text = dateMetricBorn
             heightValueChosen = String(firstHeightMeasurement) + "." + String(secondHeightMeasurement)
             weightValueChosen = String(weightMeasurement) + " kgs"
+            calculatedCentimeters = (Double(firstHeightMeasurement)! * 100.0) + Double(secondHeightMeasurement)!
+            calculatedGrams = Double(weightMeasurement)!
         }
         if measurmentChosen == "Imperial"{
             let dateImperialBorn = String(month) + "/" + String(day) + "/" + String(year)
             birthdateChosen.text = dateImperialBorn
             heightValueChosen = String(firstHeightMeasurement) + "\'" + String(secondHeightMeasurement) + "\""
             weightValueChosen = String(weightMeasurement) + " lbs"
-            
+            let inchesCalculated = (Double(firstHeightMeasurement)! * 12.0) + Double(secondHeightMeasurement)!
+            calculatedCentimeters = inchesCalculated * 2.54
+            calculatedGrams = Double(weightMeasurement)! * 0.453592
         }
         genderChosen.text = gender
         heightChosen.text = heightValueChosen
@@ -68,7 +75,7 @@ class ViewController: UIViewController {
                 profilePhotoChosen.image = image
             }
         }
-        profilePhotoChosen.layer.cornerRadius = profilePhotoChosen.frame.size.width / 2
+        profilePhotoChosen.layer.cornerRadius = 10.0
         profilePhotoChosen.layer.borderWidth = 3
         profilePhotoChosen.layer.borderColor = UIColor.black.cgColor
         profilePhotoChosen.clipsToBounds = true
@@ -86,7 +93,7 @@ class ViewController: UIViewController {
         
         present(refreshAlert, animated: true, completion: nil)
     }
-
+    
     // Pedometer
     var stepCount: Int
     var distance: Double

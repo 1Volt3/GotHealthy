@@ -12,10 +12,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="WQt-uM-fzv">
             <objects>
-                <viewController id="0KL-zk-3gI" sceneMemberID="viewController">
+                <viewController id="0KL-zk-3gI" customClass="ProfileViewController" customModule="Got_Healthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IRu-Ne-2WC"/>
                         <viewControllerLayoutGuide type="bottom" id="NuE-0s-d43"/>
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6C-ai-WBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="-143"/>
+            <point key="canvasLocation" x="417" y="-135"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

@@ -67,6 +67,7 @@ class ProfileViewController: UIViewController {
         profilePhotoChosen.layer.borderWidth = 3
         profilePhotoChosen.layer.borderColor = UIColor.black.cgColor
         profilePhotoChosen.clipsToBounds = true
+        calculateBMI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,6 +81,31 @@ class ProfileViewController: UIViewController {
         }))
         
         present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    fileprivate func calculateBMI() {
+        let height: Float = heightSlider.value
+        let weight: Float = weightSlider.value
+        let bmi: Float = (weight / (height*height)) * 703
+        
+        calculatedValue.text = "\(bmi)"
+        self.changeStatus(bmi)
+    }
+    
+    fileprivate func changeStatus(_ bmi: Float) {
+        if (bmi < 18) {
+            statusLabel.text = "underweight"
+            statusLabel.textColor = UIColor.blue
+        } else if (bmi >= 18 && bmi < 25) {
+            statusLabel.text = "normal"
+            statusLabel.textColor = UIColor.green
+        } else if (bmi >= 25 && bmi < 30) {
+            statusLabel.text = "pre-obese"
+            statusLabel.textColor = UIColor.purple
+        } else {
+            statusLabel.text = "obese"
+            statusLabel.textColor = UIColor.red
+        }
     }
     
 }

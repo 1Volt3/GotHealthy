@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5200C2251E3F91510077F623 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200C2241E3F91510077F623 /* AuthManager.swift */; };
 		52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041C001E4541A7008CD4DF /* Keyboard.swift */; };
+		520683A41E7C1E480062CE92 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 520683A31E7C1E480062CE92 /* Settings.bundle */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		5200C2241E3F91510077F623 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		52041C001E4541A7008CD4DF /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		520683A31E7C1E480062CE92 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				52791E871E3AC10E00E1B7E5 /* Header.swift */,
 				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
 				52CAC0071E38F29700E0302F /* LaunchScreen.storyboard */,
+				520683A31E7C1E480062CE92 /* Settings.bundle */,
 				52CAC00A1E38F29700E0302F /* Info.plist */,
 			);
 			path = "Got Healthy";
@@ -298,6 +301,7 @@
 			files = (
 				52CAC0091E38F29700E0302F /* LaunchScreen.storyboard in Resources */,
 				52CAC0061E38F29700E0302F /* Assets.xcassets in Resources */,
+				520683A41E7C1E480062CE92 /* Settings.bundle in Resources */,
 				52791E851E3ABECD00E1B7E5 /* TodayInterface.storyboard in Resources */,
 				52CAC0041E38F29700E0302F /* Main.storyboard in Resources */,
 			);

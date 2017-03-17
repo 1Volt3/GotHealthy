@@ -1,4 +1,3 @@
-//  Copyright 2016 Skyscanner Ltd
 //
 //  UIPosition.swift
 //  Got Healthy

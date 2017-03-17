@@ -10,6 +10,15 @@
 		5200C2251E3F91510077F623 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200C2241E3F91510077F623 /* AuthManager.swift */; };
 		52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041C001E4541A7008CD4DF /* Keyboard.swift */; };
 		520683A41E7C1E480062CE92 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 520683A31E7C1E480062CE92 /* Settings.bundle */; };
+		520683A91E7C243D0062CE92 /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683A51E7C243D0062CE92 /* FaveButton.swift */; };
+		520683AA1E7C243D0062CE92 /* FaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683A61E7C243D0062CE92 /* FaveIcon.swift */; };
+		520683AB1E7C243D0062CE92 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683A71E7C243D0062CE92 /* Ring.swift */; };
+		520683AC1E7C243D0062CE92 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683A81E7C243D0062CE92 /* Spark.swift */; };
+		520683B11E7C24620062CE92 /* Constraints+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683AD1E7C24620062CE92 /* Constraints+.swift */; };
+		520683B21E7C24620062CE92 /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683AE1E7C24620062CE92 /* Easing.swift */; };
+		520683B31E7C24620062CE92 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683AF1E7C24620062CE92 /* Geometry.swift */; };
+		520683B41E7C24620062CE92 /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683B01E7C24620062CE92 /* Init.swift */; };
+		520683B61E7C24870062CE92 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683B51E7C24870062CE92 /* FavViewController.swift */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
@@ -58,6 +67,16 @@
 		5200C2241E3F91510077F623 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		52041C001E4541A7008CD4DF /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		520683A31E7C1E480062CE92 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		520683A51E7C243D0062CE92 /* FaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveButton.swift; sourceTree = "<group>"; };
+		520683A61E7C243D0062CE92 /* FaveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveIcon.swift; sourceTree = "<group>"; };
+		520683A71E7C243D0062CE92 /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		520683A81E7C243D0062CE92 /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
+		520683AD1E7C24620062CE92 /* Constraints+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constraints+.swift"; sourceTree = "<group>"; };
+		520683AE1E7C24620062CE92 /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
+		520683AF1E7C24620062CE92 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		520683B01E7C24620062CE92 /* Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
+		520683B51E7C24870062CE92 /* FavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
+		520683B71E7C250B0062CE92 /* FaveButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FaveButton.h; path = "Got Healthy/FaveButton.h"; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
@@ -117,10 +136,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520683B81E7C25400062CE92 /* TabBarEffect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TabBarEffect;
+			path = "Got Healthy";
+			sourceTree = "<group>";
+		};
 		52CABFF21E38F29700E0302F = {
 			isa = PBXGroup;
 			children = (
 				52CABFFD1E38F29700E0302F /* Got Healthy */,
+				520683B81E7C25400062CE92 /* TabBarEffect */,
+				520683B71E7C250B0062CE92 /* FaveButton.h */,
 				52CAC0121E38F29700E0302F /* Got HealthyTests */,
 				52CAC01D1E38F29700E0302F /* Got HealthyUITests */,
 				52CABFFC1E38F29700E0302F /* Products */,
@@ -160,6 +189,15 @@
 				52F8A1941E68714600EF567A /* SecondViewController.swift */,
 				52CAC0051E38F29700E0302F /* Assets.xcassets */,
 				52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */,
+				520683AD1E7C24620062CE92 /* Constraints+.swift */,
+				520683AE1E7C24620062CE92 /* Easing.swift */,
+				520683AF1E7C24620062CE92 /* Geometry.swift */,
+				520683B01E7C24620062CE92 /* Init.swift */,
+				520683A51E7C243D0062CE92 /* FaveButton.swift */,
+				520683A61E7C243D0062CE92 /* FaveIcon.swift */,
+				520683A71E7C243D0062CE92 /* Ring.swift */,
+				520683A81E7C243D0062CE92 /* Spark.swift */,
+				520683B51E7C24870062CE92 /* FavViewController.swift */,
 				5200C2241E3F91510077F623 /* AuthManager.swift */,
 				52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */,
 				52791E871E3AC10E00E1B7E5 /* Header.swift */,
@@ -335,16 +373,25 @@
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
 				52F48BB51E4E3F9300E8ACCA /* UIPosition.swift in Sources */,
+				520683B31E7C24620062CE92 /* Geometry.swift in Sources */,
+				520683A91E7C243D0062CE92 /* FaveButton.swift in Sources */,
+				520683B41E7C24620062CE92 /* Init.swift in Sources */,
 				52C9460B1E5F4D3B00FB6515 /* StringUtils.swift in Sources */,
 				52D79C831E4B812A007B4E58 /* Gender.swift in Sources */,
 				5272E99A1E6F087500F26A23 /* BeginScreen.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
+				520683AA1E7C243D0062CE92 /* FaveIcon.swift in Sources */,
+				520683B11E7C24620062CE92 /* Constraints+.swift in Sources */,
+				520683AB1E7C243D0062CE92 /* Ring.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
+				520683AC1E7C243D0062CE92 /* Spark.swift in Sources */,
 				52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52F8A1951E68714600EF567A /* FirstViewController.swift in Sources */,
 				525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,
+				520683B61E7C24870062CE92 /* FavViewController.swift in Sources */,
+				520683B21E7C24620062CE92 /* Easing.swift in Sources */,
 				52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */,
 				52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */,
 				52F48BB31E4E3F9300E8ACCA /* FloatingTextField.swift in Sources */,
@@ -498,6 +545,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93234J3H2M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Got\\ Healthy",
+					"$(PROJECT_DIR)/Got\\ Healthy",
+					"$(PROJECT_DIR)/Got\\ Healthy",
+					"$(PROJECT_DIR)/Got\\ Healthy",
+				);
 				INFOPLIST_FILE = "Got Healthy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.volt.Got-Healthy";
@@ -511,6 +565,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93234J3H2M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Got\\ Healthy",
+					"$(PROJECT_DIR)/Got\\ Healthy",
+					"$(PROJECT_DIR)/Got\\ Healthy",
+					"$(PROJECT_DIR)/Got\\ Healthy",
+				);
 				INFOPLIST_FILE = "Got Healthy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.volt.Got-Healthy";

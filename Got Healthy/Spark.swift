@@ -18,7 +18,6 @@ class Spark: UIView {
         static let dotSizeKey         = "dotSizeKey"
     }
     
-    
     var radius: CGFloat
     var firstColor: UIColor
     var secondColor: UIColor

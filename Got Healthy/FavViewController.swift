@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import FaveButton
 
 func color(_ rgbColor: Int) -> UIColor{
     return UIColor(

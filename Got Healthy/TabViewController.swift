@@ -10,9 +10,9 @@ import UIKit
 
 class TabViewController: UIViewController{
     
-    @IBOutlet weak var contentView: UIView!
-    
     @IBOutlet var Buttons: [FaveButton]!
+    
+    @IBOutlet weak var contentView: UIView!
     
     var profileViewController: UIViewController!
     var healthViewController: UIViewController!

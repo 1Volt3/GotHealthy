@@ -210,7 +210,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="BMIStatusValue" destination="fcz-uX-V6i" id="CWp-2Q-tlS"/>
                         <outlet property="BMIValue" destination="led-Lx-YmM" id="B6D-9k-QKf"/>
@@ -241,13 +241,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPm-HB-M8O">
-                                <rect key="frame" x="74" y="325" width="44" height="19"/>
+                                <rect key="frame" x="74" y="374" width="44" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.062765773149999995" blue="0.058297293219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGL-VG-p1m">
-                                <rect key="frame" x="9" y="346" width="176" height="45"/>
+                                <rect key="frame" x="9" y="395" width="176" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="176" id="2Ei-Ns-7kp"/>
@@ -264,19 +264,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Consumed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGU-Hy-VOt">
-                                <rect key="frame" x="191" y="323" width="150" height="23"/>
+                                <rect key="frame" x="191" y="372" width="150" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.062765773149999995" blue="0.058297293219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j07-3V-GKa">
-                                <rect key="frame" x="181" y="346" width="170" height="45"/>
+                                <rect key="frame" x="181" y="395" width="170" height="45"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" red="0.1052587701" green="0.1982006952" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUR-ZY-GVw">
-                                <rect key="frame" x="9" y="544" width="44" height="30"/>
+                                <rect key="frame" x="9" y="593" width="44" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EUp-F3-cWP"/>
                                 </constraints>
@@ -286,7 +286,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEX-Eq-f04">
-                                <rect key="frame" x="20" y="274" width="110" height="21"/>
+                                <rect key="frame" x="20" y="323" width="110" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="N4q-pm-1nW"/>
                                     <constraint firstAttribute="width" constant="110" id="g3S-AY-Ajo"/>
@@ -296,7 +296,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzO-bK-hxO">
-                                <rect key="frame" x="159" y="274" width="200" height="21"/>
+                                <rect key="frame" x="159" y="323" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ENu-iV-KHs"/>
                                 </constraints>
@@ -305,31 +305,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwr-Zb-MUY">
-                                <rect key="frame" x="213" y="451" width="138" height="61"/>
+                                <rect key="frame" x="213" y="500" width="138" height="61"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" red="0.1052587701" green="0.1982006952" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vz3-YX-NBd">
-                                <rect key="frame" x="13" y="452" width="193" height="59"/>
+                                <rect key="frame" x="13" y="501" width="193" height="59"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" red="0.1052587701" green="0.1982006952" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efh-GH-EWy">
-                                <rect key="frame" x="47" y="423" width="123" height="21"/>
+                                <rect key="frame" x="47" y="472" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.062765773149999995" blue="0.058297293219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWx-cx-CG1">
-                                <rect key="frame" x="249" y="423" width="67" height="21"/>
+                                <rect key="frame" x="249" y="472" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.062765773149999995" blue="0.058297293219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJy-VI-CcI">
-                                <rect key="frame" x="271" y="544" width="88" height="30"/>
+                                <rect key="frame" x="271" y="593" width="88" height="30"/>
                                 <state key="normal" title="Add Calories"/>
                                 <connections>
                                     <segue destination="0t4-n2-y3t" kind="show" id="Bno-Gw-i4i"/>
@@ -376,7 +376,7 @@
                             <constraint firstItem="XGL-VG-p1m" firstAttribute="baseline" secondItem="j07-3V-GKa" secondAttribute="baseline" id="uym-Ja-YWK"/>
                         </constraints>
                     </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="caloriesBurned" destination="Vz3-YX-NBd" id="IQs-US-6iz"/>
                         <outlet property="distanceLabel" destination="gwr-Zb-MUY" id="Yl6-IW-pEO"/>
@@ -407,10 +407,10 @@
             </objects>
             <point key="canvasLocation" x="3034" y="-864"/>
         </scene>
-        <!--View Controller-->
+        <!--Activity View Controller-->
         <scene sceneID="y2o-EK-WvH">
             <objects>
-                <viewController storyboardIdentifier="NutritionViewController" id="QN6-uY-E0I" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NutritionViewController" id="QN6-uY-E0I" customClass="ActivityViewController" customModule="Got_Healthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TRo-F8-Pxj"/>
                         <viewControllerLayoutGuide type="bottom" id="TZU-uf-J3o"/>
@@ -425,10 +425,10 @@
             </objects>
             <point key="canvasLocation" x="4138" y="-864"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="DBN-eb-7vN">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="I1T-J5-6nM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="I1T-J5-6nM" customClass="SettingsViewController" customModule="Got_Healthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PZY-pB-Yyb"/>
                         <viewControllerLayoutGuide type="bottom" id="UKF-2M-GQz"/>
@@ -446,7 +446,7 @@
         <!--Tab View Controller-->
         <scene sceneID="gPc-WS-vTJ">
             <objects>
-                <viewController storyboardIdentifier="HomePage" id="u3D-3P-ElV" customClass="TabViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePage" id="u3D-3P-ElV" customClass="TabViewController" customModule="Got_Healthy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FJK-1h-xVb"/>
                         <viewControllerLayoutGuide type="bottom" id="OQG-ff-b95"/>
@@ -467,15 +467,12 @@
                                         </constraints>
                                         <state key="normal" title="Profile" image="heart"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
-                                                <color key="value" red="0.0049824473330000001" green="0.55344600580000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="lGl-po-o59"/>
+                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="eKC-xa-PAy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuq-uL-pqE" customClass="FaveButton" customModule="Got_Healthy">
@@ -494,7 +491,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="M4Q-to-Lrb"/>
+                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="sXP-AY-haA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-yL-znb" customClass="FaveButton" customModule="Got_Healthy">
@@ -514,7 +511,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="IFf-48-y54"/>
+                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="LB7-YR-a4u"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtd-6l-Aso" customClass="FaveButton" customModule="Got_Healthy">
@@ -533,7 +530,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="XlY-Tm-BB8"/>
+                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="hjp-D0-ciL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLE-fx-MQ9" customClass="FaveButton" customModule="Got_Healthy">
@@ -553,11 +550,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="gfP-TN-C0q"/>
+                                            <action selector="didPressTab:" destination="u3D-3P-ElV" eventType="touchUpInside" id="R2f-Jc-DMT"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.27664462162685222" green="1" blue="0.43549937627882673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0029339916535113808" green="1" blue="0.46497880133216474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="WLE-fx-MQ9" firstAttribute="leading" secondItem="Gtd-6l-Aso" secondAttribute="trailing" constant="20" id="6S4-1g-Ndv"/>
                                     <constraint firstItem="JPb-61-Yic" firstAttribute="top" secondItem="f2q-bd-bFv" secondAttribute="top" constant="13" id="927-aH-h1l"/>
@@ -594,12 +591,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="nMT-rY-tlq" id="dTA-YR-tV1"/>
-                        <outletCollection property="Buttons" destination="JPb-61-Yic" collectionClass="NSMutableArray" id="NZb-7y-Wh4"/>
-                        <outletCollection property="Buttons" destination="Cuq-uL-pqE" collectionClass="NSMutableArray" id="OYY-Tl-U3e"/>
-                        <outletCollection property="Buttons" destination="7cj-yL-znb" collectionClass="NSMutableArray" id="WST-ID-yIi"/>
-                        <outletCollection property="Buttons" destination="Gtd-6l-Aso" collectionClass="NSMutableArray" id="XGD-ed-TtX"/>
-                        <outletCollection property="Buttons" destination="WLE-fx-MQ9" collectionClass="NSMutableArray" id="zcb-7Q-wOH"/>
+                        <outlet property="contentView" destination="nMT-rY-tlq" id="Pw0-uK-tq2"/>
+                        <outletCollection property="Buttons" destination="JPb-61-Yic" collectionClass="NSMutableArray" id="ui8-ar-Bh5"/>
+                        <outletCollection property="Buttons" destination="Cuq-uL-pqE" collectionClass="NSMutableArray" id="qLb-p1-XQY"/>
+                        <outletCollection property="Buttons" destination="7cj-yL-znb" collectionClass="NSMutableArray" id="Voe-bu-2wi"/>
+                        <outletCollection property="Buttons" destination="Gtd-6l-Aso" collectionClass="NSMutableArray" id="bsS-xi-2sm"/>
+                        <outletCollection property="Buttons" destination="WLE-fx-MQ9" collectionClass="NSMutableArray" id="alr-hp-ugs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAC-SE-OW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1282,7 +1279,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14f-ig-INC" id="icd-Jb-QaH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

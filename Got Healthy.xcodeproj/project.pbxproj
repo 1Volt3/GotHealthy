@@ -19,6 +19,7 @@
 		520683B31E7C24620062CE92 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683AF1E7C24620062CE92 /* Geometry.swift */; };
 		520683B41E7C24620062CE92 /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683B01E7C24620062CE92 /* Init.swift */; };
 		520683B61E7C24870062CE92 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683B51E7C24870062CE92 /* FavViewController.swift */; };
+		5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */; };
 		522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B40F41E7C8F2C006010A4 /* TabViewController.swift */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
@@ -40,6 +41,7 @@
 		52CAC0091E38F29700E0302F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CAC0071E38F29700E0302F /* LaunchScreen.storyboard */; };
 		52CAC0141E38F29700E0302F /* Got_HealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC0131E38F29700E0302F /* Got_HealthyTests.swift */; };
 		52CAC01F1E38F29700E0302F /* Got_HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC01E1E38F29700E0302F /* Got_HealthyUITests.swift */; };
+		52CDF75D1E80417C0031FFE2 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDF75C1E80417C0031FFE2 /* ActivityView.swift */; };
 		52D79C831E4B812A007B4E58 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D79C821E4B812A007B4E58 /* Gender.swift */; };
 		52F48BB31E4E3F9300E8ACCA /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */; };
 		52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */; };
@@ -79,6 +81,7 @@
 		520683B01E7C24620062CE92 /* Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
 		520683B51E7C24870062CE92 /* FavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 		520683B71E7C250B0062CE92 /* FaveButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FaveButton.h; path = "Got Healthy/FaveButton.h"; sourceTree = "<group>"; };
+		5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		522B40F41E7C8F2C006010A4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		52CAC01A1E38F29700E0302F /* Got HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Got HealthyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CAC01E1E38F29700E0302F /* Got_HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Got_HealthyUITests.swift; sourceTree = "<group>"; };
 		52CAC0201E38F29700E0302F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CDF75C1E80417C0031FFE2 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		52D79C821E4B812A007B4E58 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldIcon.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				52D79C821E4B812A007B4E58 /* Gender.swift */,
 				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
 				525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */,
+				52CDF75C1E80417C0031FFE2 /* ActivityView.swift */,
+				5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */,
 				52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */,
 				52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */,
 				52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */,
@@ -408,6 +414,8 @@
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
 				522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */,
 				520683AC1E7C243D0062CE92 /* Spark.swift in Sources */,
+				5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */,
+				52CDF75D1E80417C0031FFE2 /* ActivityView.swift in Sources */,
 				52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52F8A1951E68714600EF567A /* FirstViewController.swift in Sources */,

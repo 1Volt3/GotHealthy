@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class PhotoEntry: UIViewController,UIImagePickerControllerDelegate,
 UINavigationControllerDelegate  {
@@ -44,6 +45,7 @@ UINavigationControllerDelegate  {
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        picker.mediaTypes = [kUTTypeImage as String]
         picker.modalPresentationStyle = .popover
         present(picker, animated: true, completion: nil)
     }
@@ -53,6 +55,7 @@ UINavigationControllerDelegate  {
             picker.allowsEditing = false
             picker.sourceType = UIImagePickerControllerSourceType.camera
             picker.cameraCaptureMode = .photo
+            picker.mediaTypes = [kUTTypeImage as String]
             picker.modalPresentationStyle = .fullScreen
             present(picker,animated: true,completion: nil)
         } else {

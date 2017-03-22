@@ -14,6 +14,12 @@ class TabViewController: UIViewController{
     
     @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet weak var profileTabButton: FaveButton!
+    @IBOutlet weak var activityTabButton: FaveButton!
+    @IBOutlet weak var exerciseTabButton: FaveButton!
+    @IBOutlet weak var nutritionTabButton: FaveButton!
+    @IBOutlet weak var settingsTabButton: FaveButton!
+    
     var profileViewController: UIViewController!
     var healthViewController: UIViewController!
     var exerciseViewController: UIViewController!
@@ -34,12 +40,17 @@ class TabViewController: UIViewController{
         viewControllers = [profileViewController, healthViewController, exerciseViewController, nutritionViewController, settingsViewController]
         Buttons[selectedIndex].isSelected = true
         didPressTab(Buttons[selectedIndex])
+        profileTabButton.isSelected = true
+        activityTabButton.isSelected = true
+        exerciseTabButton.isSelected = true
+        nutritionTabButton.isSelected = true
+        settingsTabButton.isSelected = true
     }
 
     @IBAction func didPressTab(_ sender: FaveButton) {
         let previousIndex = selectedIndex
         selectedIndex = sender.tag
-        Buttons[previousIndex].isSelected = false
+        //Buttons[previousIndex].isSelected = false
         let previousVC = viewControllers[previousIndex]
         previousVC.willMove(toParentViewController: nil)
         previousVC.view.removeFromSuperview()

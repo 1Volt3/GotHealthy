@@ -10,7 +10,7 @@ import UIKit
 
 class FaveIcon: UIView {
     
-    var iconColor: UIColor = .gray
+    var iconColor: UIColor = .white
     var iconImage: UIImage!
     var iconLayer: CAShapeLayer!
     var iconMask:  CALayer!

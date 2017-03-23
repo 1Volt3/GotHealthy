@@ -415,12 +415,58 @@
                     <view key="view" contentMode="scaleToFill" id="zFB-0w-n11">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Rog-Y7-U1o">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeasurementType" textLabel="ipH-DG-yvo" detailTextLabel="hM1-29-4aB" style="IBUITableViewCellStyleValue1" id="fwJ-cS-CsP">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fwJ-cS-CsP" id="a41-YF-kVU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Measurement Unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ipH-DG-yvo">
+                                                    <rect key="frame" x="15" y="11" width="141" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Imperial" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hM1-29-4aB">
+                                                    <rect key="frame" x="299" y="11" width="61" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeasurementType" translatesAutoresizingMaskIntoConstraints="NO" id="Obo-Kc-Ysp">
+                                <rect key="frame" x="0.0" y="311" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Obo-Kc-Ysp" id="esj-Iu-huR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rog-Y7-U1o" secondAttribute="trailing" id="ZAn-By-jRS"/>
+                            <constraint firstItem="Rog-Y7-U1o" firstAttribute="leading" secondItem="zFB-0w-n11" secondAttribute="leading" id="gms-Ey-VmI"/>
+                            <constraint firstItem="Rog-Y7-U1o" firstAttribute="top" secondItem="PZY-pB-Yyb" secondAttribute="bottom" id="qIG-lz-VeC"/>
+                            <constraint firstAttribute="bottom" secondItem="Rog-Y7-U1o" secondAttribute="bottom" id="ssS-UR-xP0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMP-IY-la9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5218" y="-864"/>
+            <point key="canvasLocation" x="5216.8000000000002" y="-864.01799100449784"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="gPc-WS-vTJ">
@@ -446,10 +492,10 @@
                                         <state key="normal" title="Profile" image="heart"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.85490196078431369" green="0.6470588235294118" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -462,13 +508,13 @@
                                             <constraint firstAttribute="width" constant="51" id="zwa-vu-Mhs"/>
                                         </constraints>
                                         <color key="tintColor" red="0.0" green="0.0095094450959999997" blue="0.01493685233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Home" image="like"/>
+                                        <state key="normal" title="Home" image="Activity"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
-                                                <color key="value" red="0.0" green="0.0095094450962976401" blue="0.014936852331606243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.85490196078431369" green="0.6470588235294118" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -481,13 +527,13 @@
                                             <constraint firstAttribute="width" constant="51" id="e9I-JV-Eup"/>
                                         </constraints>
                                         <color key="tintColor" red="0.0" green="0.0095094450959999997" blue="0.01493685233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Activity" image="like"/>
+                                        <state key="normal" title="Activity" image="Nutrition"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
-                                                <color key="value" red="0.0" green="0.0095094450959999997" blue="0.01493685233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.85490196078431369" green="0.6470588235294118" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -497,13 +543,13 @@
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLE-fx-MQ9" customClass="FaveButton" customModule="Got_Healthy">
                                         <rect key="frame" x="316" y="13" width="51" height="35"/>
                                         <color key="tintColor" red="0.0" green="0.0095094450959999997" blue="0.01493685233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Settings" image="heart"/>
+                                        <state key="normal" title="Settings" image="Settings"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
-                                                <color key="value" red="0.0" green="0.0095094450959999997" blue="0.01493685233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.85490196078431369" green="0.6470588235294118" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -513,13 +559,13 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-yL-znb" customClass="FaveButton" customModule="Got_Healthy">
                                         <rect key="frame" x="162" y="13" width="51" height="35"/>
                                         <color key="tintColor" red="0.0" green="0.0095094450959999997" blue="0.01493685233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Exercise" image="heart"/>
+                                        <state key="normal" title="Exercise" image="Exercise"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
-                                                <color key="value" red="0.0" green="0.0095094450959999997" blue="0.01493685233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.85490196078431369" green="0.6470588235294118" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -567,7 +613,7 @@
                             <constraint firstItem="nMT-rY-tlq" firstAttribute="top" secondItem="38y-7z-WGh" secondAttribute="top" id="6rY-ve-7XM"/>
                             <constraint firstItem="nMT-rY-tlq" firstAttribute="leading" secondItem="38y-7z-WGh" secondAttribute="leading" id="Nke-ZY-lBN"/>
                             <constraint firstItem="f2q-bd-bFv" firstAttribute="top" secondItem="38y-7z-WGh" secondAttribute="top" constant="606" id="SJx-vv-wkY"/>
-                            <constraint firstItem="f2q-bd-bFv" firstAttribute="top" secondItem="nMT-rY-tlq" secondAttribute="bottom" symbolic="YES" id="ftC-GZ-Q3p"/>
+                            <constraint firstItem="f2q-bd-bFv" firstAttribute="top" secondItem="nMT-rY-tlq" secondAttribute="bottom" constant="8" symbolic="YES" id="ftC-GZ-Q3p"/>
                             <constraint firstItem="nMT-rY-tlq" firstAttribute="leading" secondItem="f2q-bd-bFv" secondAttribute="leading" id="p9u-zZ-Fg0"/>
                             <constraint firstAttribute="trailing" secondItem="nMT-rY-tlq" secondAttribute="trailing" id="wEJ-wb-vSr"/>
                             <constraint firstItem="Cuq-uL-pqE" firstAttribute="top" secondItem="nMT-rY-tlq" secondAttribute="bottom" constant="21" id="zY1-tu-LrZ"/>
@@ -1267,7 +1313,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14f-ig-INC" id="icd-Jb-QaH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1429,15 +1475,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Activity" width="200" height="200"/>
         <image name="BackArrow" width="148" height="148"/>
         <image name="ButtonBoxGreen" width="172" height="91"/>
+        <image name="Exercise" width="200" height="200"/>
         <image name="Female" width="256" height="256"/>
         <image name="GrayBoxButton" width="172" height="91"/>
         <image name="Male" width="256" height="256"/>
         <image name="NextArrow" width="148" height="148"/>
+        <image name="Nutrition" width="200" height="200"/>
+        <image name="Settings" width="200" height="200"/>
         <image name="first" width="30" height="30"/>
         <image name="heart" width="128" height="128"/>
-        <image name="like" width="128" height="128"/>
         <image name="runner" width="300" height="300"/>
         <image name="second" width="30" height="30"/>
     </resources>

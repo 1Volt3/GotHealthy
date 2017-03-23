@@ -40,17 +40,12 @@ class TabViewController: UIViewController{
         viewControllers = [profileViewController, healthViewController, exerciseViewController, nutritionViewController, settingsViewController]
         Buttons[selectedIndex].isSelected = true
         didPressTab(Buttons[selectedIndex])
-        profileTabButton.isSelected = true
-        activityTabButton.isSelected = true
-        exerciseTabButton.isSelected = true
-        nutritionTabButton.isSelected = true
-        settingsTabButton.isSelected = true
     }
 
     @IBAction func didPressTab(_ sender: FaveButton) {
         let previousIndex = selectedIndex
         selectedIndex = sender.tag
-        //Buttons[previousIndex].isSelected = false
+        Buttons[previousIndex].isSelected = false
         let previousVC = viewControllers[previousIndex]
         previousVC.willMove(toParentViewController: nil)
         previousVC.view.removeFromSuperview()

@@ -19,6 +19,7 @@
 		520683B31E7C24620062CE92 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683AF1E7C24620062CE92 /* Geometry.swift */; };
 		520683B41E7C24620062CE92 /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683B01E7C24620062CE92 /* Init.swift */; };
 		520683B61E7C24870062CE92 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683B51E7C24870062CE92 /* FavViewController.swift */; };
+		520E98CA1E8582320066876B /* Beginning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520E98C91E8582320066876B /* Beginning.storyboard */; };
 		5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */; };
 		522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B40F41E7C8F2C006010A4 /* TabViewController.swift */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
@@ -81,6 +82,7 @@
 		520683B01E7C24620062CE92 /* Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
 		520683B51E7C24870062CE92 /* FavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 		520683B71E7C250B0062CE92 /* FaveButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FaveButton.h; path = "Got Healthy/FaveButton.h"; sourceTree = "<group>"; };
+		520E98C91E8582320066876B /* Beginning.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Beginning.storyboard; sourceTree = "<group>"; };
 		5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		522B40F41E7C8F2C006010A4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
@@ -154,6 +156,17 @@
 			path = "Got Healthy";
 			sourceTree = "<group>";
 		};
+		520E98CB1E85823A0066876B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				52CAC0021E38F29700E0302F /* Main.storyboard */,
+				520E98C91E8582320066876B /* Beginning.storyboard */,
+				52CAC0071E38F29700E0302F /* LaunchScreen.storyboard */,
+				52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		52B09EA61E80180700F162E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +206,7 @@
 				52CABFFE1E38F29700E0302F /* AppDelegate.swift */,
 				52CAC0001E38F29700E0302F /* ViewController.swift */,
 				52AECE981E79E9E4006978A9 /* ProfileView.swift */,
-				52CAC0021E38F29700E0302F /* Main.storyboard */,
+				520E98CB1E85823A0066876B /* Storyboard */,
 				522B40F41E7C8F2C006010A4 /* TabViewController.swift */,
 				5272E9991E6F087500F26A23 /* BeginScreen.swift */,
 				52041C001E4541A7008CD4DF /* Keyboard.swift */,
@@ -211,7 +224,6 @@
 				52F8A1931E68714600EF567A /* FirstViewController.swift */,
 				52F8A1941E68714600EF567A /* SecondViewController.swift */,
 				52CAC0051E38F29700E0302F /* Assets.xcassets */,
-				52791E831E3ABECD00E1B7E5 /* TodayInterface.storyboard */,
 				520683AD1E7C24620062CE92 /* Constraints+.swift */,
 				520683AE1E7C24620062CE92 /* Easing.swift */,
 				520683AF1E7C24620062CE92 /* Geometry.swift */,
@@ -225,7 +237,6 @@
 				52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */,
 				52791E871E3AC10E00E1B7E5 /* Header.swift */,
 				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
-				52CAC0071E38F29700E0302F /* LaunchScreen.storyboard */,
 				520683A31E7C1E480062CE92 /* Settings.bundle */,
 				52CAC00A1E38F29700E0302F /* Info.plist */,
 			);
@@ -365,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520E98CA1E8582320066876B /* Beginning.storyboard in Resources */,
 				52CAC0091E38F29700E0302F /* LaunchScreen.storyboard in Resources */,
 				52CAC0061E38F29700E0302F /* Assets.xcassets in Resources */,
 				520683A41E7C1E480062CE92 /* Settings.bundle in Resources */,

@@ -15,7 +15,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var stepCountLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var profilePhotoChosen: UIImageView!
     @IBOutlet weak var measurementChosen: UILabel!
     @IBOutlet weak var caloriesBurned: UILabel!
     var sharedDefaults: UserDefaults! = UserDefaults(suiteName: defaultsSuiteName)
@@ -43,18 +42,6 @@ class ViewController: UIViewController {
             calculatedGrams = Double(weightMeasurement)! * 0.453592
         }
         measurementChosen.text = measurmentChosen
-        if let imgData = defaults.object(forKey: "imageChosen") as? NSData
-        {
-            if let image = UIImage(data: imgData as Data)
-            {
-                //set image in UIImageView imgSignature
-                profilePhotoChosen.image = image
-            }
-        }
-        profilePhotoChosen.layer.cornerRadius = 10.0
-        profilePhotoChosen.layer.borderWidth = 3
-        profilePhotoChosen.layer.borderColor = UIColor.black.cgColor
-        profilePhotoChosen.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

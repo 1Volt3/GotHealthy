@@ -20,6 +20,7 @@
 		520683B41E7C24620062CE92 /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683B01E7C24620062CE92 /* Init.swift */; };
 		520683B61E7C24870062CE92 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683B51E7C24870062CE92 /* FavViewController.swift */; };
 		520E98CA1E8582320066876B /* Beginning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520E98C91E8582320066876B /* Beginning.storyboard */; };
+		520E98CD1E858B2A0066876B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E98CC1E858B2A0066876B /* NotificationCenter.framework */; };
 		5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */; };
 		522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B40F41E7C8F2C006010A4 /* TabViewController.swift */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
@@ -83,6 +84,7 @@
 		520683B51E7C24870062CE92 /* FavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 		520683B71E7C250B0062CE92 /* FaveButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FaveButton.h; path = "Got Healthy/FaveButton.h"; sourceTree = "<group>"; };
 		520E98C91E8582320066876B /* Beginning.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Beginning.storyboard; sourceTree = "<group>"; };
+		520E98CC1E858B2A0066876B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		522B40F41E7C8F2C006010A4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520E98CD1E858B2A0066876B /* NotificationCenter.framework in Frameworks */,
 				52791E901E3AC1D100E1B7E5 /* QuartzCore.framework in Frameworks */,
 				52B09EA81E80180800F162E8 /* HealthKit.framework in Frameworks */,
 			);
@@ -170,6 +173,8 @@
 		52B09EA61E80180700F162E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */,
+				520E98CC1E858B2A0066876B /* NotificationCenter.framework */,
 				52B09EA71E80180800F162E8 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -202,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				52B09EA51E80180700F162E8 /* Got Healthy.entitlements */,
-				52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */,
 				52CABFFE1E38F29700E0302F /* AppDelegate.swift */,
 				52CAC0001E38F29700E0302F /* ViewController.swift */,
 				52AECE981E79E9E4006978A9 /* ProfileView.swift */,

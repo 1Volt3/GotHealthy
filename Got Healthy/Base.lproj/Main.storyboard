@@ -444,7 +444,7 @@
                                 <rect key="frame" x="0.0" y="311" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Obo-Kc-Ysp" id="esj-Iu-huR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1307,7 +1307,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14f-ig-INC" id="icd-Jb-QaH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1485,9 +1485,9 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Onb-wB-4dC"/>
         <segue reference="r8m-6D-28V"/>
-        <segue reference="Dd2-SK-nCO"/>
-        <segue reference="uLc-4u-kbG"/>
+        <segue reference="5mL-JT-BiV"/>
+        <segue reference="cbV-O0-BaX"/>
+        <segue reference="vfB-sv-teo"/>
     </inferredMetricsTieBreakers>
 </document>

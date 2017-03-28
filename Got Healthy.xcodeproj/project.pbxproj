@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5200C2251E3F91510077F623 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5200C2241E3F91510077F623 /* AuthManager.swift */; };
 		52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041C001E4541A7008CD4DF /* Keyboard.swift */; };
 		520683A41E7C1E480062CE92 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 520683A31E7C1E480062CE92 /* Settings.bundle */; };
 		520683A91E7C243D0062CE92 /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520683A51E7C243D0062CE92 /* FaveButton.swift */; };
@@ -35,7 +34,6 @@
 		52791E901E3AC1D100E1B7E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */; };
 		52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AECE981E79E9E4006978A9 /* ProfileView.swift */; };
 		52B09EA81E80180800F162E8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B09EA71E80180800F162E8 /* HealthKit.framework */; };
-		52C9460B1E5F4D3B00FB6515 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9460A1E5F4D3B00FB6515 /* StringUtils.swift */; };
 		52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CABFFE1E38F29700E0302F /* AppDelegate.swift */; };
 		52CAC0011E38F29700E0302F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC0001E38F29700E0302F /* ViewController.swift */; };
 		52CAC0041E38F29700E0302F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CAC0021E38F29700E0302F /* Main.storyboard */; };
@@ -70,7 +68,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5200C2241E3F91510077F623 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		52041C001E4541A7008CD4DF /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		520683A31E7C1E480062CE92 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		520683A51E7C243D0062CE92 /* FaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveButton.swift; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		52AECE981E79E9E4006978A9 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		52B09EA51E80180700F162E8 /* Got Healthy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Got Healthy.entitlements"; sourceTree = "<group>"; };
 		52B09EA71E80180800F162E8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		52C9460A1E5F4D3B00FB6515 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		52CABFFB1E38F29700E0302F /* Got Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Got Healthy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CABFFE1E38F29700E0302F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52CAC0001E38F29700E0302F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -224,7 +220,6 @@
 				52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */,
 				52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */,
 				52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */,
-				52C9460A1E5F4D3B00FB6515 /* StringUtils.swift */,
 				52F8A1931E68714600EF567A /* FirstViewController.swift */,
 				52F8A1941E68714600EF567A /* SecondViewController.swift */,
 				52CAC0051E38F29700E0302F /* Assets.xcassets */,
@@ -237,7 +232,6 @@
 				520683A71E7C243D0062CE92 /* Ring.swift */,
 				520683A81E7C243D0062CE92 /* Spark.swift */,
 				520683B51E7C24870062CE92 /* FavViewController.swift */,
-				5200C2241E3F91510077F623 /* AuthManager.swift */,
 				52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */,
 				52791E871E3AC10E00E1B7E5 /* Header.swift */,
 				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
@@ -413,14 +407,12 @@
 				525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */,
 				52F8A1961E68714600EF567A /* SecondViewController.swift in Sources */,
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
-				5200C2251E3F91510077F623 /* AuthManager.swift in Sources */,
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
 				52F48BB51E4E3F9300E8ACCA /* UIPosition.swift in Sources */,
 				520683B31E7C24620062CE92 /* Geometry.swift in Sources */,
 				520683A91E7C243D0062CE92 /* FaveButton.swift in Sources */,
 				520683B41E7C24620062CE92 /* Init.swift in Sources */,
-				52C9460B1E5F4D3B00FB6515 /* StringUtils.swift in Sources */,
 				52D79C831E4B812A007B4E58 /* Gender.swift in Sources */,
 				5272E99A1E6F087500F26A23 /* BeginScreen.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,

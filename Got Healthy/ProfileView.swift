@@ -16,7 +16,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var genderChosen: UILabel!
     @IBOutlet weak var heightChosen: UILabel!
     @IBOutlet weak var weightChosen: UILabel!
-    @IBOutlet weak var measurementChosen: UILabel!
     @IBOutlet weak var profilePhotoChosen: UIImageView!
     @IBOutlet weak var BMIValue: UILabel!
     @IBOutlet weak var BMIStatusValue: UILabel!
@@ -60,7 +59,6 @@ class ProfileViewController: UIViewController {
         genderChosen.text = gender
         heightChosen.text = heightValueChosen
         weightChosen.text = weightValueChosen
-        measurementChosen.text = measurmentChosen
         if let imgData = defaults.object(forKey: "imageChosen") as? NSData
         {
             if let image = UIImage(data: imgData as Data)

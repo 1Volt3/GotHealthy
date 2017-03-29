@@ -75,7 +75,7 @@ open class FloatingTextFieldIcon: FloatingTextField {
     @IBInspectable
     open var iconRotationDegrees:Double = 0 {
         didSet {
-            self.iconLabel.transform = CGAffineTransform(rotationAngle: CGFloat(iconRotationDegrees * M_PI / 180.0))
+            self.iconLabel.transform = CGAffineTransform(rotationAngle: CGFloat(iconRotationDegrees * Double.pi / 180.0))
         }
     }
     

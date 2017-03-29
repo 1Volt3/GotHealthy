@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import CoreLocation
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
 
+    var storyboard : UIStoryboard?;
+    let locationManager = CLLocationManager()
+    var pos = 0
+    var LatitudeGPS = NSString()
+    var LongitudeGPS = NSString()
+    var speedGPS = NSString()
+    var Course = NSString()
+    var Altitude = NSString()
+    var bgtimer = Timer()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -46,9 +56,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
 
+    var backgroundUpdateTask: UIBackgroundTaskIdentifier!
+    
+    
+    func beginBackgroundUpdateTask() {
+        self.backgroundUpdateTask = UIApplication.shared.beginBackgroundTask(expirationHandler: {
+            self.endBackgroundUpdateTask()
+        })
+    }
+    
+    func endBackgroundUpdateTask() {
+        UIApplication.shared.endBackgroundTask(self.backgroundUpdateTask)
+        self.backgroundUpdateTask = UIBackgroundTaskInvalid
+    }
+    
+    func doBackgroundTask() {
+        
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: {
+            self.beginBackgroundUpdateTask()
+            
+            // Do something
+            self.StartupdateLocation()
+            
+            self.bgtimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(AppDelegate.bgtimer(_:)), userInfo: nil, repeats: true)
+            RunLoop.current.add(self.bgtimer, forMode: RunLoopMode.defaultRunLoopMode)
+            RunLoop.current.run()
+            
+            
+            // End the background task.
+            self.endBackgroundUpdateTask()
+        })
+    }
+    
+    
+    func bgtimer(_ timer:Timer!){
+        updateLocation()
+        print("Position Report: \(pos)")
+    }
+
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        self.doBackgroundTask()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -64,6 +114,80 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
+    func StartupdateLocation() {
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.pausesLocationUpdatesAutomatically = false
+    }
+    
+    func updateLocation() {
+        pos += 1
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        LatitudeGPS = String(format: "%.10f", manager.location!.coordinate.latitude) as NSString
+        LongitudeGPS = String(format: "%.10f", manager.location!.coordinate.longitude) as NSString
+        speedGPS = String(format: "%.3f", manager.location!.speed) as NSString
+        Altitude = String(format: "%.3f", manager.location!.altitude) as NSString
+        Course = String(format: "%.3f", manager.location!.course) as NSString
+        
+    }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+    }
+    
+    lazy var applicationDocumentsDirectory: URL = {
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.zedenem.MoonRunner" in the application's documents Application Support directory.
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return urls.last! as URL
+    }()
+
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
+        let modelURL = Bundle.main.url(forResource: "GotHealthy", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOf: modelURL)!
+    }()
+    
+    lazy var managedObjectContext: NSManagedObjectContext? = {
+        // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
+        let coordinator = self.persistentStoreCoordinator
+        if coordinator == nil {
+            return nil
+        }
+        var managedObjectContext = NSManagedObjectContext()
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        return managedObjectContext
+    }()
+    
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
+        // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
+        // Create the coordinator and store
+        var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        let url = self.applicationDocumentsDirectory.appendingPathComponent("GotHealthy.sqlite")
+        var error: NSError? = nil
+        var failureReason = "There was an error creating or loading the application's saved data."
+        do {
+            try coordinator!.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
+            coordinator = nil
+            // Report any error we got.
+            var dict = [AnyHashable: Any]()
+            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason
+            dict[NSUnderlyingErrorKey] = error
+        } catch {
+            fatalError()
+        }
+        return coordinator
+    }()
     
     // MARK: - Core Data stack
     
@@ -74,7 +198,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "ToDO_App")
+        let container = NSPersistentContainer(name: "GotHealthy")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -111,7 +235,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
-
-
-}
-

@@ -22,6 +22,18 @@
 		520E98CD1E858B2A0066876B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E98CC1E858B2A0066876B /* NotificationCenter.framework */; };
 		5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */; };
 		522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B40F41E7C8F2C006010A4 /* TabViewController.swift */; };
+		523EAAA41E8B11700065DF18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAAA31E8B11700065DF18 /* MapKit.framework */; };
+		523EAAA91E8B12FA0065DF18 /* RunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAA81E8B12FA0065DF18 /* RunView.swift */; };
+		523EAAB01E8B13680065DF18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAA1E8B13680065DF18 /* HomeViewController.swift */; };
+		523EAAB11E8B13680065DF18 /* RunSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAB1E8B13680065DF18 /* RunSetupViewController.swift */; };
+		523EAAB21E8B13680065DF18 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAC1E8B13680065DF18 /* NewRunViewController.swift */; };
+		523EAAB31E8B13680065DF18 /* RunDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAD1E8B13680065DF18 /* RunDetailViewController.swift */; };
+		523EAAB41E8B13680065DF18 /* MulticolorPolylineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */; };
+		523EAAB81E8B14100065DF18 /* Exercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAB61E8B14100065DF18 /* Exercise.xcdatamodeld */; };
+		523EAAF91E8B1E0E0065DF18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */; };
+		523EAB011E8B24C40065DF18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAB001E8B24C40065DF18 /* CoreGraphics.framework */; };
+		523EAB031E8B286E0065DF18 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAB021E8B286E0065DF18 /* Run.swift */; };
+		523EAB051E8B28980065DF18 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAB041E8B28980065DF18 /* Location.swift */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
@@ -42,6 +54,7 @@
 		52CAC0141E38F29700E0302F /* Got_HealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC0131E38F29700E0302F /* Got_HealthyTests.swift */; };
 		52CAC01F1E38F29700E0302F /* Got_HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CAC01E1E38F29700E0302F /* Got_HealthyUITests.swift */; };
 		52CDF75D1E80417C0031FFE2 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDF75C1E80417C0031FFE2 /* ActivityView.swift */; };
+		52D2F5721E8B098D007DAEAD /* GotHealthy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52D2F5701E8B098D007DAEAD /* GotHealthy.xcdatamodeld */; };
 		52D79C831E4B812A007B4E58 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D79C821E4B812A007B4E58 /* Gender.swift */; };
 		52F48BB31E4E3F9300E8ACCA /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */; };
 		52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */; };
@@ -84,6 +97,18 @@
 		520E98CC1E858B2A0066876B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		522B40F41E7C8F2C006010A4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		523EAAA31E8B11700065DF18 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		523EAAA81E8B12FA0065DF18 /* RunView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunView.swift; sourceTree = "<group>"; };
+		523EAAAA1E8B13680065DF18 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		523EAAAB1E8B13680065DF18 /* RunSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunSetupViewController.swift; sourceTree = "<group>"; };
+		523EAAAC1E8B13680065DF18 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
+		523EAAAD1E8B13680065DF18 /* RunDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunDetailViewController.swift; sourceTree = "<group>"; };
+		523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticolorPolylineSegment.swift; sourceTree = "<group>"; };
+		523EAAB71E8B14100065DF18 /* Exercise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Exercise.xcdatamodel; sourceTree = "<group>"; };
+		523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		523EAB001E8B24C40065DF18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		523EAB021E8B286E0065DF18 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		523EAB041E8B28980065DF18 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
@@ -111,6 +136,7 @@
 		52CAC01E1E38F29700E0302F /* Got_HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Got_HealthyUITests.swift; sourceTree = "<group>"; };
 		52CAC0201E38F29700E0302F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52CDF75C1E80417C0031FFE2 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		52D2F5711E8B098D007DAEAD /* GotHealthy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GotHealthy.xcdatamodel; sourceTree = "<group>"; };
 		52D79C821E4B812A007B4E58 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldIcon.swift; sourceTree = "<group>"; };
@@ -124,6 +150,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523EAB011E8B24C40065DF18 /* CoreGraphics.framework in Frameworks */,
+				523EAAF91E8B1E0E0065DF18 /* CoreLocation.framework in Frameworks */,
+				523EAAA41E8B11700065DF18 /* MapKit.framework in Frameworks */,
 				520E98CD1E858B2A0066876B /* NotificationCenter.framework in Frameworks */,
 				52791E901E3AC1D100E1B7E5 /* QuartzCore.framework in Frameworks */,
 				52B09EA81E80180800F162E8 /* HealthKit.framework in Frameworks */,
@@ -166,9 +195,66 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		523BD8141E8BF61C00FE3257 /* Nutrition */ = {
+			isa = PBXGroup;
+			children = (
+				52F8A1931E68714600EF567A /* FirstViewController.swift */,
+				52F8A1941E68714600EF567A /* SecondViewController.swift */,
+			);
+			name = Nutrition;
+			sourceTree = "<group>";
+		};
+		523BD8151E8BF64400FE3257 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				522B40F41E7C8F2C006010A4 /* TabViewController.swift */,
+				520683A51E7C243D0062CE92 /* FaveButton.swift */,
+				520683A61E7C243D0062CE92 /* FaveIcon.swift */,
+				520683A71E7C243D0062CE92 /* Ring.swift */,
+				520683A81E7C243D0062CE92 /* Spark.swift */,
+				520683B51E7C24870062CE92 /* FavViewController.swift */,
+				520683AD1E7C24620062CE92 /* Constraints+.swift */,
+				520683AE1E7C24620062CE92 /* Easing.swift */,
+				520683AF1E7C24620062CE92 /* Geometry.swift */,
+				520683B01E7C24620062CE92 /* Init.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		523BD8161E8BF67600FE3257 /* FloatTextField */ = {
+			isa = PBXGroup;
+			children = (
+				52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */,
+				52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */,
+				52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */,
+			);
+			name = FloatTextField;
+			sourceTree = "<group>";
+		};
+		523EAAA71E8B12EC0065DF18 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				52791E871E3AC10E00E1B7E5 /* Header.swift */,
+				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
+				523EAAA81E8B12FA0065DF18 /* RunView.swift */,
+				523EAB021E8B286E0065DF18 /* Run.swift */,
+				523EAB041E8B28980065DF18 /* Location.swift */,
+				523EAAAA1E8B13680065DF18 /* HomeViewController.swift */,
+				523EAAAB1E8B13680065DF18 /* RunSetupViewController.swift */,
+				523EAAAC1E8B13680065DF18 /* NewRunViewController.swift */,
+				523EAAAD1E8B13680065DF18 /* RunDetailViewController.swift */,
+				523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */,
+				523EAAB61E8B14100065DF18 /* Exercise.xcdatamodeld */,
+			);
+			name = Exercise;
+			sourceTree = "<group>";
+		};
 		52B09EA61E80180700F162E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				523EAB001E8B24C40065DF18 /* CoreGraphics.framework */,
+				523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */,
+				523EAAA31E8B11700065DF18 /* MapKit.framework */,
 				52791E8F1E3AC1D100E1B7E5 /* QuartzCore.framework */,
 				520E98CC1E858B2A0066876B /* NotificationCenter.framework */,
 				52B09EA71E80180800F162E8 /* HealthKit.framework */,
@@ -206,8 +292,11 @@
 				52CABFFE1E38F29700E0302F /* AppDelegate.swift */,
 				52CAC0001E38F29700E0302F /* ViewController.swift */,
 				52AECE981E79E9E4006978A9 /* ProfileView.swift */,
+				523EAAA71E8B12EC0065DF18 /* Exercise */,
+				523BD8141E8BF61C00FE3257 /* Nutrition */,
 				520E98CB1E85823A0066876B /* Storyboard */,
-				522B40F41E7C8F2C006010A4 /* TabViewController.swift */,
+				523BD8151E8BF64400FE3257 /* TabBar */,
+				523BD8161E8BF67600FE3257 /* FloatTextField */,
 				5272E9991E6F087500F26A23 /* BeginScreen.swift */,
 				52041C001E4541A7008CD4DF /* Keyboard.swift */,
 				525EB2B51E422E0E000A8F09 /* NameEntry.swift */,
@@ -217,24 +306,9 @@
 				525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */,
 				52CDF75C1E80417C0031FFE2 /* ActivityView.swift */,
 				5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */,
-				52F48BB01E4E3F9300E8ACCA /* FloatingTextField.swift */,
-				52F48BB11E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift */,
-				52F48BB21E4E3F9300E8ACCA /* UIPosition.swift */,
-				52F8A1931E68714600EF567A /* FirstViewController.swift */,
-				52F8A1941E68714600EF567A /* SecondViewController.swift */,
 				52CAC0051E38F29700E0302F /* Assets.xcassets */,
-				520683AD1E7C24620062CE92 /* Constraints+.swift */,
-				520683AE1E7C24620062CE92 /* Easing.swift */,
-				520683AF1E7C24620062CE92 /* Geometry.swift */,
-				520683B01E7C24620062CE92 /* Init.swift */,
-				520683A51E7C243D0062CE92 /* FaveButton.swift */,
-				520683A61E7C243D0062CE92 /* FaveIcon.swift */,
-				520683A71E7C243D0062CE92 /* Ring.swift */,
-				520683A81E7C243D0062CE92 /* Spark.swift */,
-				520683B51E7C24870062CE92 /* FavViewController.swift */,
 				52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */,
-				52791E871E3AC10E00E1B7E5 /* Header.swift */,
-				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
+				52D2F5701E8B098D007DAEAD /* GotHealthy.xcdatamodeld */,
 				520683A31E7C1E480062CE92 /* Settings.bundle */,
 				52CAC00A1E38F29700E0302F /* Info.plist */,
 			);
@@ -406,28 +480,38 @@
 			files = (
 				525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */,
 				52F8A1961E68714600EF567A /* SecondViewController.swift in Sources */,
+				523EAB051E8B28980065DF18 /* Location.swift in Sources */,
+				523EAAB01E8B13680065DF18 /* HomeViewController.swift in Sources */,
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
+				523EAAB21E8B13680065DF18 /* NewRunViewController.swift in Sources */,
 				52F48BB51E4E3F9300E8ACCA /* UIPosition.swift in Sources */,
 				520683B31E7C24620062CE92 /* Geometry.swift in Sources */,
+				523EAAA91E8B12FA0065DF18 /* RunView.swift in Sources */,
 				520683A91E7C243D0062CE92 /* FaveButton.swift in Sources */,
 				520683B41E7C24620062CE92 /* Init.swift in Sources */,
+				523EAAB11E8B13680065DF18 /* RunSetupViewController.swift in Sources */,
 				52D79C831E4B812A007B4E58 /* Gender.swift in Sources */,
 				5272E99A1E6F087500F26A23 /* BeginScreen.swift in Sources */,
+				523EAAB31E8B13680065DF18 /* RunDetailViewController.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
 				520683AA1E7C243D0062CE92 /* FaveIcon.swift in Sources */,
 				520683B11E7C24620062CE92 /* Constraints+.swift in Sources */,
 				520683AB1E7C243D0062CE92 /* Ring.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
 				522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */,
+				52D2F5721E8B098D007DAEAD /* GotHealthy.xcdatamodeld in Sources */,
 				520683AC1E7C243D0062CE92 /* Spark.swift in Sources */,
 				5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */,
 				52CDF75D1E80417C0031FFE2 /* ActivityView.swift in Sources */,
 				52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */,
+				523EAAB81E8B14100065DF18 /* Exercise.xcdatamodeld in Sources */,
+				523EAB031E8B286E0065DF18 /* Run.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52F8A1951E68714600EF567A /* FirstViewController.swift in Sources */,
 				525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */,
+				523EAAB41E8B13680065DF18 /* MulticolorPolylineSegment.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,
 				520683B61E7C24870062CE92 /* FavViewController.swift in Sources */,
 				520683B21E7C24620062CE92 /* Easing.swift in Sources */,
@@ -594,6 +678,10 @@
 				);
 				INFOPLIST_FILE = "Got Healthy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.volt.Got-Healthy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -615,8 +703,13 @@
 				);
 				INFOPLIST_FILE = "Got Healthy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.volt.Got-Healthy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -719,6 +812,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		523EAAB61E8B14100065DF18 /* Exercise.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				523EAAB71E8B14100065DF18 /* Exercise.xcdatamodel */,
+			);
+			currentVersion = 523EAAB71E8B14100065DF18 /* Exercise.xcdatamodel */;
+			path = Exercise.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		52D2F5701E8B098D007DAEAD /* GotHealthy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52D2F5711E8B098D007DAEAD /* GotHealthy.xcdatamodel */,
+			);
+			currentVersion = 52D2F5711E8B098D007DAEAD /* GotHealthy.xcdatamodel */;
+			path = GotHealthy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 52CABFF31E38F29700E0302F /* Project object */;
 }

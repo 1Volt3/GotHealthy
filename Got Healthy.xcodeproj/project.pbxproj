@@ -29,7 +29,6 @@
 		523EAAB21E8B13680065DF18 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAC1E8B13680065DF18 /* NewRunViewController.swift */; };
 		523EAAB31E8B13680065DF18 /* RunDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAD1E8B13680065DF18 /* RunDetailViewController.swift */; };
 		523EAAB41E8B13680065DF18 /* MulticolorPolylineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */; };
-		523EAAB81E8B14100065DF18 /* Exercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAB61E8B14100065DF18 /* Exercise.xcdatamodeld */; };
 		523EAAF91E8B1E0E0065DF18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */; };
 		523EAB011E8B24C40065DF18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAB001E8B24C40065DF18 /* CoreGraphics.framework */; };
 		523EAB031E8B286E0065DF18 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAB021E8B286E0065DF18 /* Run.swift */; };
@@ -104,7 +103,6 @@
 		523EAAAC1E8B13680065DF18 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 		523EAAAD1E8B13680065DF18 /* RunDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunDetailViewController.swift; sourceTree = "<group>"; };
 		523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticolorPolylineSegment.swift; sourceTree = "<group>"; };
-		523EAAB71E8B14100065DF18 /* Exercise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Exercise.xcdatamodel; sourceTree = "<group>"; };
 		523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		523EAB001E8B24C40065DF18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		523EAB021E8B286E0065DF18 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
@@ -244,7 +242,6 @@
 				523EAAAC1E8B13680065DF18 /* NewRunViewController.swift */,
 				523EAAAD1E8B13680065DF18 /* RunDetailViewController.swift */,
 				523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */,
-				523EAAB61E8B14100065DF18 /* Exercise.xcdatamodeld */,
 			);
 			name = Exercise;
 			sourceTree = "<group>";
@@ -506,7 +503,6 @@
 				5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */,
 				52CDF75D1E80417C0031FFE2 /* ActivityView.swift in Sources */,
 				52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */,
-				523EAAB81E8B14100065DF18 /* Exercise.xcdatamodeld in Sources */,
 				523EAB031E8B286E0065DF18 /* Run.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				52F8A1951E68714600EF567A /* FirstViewController.swift in Sources */,
@@ -814,16 +810,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		523EAAB61E8B14100065DF18 /* Exercise.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				523EAAB71E8B14100065DF18 /* Exercise.xcdatamodel */,
-			);
-			currentVersion = 523EAAB71E8B14100065DF18 /* Exercise.xcdatamodel */;
-			path = Exercise.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		52D2F5701E8B098D007DAEAD /* GotHealthy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

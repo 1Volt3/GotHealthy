@@ -1589,7 +1589,7 @@
         <!--Detail-->
         <scene sceneID="YCw-m3-Zh2">
             <objects>
-                <viewController storyboardIdentifier="Detail" title="Detail" id="Wke-IA-gy0" customClass="RunDetailViewController" customModule="Got_Healthy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RunDetails" title="Detail" id="Wke-IA-gy0" customClass="RunDetailViewController" customModule="Got_Healthy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sLU-ST-Oco"/>
                         <viewControllerLayoutGuide type="bottom" id="1yw-K2-QJ1"/>

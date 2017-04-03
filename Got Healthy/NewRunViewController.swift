@@ -390,7 +390,7 @@ class NewRunViewController: UIViewController{
         let  Delete = UIAlertAction(title: "Delete", style: .destructive) { (action) -> Void in
             OperationQueue.main.addOperation({ () -> Void in
                 DispatchQueue.main.async(execute: { () -> Void in
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Run Home")
+                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ExerciseViewController")
                     self.runFinish = true
                     self.walkFinish = true
                     self.downRun = 0

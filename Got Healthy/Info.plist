@@ -6,6 +6,8 @@
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>Got Healthy</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Got Healthy needs your location for measuring exercise.</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

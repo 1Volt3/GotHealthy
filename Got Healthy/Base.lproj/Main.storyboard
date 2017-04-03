@@ -272,7 +272,7 @@
         <!--View Controller-->
         <scene sceneID="Q2g-vv-hHS">
             <objects>
-                <viewController storyboardIdentifier="ExerciseViewController" id="IIa-4Z-3nJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NutritionViewController" id="IIa-4Z-3nJ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BDK-Er-zsK"/>
                         <viewControllerLayoutGuide type="bottom" id="ajy-x4-Z7i"/>
@@ -298,25 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xS-Od-2A0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3034" y="-864"/>
-        </scene>
-        <!--Activity View Controller-->
-        <scene sceneID="y2o-EK-WvH">
-            <objects>
-                <viewController storyboardIdentifier="NutritionViewController" id="QN6-uY-E0I" customClass="ActivityViewController" customModule="Got_Healthy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TRo-F8-Pxj"/>
-                        <viewControllerLayoutGuide type="bottom" id="TZU-uf-J3o"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aXY-de-6Hk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L1n-Qi-Uml" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4138" y="-864"/>
+            <point key="canvasLocation" x="4308" y="-864"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="DBN-eb-7vN">
@@ -616,7 +598,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="28" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-fK-8PX" customClass="FloatingTextField" customModule="Got_Healthy">
-                                <rect key="frame" x="16" y="96" width="343" height="30"/>
+                                <rect key="frame" x="16" y="96" width="343" height="70"/>
                                 <color key="tintColor" red="0.0049824473330000001" green="0.55344600580000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -651,7 +633,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="28" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qNX-G7-Ehl" customClass="FloatingTextField" customModule="Got_Healthy">
-                                <rect key="frame" x="16" y="319" width="343" height="30"/>
+                                <rect key="frame" x="16" y="299" width="343" height="70"/>
                                 <color key="tintColor" red="0.0049824473330000001" green="0.55344600580000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -1256,7 +1238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKv-rT-4yZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2530" y="-2293"/>
+            <point key="canvasLocation" x="3738" y="-2346"/>
         </scene>
         <!--Add an Item-->
         <scene sceneID="Uan-qD-fZL">
@@ -1366,7 +1348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rA7-Ex-1xe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3326" y="-2292"/>
+            <point key="canvasLocation" x="4910" y="-2346"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8YE-Wd-e5U">
@@ -1385,7 +1367,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Mh-0E-Cdu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3033" y="-1626"/>
+            <point key="canvasLocation" x="4218" y="-1643"/>
         </scene>
         <!--New Run-->
         <scene sceneID="Qfv-Ab-UWe">
@@ -1602,7 +1584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeO-hw-rr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5668" y="-1567"/>
+            <point key="canvasLocation" x="3033" y="-2266"/>
         </scene>
         <!--Detail-->
         <scene sceneID="YCw-m3-Zh2">
@@ -1694,12 +1676,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEr-1p-EKr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6394" y="-1567"/>
+            <point key="canvasLocation" x="3033" y="-2968"/>
         </scene>
         <!--Home-->
         <scene sceneID="WB9-Ay-rHj">
             <objects>
-                <viewController storyboardIdentifier="Run Home" title="Home" id="dTj-ju-c6t" customClass="HomeViewController" customModule="Got_Healthy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExerciseViewController" title="Home" id="dTj-ju-c6t" customClass="HomeViewController" customModule="Got_Healthy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fe4-15-4MP"/>
                         <viewControllerLayoutGuide type="bottom" id="m0P-TR-8Dl"/>
@@ -1824,7 +1806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daz-6P-rRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4137" y="-1567"/>
+            <point key="canvasLocation" x="3033" y="-864"/>
         </scene>
         <!--Run Setup View Controller-->
         <scene sceneID="RjD-zr-Dkq">
@@ -2052,7 +2034,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5B-BM-2SJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4911" y="-1567"/>
+            <point key="canvasLocation" x="3033" y="-1567"/>
         </scene>
     </scenes>
     <resources>

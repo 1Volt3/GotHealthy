@@ -25,6 +25,8 @@
 		523BD8761E9409AA00FE3257 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BD8741E9409AA00FE3257 /* TimeViewController.swift */; };
 		523BD8771E9409AA00FE3257 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BD8751E9409AA00FE3257 /* FoodViewController.swift */; };
 		523BD8791E9409CE00FE3257 /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BD8781E9409CE00FE3257 /* DiningViewController.swift */; };
+		523CCDF41E95C60300CB9D10 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CCDF31E95C60300CB9D10 /* Location.swift */; };
+		523CCDF61E95C60E00CB9D10 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CCDF51E95C60E00CB9D10 /* Run.swift */; };
 		523EAAA41E8B11700065DF18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAAA31E8B11700065DF18 /* MapKit.framework */; };
 		523EAAA91E8B12FA0065DF18 /* RunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAA81E8B12FA0065DF18 /* RunView.swift */; };
 		523EAAB01E8B13680065DF18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAA1E8B13680065DF18 /* HomeViewController.swift */; };
@@ -34,8 +36,6 @@
 		523EAAB41E8B13680065DF18 /* MulticolorPolylineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */; };
 		523EAAF91E8B1E0E0065DF18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */; };
 		523EAB011E8B24C40065DF18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAB001E8B24C40065DF18 /* CoreGraphics.framework */; };
-		523EAB031E8B286E0065DF18 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAB021E8B286E0065DF18 /* Run.swift */; };
-		523EAB051E8B28980065DF18 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAB041E8B28980065DF18 /* Location.swift */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
@@ -100,6 +100,8 @@
 		523BD8741E9409AA00FE3257 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		523BD8751E9409AA00FE3257 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		523BD8781E9409CE00FE3257 /* DiningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningViewController.swift; sourceTree = "<group>"; };
+		523CCDF31E95C60300CB9D10 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		523CCDF51E95C60E00CB9D10 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		523EAAA31E8B11700065DF18 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		523EAAA81E8B12FA0065DF18 /* RunView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunView.swift; sourceTree = "<group>"; };
 		523EAAAA1E8B13680065DF18 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +111,6 @@
 		523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticolorPolylineSegment.swift; sourceTree = "<group>"; };
 		523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		523EAB001E8B24C40065DF18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		523EAB021E8B286E0065DF18 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
-		523EAB041E8B28980065DF18 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
@@ -237,9 +237,9 @@
 			children = (
 				52791E871E3AC10E00E1B7E5 /* Header.swift */,
 				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
+				523CCDF51E95C60E00CB9D10 /* Run.swift */,
+				523CCDF31E95C60300CB9D10 /* Location.swift */,
 				523EAAA81E8B12FA0065DF18 /* RunView.swift */,
-				523EAB021E8B286E0065DF18 /* Run.swift */,
-				523EAB041E8B28980065DF18 /* Location.swift */,
 				523EAAAA1E8B13680065DF18 /* HomeViewController.swift */,
 				523EAAAB1E8B13680065DF18 /* RunSetupViewController.swift */,
 				523EAAAC1E8B13680065DF18 /* NewRunViewController.swift */,
@@ -479,7 +479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */,
-				523EAB051E8B28980065DF18 /* Location.swift in Sources */,
 				523EAAB01E8B13680065DF18 /* HomeViewController.swift in Sources */,
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
@@ -497,6 +496,7 @@
 				523EAAB31E8B13680065DF18 /* RunDetailViewController.swift in Sources */,
 				525EB2BA1E422E2D000A8F09 /* WeightEntry.swift in Sources */,
 				520683AA1E7C243D0062CE92 /* FaveIcon.swift in Sources */,
+				523CCDF61E95C60E00CB9D10 /* Run.swift in Sources */,
 				520683B11E7C24620062CE92 /* Constraints+.swift in Sources */,
 				523BD8761E9409AA00FE3257 /* TimeViewController.swift in Sources */,
 				520683AB1E7C243D0062CE92 /* Ring.swift in Sources */,
@@ -508,13 +508,13 @@
 				5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */,
 				52CDF75D1E80417C0031FFE2 /* ActivityView.swift in Sources */,
 				52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */,
-				523EAB031E8B286E0065DF18 /* Run.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */,
 				523EAAB41E8B13680065DF18 /* MulticolorPolylineSegment.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,
 				520683B61E7C24870062CE92 /* FavViewController.swift in Sources */,
 				520683B21E7C24620062CE92 /* Easing.swift in Sources */,
+				523CCDF41E95C60300CB9D10 /* Location.swift in Sources */,
 				52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */,
 				52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */,
 				52F48BB31E4E3F9300E8ACCA /* FloatingTextField.swift in Sources */,

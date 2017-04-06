@@ -8,6 +8,11 @@
 	<string>Got Healthy</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Got Healthy needs your location for measuring exercise.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

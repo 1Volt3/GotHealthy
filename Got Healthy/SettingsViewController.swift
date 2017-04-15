@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var notificationSettingSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

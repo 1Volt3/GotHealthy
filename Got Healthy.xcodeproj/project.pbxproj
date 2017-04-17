@@ -36,6 +36,9 @@
 		523EAAB41E8B13680065DF18 /* MulticolorPolylineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */; };
 		523EAAF91E8B1E0E0065DF18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */; };
 		523EAB011E8B24C40065DF18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAB001E8B24C40065DF18 /* CoreGraphics.framework */; };
+		524AED391EA2EE650071D954 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED381EA2EE650071D954 /* Constants.swift */; };
+		524AED3C1EA2F1220071D954 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED3B1EA2F1220071D954 /* NotificationHelper.swift */; };
+		524AED3F1EA3D9110071D954 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED3E1EA3D9110071D954 /* Globals.swift */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
@@ -111,6 +114,9 @@
 		523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticolorPolylineSegment.swift; sourceTree = "<group>"; };
 		523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		523EAB001E8B24C40065DF18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		524AED381EA2EE650071D954 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		524AED3B1EA2F1220071D954 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		524AED3E1EA3D9110071D954 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
@@ -236,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				52791E871E3AC10E00E1B7E5 /* Header.swift */,
-				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
 				523CCDF51E95C60E00CB9D10 /* Run.swift */,
 				523CCDF31E95C60300CB9D10 /* Location.swift */,
 				523EAAA81E8B12FA0065DF18 /* RunView.swift */,
@@ -247,6 +252,25 @@
 				523EAAAE1E8B13680065DF18 /* MulticolorPolylineSegment.swift */,
 			);
 			name = Exercise;
+			sourceTree = "<group>";
+		};
+		524AED3A1EA2EEB50071D954 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				52791E881E3AC10E00E1B7E5 /* Extensions.swift */,
+				524AED381EA2EE650071D954 /* Constants.swift */,
+				524AED3B1EA2F1220071D954 /* NotificationHelper.swift */,
+				524AED3E1EA3D9110071D954 /* Globals.swift */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
+		524AED3D1EA2F4C60071D954 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				52CDF75C1E80417C0031FFE2 /* ActivityView.swift */,
+			);
+			name = Activity;
 			sourceTree = "<group>";
 		};
 		52B09EA61E80180700F162E8 /* Frameworks */ = {
@@ -304,7 +328,8 @@
 				52D79C821E4B812A007B4E58 /* Gender.swift */,
 				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
 				525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */,
-				52CDF75C1E80417C0031FFE2 /* ActivityView.swift */,
+				524AED3A1EA2EEB50071D954 /* Extras */,
+				524AED3D1EA2F4C60071D954 /* Activity */,
 				5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */,
 				52CAC0051E38F29700E0302F /* Assets.xcassets */,
 				52791E841E3ABECD00E1B7E5 /* TodayViewController.swift */,
@@ -402,6 +427,7 @@
 					52CABFFA1E38F29700E0302F = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 93234J3H2M;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -412,12 +438,14 @@
 					52CAC00E1E38F29700E0302F = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 93234J3H2M;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 52CABFFA1E38F29700E0302F;
 					};
 					52CAC0191E38F29700E0302F = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 93234J3H2M;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 52CABFFA1E38F29700E0302F;
 					};
@@ -484,6 +512,7 @@
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
 				523BD8791E9409CE00FE3257 /* DiningViewController.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
+				524AED3C1EA2F1220071D954 /* NotificationHelper.swift in Sources */,
 				523EAAB21E8B13680065DF18 /* NewRunViewController.swift in Sources */,
 				52F48BB51E4E3F9300E8ACCA /* UIPosition.swift in Sources */,
 				520683B31E7C24620062CE92 /* Geometry.swift in Sources */,
@@ -502,12 +531,14 @@
 				520683AB1E7C243D0062CE92 /* Ring.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
 				523BD8771E9409AA00FE3257 /* FoodViewController.swift in Sources */,
+				524AED391EA2EE650071D954 /* Constants.swift in Sources */,
 				522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */,
 				52D2F5721E8B098D007DAEAD /* GotHealthy.xcdatamodeld in Sources */,
 				520683AC1E7C243D0062CE92 /* Spark.swift in Sources */,
 				5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */,
 				52CDF75D1E80417C0031FFE2 /* ActivityView.swift in Sources */,
 				52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */,
+				524AED3F1EA3D9110071D954 /* Globals.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
 				525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */,
 				523EAAB41E8B13680065DF18 /* MulticolorPolylineSegment.swift in Sources */,

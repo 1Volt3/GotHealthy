@@ -115,5 +115,4 @@ class ProfileViewController: UIViewController {
             BMIStatusValue.textColor = UIColor.red
         }
     }
-    
 }

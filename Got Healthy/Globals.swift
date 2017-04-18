@@ -1,9 +1,9 @@
 import UIKit
-import AHKActionSheet
-import AMPopTip
+//import AHKActionSheet
+//import AMPopTip
 
 class Globals {
-  class func numericToolbar(_ target: AnyObject?, selector: Selector, barColor: UIColor = UIColor.white, textColor: UIColor = UIColor.palette_main) -> UIToolbar {
+  /*class func numericToolbar(_ target: AnyObject?, selector: Selector, barColor: UIColor = UIColor.white, textColor: UIColor = UIColor.palette_main) -> UIToolbar {
     let numberToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 50))
     numberToolbar.barStyle = .blackTranslucent
 
@@ -54,5 +54,5 @@ class Globals {
       let popTip = AMPopTip()
       popTip.showText(text, direction: direction, maxWidth: 200, in: view, fromFrame: frame)
     }
-  }
+  }*/
 }

@@ -32,17 +32,17 @@ class SettingsViewController: UITableViewController, UIAlertViewDelegate, UIText
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateUI()
+        //updateUI()
     }
     
     @IBAction func reminderSwitch(_ sender: Any) {
         userDefaults.set((sender as AnyObject).isOn, forKey: Constants.Notification.on.key())
         userDefaults.synchronize()
         self.tableView.reloadData()
-        updateNotificationPreferences()
+        //updateNotificationPreferences()
     }
     
-    func updateUI() {
+    /*func updateUI() {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         var suffix = ""
@@ -148,6 +148,6 @@ class SettingsViewController: UITableViewController, UIAlertViewDelegate, UIText
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return Globals.numericTextField(textField, shouldChangeCharactersInRange: range, replacementString: string)
-    }
+    }*/
     
 }

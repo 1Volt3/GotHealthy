@@ -12,7 +12,9 @@ class TimeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var dayOfWeek: String?
     
-    let timeOfDay = ["Breakfast", "Lunch", "Dinner"]
+    var timeOfDayString = ""
+    
+    var timeOfDay = [String]()
     
     var currentCell = ""
 
@@ -20,7 +22,10 @@ class TimeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return timeOfDay.count
+
+            return timeOfDay.count
+        
+        
         
     }
     
@@ -28,15 +33,17 @@ class TimeViewController: UIViewController, UITableViewDelegate, UITableViewData
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        
+
         cell.textLabel?.text = timeOfDay[indexPath.row]
         
         return cell
-        
+
     }
     
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+       
         
         let indexPath = tableView.indexPathForSelectedRow
         
@@ -45,9 +52,7 @@ class TimeViewController: UIViewController, UITableViewDelegate, UITableViewData
         currentCell = timeOfDay[arrayVal]
         
         performSegue(withIdentifier: "showFood", sender: self)
-        
-        
-        
+   
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,9 +60,8 @@ class TimeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if segue.identifier == "showFood" {
             if let FoodVC = segue.destination as? FoodViewController {
-                
-                
-                FoodVC.dayOfWeek = dayOfWeek! + currentCell
+                FoodVC.dayOfWeek = dayOfWeek!
+                FoodVC.timeOfDay = currentCell
             }
         }
         else{
@@ -71,6 +75,15 @@ class TimeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if  "Saturday"  == dayOfWeek || "Sunday" == dayOfWeek {
+            timeOfDay.append("Lunch")
+            timeOfDay.append("Dinner")
+         }
+        else{
+            timeOfDay.append("Breakfast")
+            timeOfDay.append("Lunch")
+            timeOfDay.append("Dinner")
+        }
         // Do any additional setup after loading the view.
     }
 

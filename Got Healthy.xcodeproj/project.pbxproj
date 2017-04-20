@@ -22,9 +22,6 @@
 		520E98CD1E858B2A0066876B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E98CC1E858B2A0066876B /* NotificationCenter.framework */; };
 		5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */; };
 		522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B40F41E7C8F2C006010A4 /* TabViewController.swift */; };
-		523BD8761E9409AA00FE3257 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BD8741E9409AA00FE3257 /* TimeViewController.swift */; };
-		523BD8771E9409AA00FE3257 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BD8751E9409AA00FE3257 /* FoodViewController.swift */; };
-		523BD8791E9409CE00FE3257 /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BD8781E9409CE00FE3257 /* DiningViewController.swift */; };
 		523CCDF41E95C60300CB9D10 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CCDF31E95C60300CB9D10 /* Location.swift */; };
 		523CCDF61E95C60E00CB9D10 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CCDF51E95C60E00CB9D10 /* Run.swift */; };
 		523EAAA41E8B11700065DF18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAAA31E8B11700065DF18 /* MapKit.framework */; };
@@ -39,6 +36,11 @@
 		524AED391EA2EE650071D954 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED381EA2EE650071D954 /* Constants.swift */; };
 		524AED3C1EA2F1220071D954 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED3B1EA2F1220071D954 /* NotificationHelper.swift */; };
 		524AED3F1EA3D9110071D954 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED3E1EA3D9110071D954 /* Globals.swift */; };
+		524AED431EA91D6B0071D954 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED401EA91D6B0071D954 /* FoodTableViewCell.swift */; };
+		524AED441EA91D6B0071D954 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED411EA91D6B0071D954 /* TimeViewController.swift */; };
+		524AED451EA91D6B0071D954 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED421EA91D6B0071D954 /* FoodViewController.swift */; };
+		524AED471EA91D810071D954 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED461EA91D810071D954 /* ItemViewController.swift */; };
+		524AED491EA91E440071D954 /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED481EA91E440071D954 /* DiningViewController.swift */; };
 		525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */; };
 		525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B51E422E0E000A8F09 /* NameEntry.swift */; };
 		525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525EB2B71E422E21000A8F09 /* AgeEntry.swift */; };
@@ -100,9 +102,6 @@
 		520E98CC1E858B2A0066876B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		522B40F41E7C8F2C006010A4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		523BD8741E9409AA00FE3257 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
-		523BD8751E9409AA00FE3257 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
-		523BD8781E9409CE00FE3257 /* DiningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningViewController.swift; sourceTree = "<group>"; };
 		523CCDF31E95C60300CB9D10 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		523CCDF51E95C60E00CB9D10 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		523EAAA31E8B11700065DF18 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -117,6 +116,11 @@
 		524AED381EA2EE650071D954 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		524AED3B1EA2F1220071D954 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		524AED3E1EA3D9110071D954 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		524AED401EA91D6B0071D954 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		524AED411EA91D6B0071D954 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		524AED421EA91D6B0071D954 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		524AED461EA91D810071D954 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		524AED481EA91E440071D954 /* DiningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningViewController.swift; sourceTree = "<group>"; };
 		525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoEntry.swift; sourceTree = "<group>"; };
 		525EB2B51E422E0E000A8F09 /* NameEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameEntry.swift; sourceTree = "<group>"; };
 		525EB2B71E422E21000A8F09 /* AgeEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeEntry.swift; sourceTree = "<group>"; };
@@ -204,9 +208,11 @@
 		523BD8141E8BF61C00FE3257 /* Nutrition */ = {
 			isa = PBXGroup;
 			children = (
-				523BD8781E9409CE00FE3257 /* DiningViewController.swift */,
-				523BD8741E9409AA00FE3257 /* TimeViewController.swift */,
-				523BD8751E9409AA00FE3257 /* FoodViewController.swift */,
+				524AED401EA91D6B0071D954 /* FoodTableViewCell.swift */,
+				524AED461EA91D810071D954 /* ItemViewController.swift */,
+				524AED411EA91D6B0071D954 /* TimeViewController.swift */,
+				524AED481EA91E440071D954 /* DiningViewController.swift */,
+				524AED421EA91D6B0071D954 /* FoodViewController.swift */,
 			);
 			name = Nutrition;
 			sourceTree = "<group>";
@@ -510,8 +516,8 @@
 				523EAAB01E8B13680065DF18 /* HomeViewController.swift in Sources */,
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
-				523BD8791E9409CE00FE3257 /* DiningViewController.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
+				524AED491EA91E440071D954 /* DiningViewController.swift in Sources */,
 				524AED3C1EA2F1220071D954 /* NotificationHelper.swift in Sources */,
 				523EAAB21E8B13680065DF18 /* NewRunViewController.swift in Sources */,
 				52F48BB51E4E3F9300E8ACCA /* UIPosition.swift in Sources */,
@@ -527,23 +533,25 @@
 				520683AA1E7C243D0062CE92 /* FaveIcon.swift in Sources */,
 				523CCDF61E95C60E00CB9D10 /* Run.swift in Sources */,
 				520683B11E7C24620062CE92 /* Constraints+.swift in Sources */,
-				523BD8761E9409AA00FE3257 /* TimeViewController.swift in Sources */,
 				520683AB1E7C243D0062CE92 /* Ring.swift in Sources */,
 				52791E891E3AC10E00E1B7E5 /* Header.swift in Sources */,
-				523BD8771E9409AA00FE3257 /* FoodViewController.swift in Sources */,
 				524AED391EA2EE650071D954 /* Constants.swift in Sources */,
 				522B40F51E7C8F2C006010A4 /* TabViewController.swift in Sources */,
 				52D2F5721E8B098D007DAEAD /* GotHealthy.xcdatamodeld in Sources */,
+				524AED441EA91D6B0071D954 /* TimeViewController.swift in Sources */,
 				520683AC1E7C243D0062CE92 /* Spark.swift in Sources */,
 				5229D2301E8032BC00A5F328 /* SettingsViewController.swift in Sources */,
+				524AED431EA91D6B0071D954 /* FoodTableViewCell.swift in Sources */,
 				52CDF75D1E80417C0031FFE2 /* ActivityView.swift in Sources */,
 				52AECE991E79E9E4006978A9 /* ProfileView.swift in Sources */,
 				524AED3F1EA3D9110071D954 /* Globals.swift in Sources */,
 				52CAC0011E38F29700E0302F /* ViewController.swift in Sources */,
+				524AED471EA91D810071D954 /* ItemViewController.swift in Sources */,
 				525A09DC1E6DCFF600BC2A23 /* photoEntry.swift in Sources */,
 				523EAAB41E8B13680065DF18 /* MulticolorPolylineSegment.swift in Sources */,
 				52CABFFF1E38F29700E0302F /* AppDelegate.swift in Sources */,
 				520683B61E7C24870062CE92 /* FavViewController.swift in Sources */,
+				524AED451EA91D6B0071D954 /* FoodViewController.swift in Sources */,
 				520683B21E7C24620062CE92 /* Easing.swift in Sources */,
 				523CCDF41E95C60300CB9D10 /* Location.swift in Sources */,
 				52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */,

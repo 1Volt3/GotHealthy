@@ -2034,9 +2034,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Muhlenberg Dining" id="iSr-AU-Aiu">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="xbh-pa-xwV"/>
-                                    </navigationItem>
+                                    <navigationItem title="Muhlenberg Dining" id="iSr-AU-Aiu"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-al-BWc">
@@ -2093,22 +2091,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FoH-xv-t8B">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Muhlenberg Dining" id="05h-Hh-uNi">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Idi-87-xWJ">
-                                            <connections>
-                                                <segue destination="o5r-So-MAJ" kind="show" id="kpX-tB-hwe">
-                                                    <nil key="action"/>
-                                                </segue>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Muhlenberg Dining" id="05h-Hh-uNi"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zcz-06-1x8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="T56-GT-UBS">
@@ -2160,23 +2150,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-2h-gjg">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Muhlenberg Dining" id="dRn-pf-ISu">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5z3-fF-Kyg">
-                                            <connections>
-                                                <action selector="pressBackButton:" destination="gzQ-c6-vQ3" id="Yy3-Vv-u8m"/>
-                                                <segue destination="QzN-lz-nH2" kind="show" identifier="backButton" id="Fg0-WV-4K5">
-                                                    <nil key="action"/>
-                                                </segue>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Muhlenberg Dining" id="dRn-pf-ISu"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jen-pu-InB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" rowHeight="60" id="eFq-u2-R4X" customClass="FoodTableViewCell" customModule="Got_Healthy" customModuleProvider="target">
@@ -2265,14 +2246,6 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Muhlenberg Dining" id="Md2-eW-8GL">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="fFk-Uj-76W">
-                                            <connections>
-                                                <action selector="pressBackButton:" destination="zSc-uD-FE1" id="1Qv-j8-FrH"/>
-                                                <segue destination="gzQ-c6-vQ3" kind="show" identifier="backButton" id="goj-Dy-KNH">
-                                                    <nil key="action"/>
-                                                </segue>
-                                            </connections>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OS5-GJ-uEa"/>
                                     </navigationItem>
                                 </items>
@@ -2429,11 +2402,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5mL-JT-BiV"/>
-        <segue reference="uLc-4u-kbG"/>
+        <segue reference="cbV-O0-BaX"/>
         <segue reference="vfB-sv-teo"/>
-        <segue reference="kUd-qI-dxx"/>
-        <segue reference="7Zg-Cu-b6L"/>
-        <segue reference="Fg0-WV-4K5"/>
-        <segue reference="goj-Dy-KNH"/>
+        <segue reference="r8m-6D-28V"/>
     </inferredMetricsTieBreakers>
 </document>

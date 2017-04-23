@@ -77,6 +77,10 @@ UINavigationControllerDelegate  {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
     func noCamera(){
         let alertVC = UIAlertController(
             title: "No Camera",

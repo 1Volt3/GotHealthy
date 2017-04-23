@@ -72,5 +72,6 @@ class Gender: UIViewController {
             gender = "Female"
             genderDefaults.set(gender, forKey: "genderSelected")
         }
+        _ = navigationController?.popViewController(animated: true)
     }
 }

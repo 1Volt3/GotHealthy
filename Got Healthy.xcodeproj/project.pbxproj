@@ -279,6 +279,18 @@
 			name = Activity;
 			sourceTree = "<group>";
 		};
+		524AED4A1EAD03810071D954 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				525EB2B51E422E0E000A8F09 /* NameEntry.swift */,
+				525EB2B71E422E21000A8F09 /* AgeEntry.swift */,
+				52D79C821E4B812A007B4E58 /* Gender.swift */,
+				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
+				525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */,
+			);
+			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		52B09EA61E80180700F162E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,11 +341,7 @@
 				523BD8161E8BF67600FE3257 /* FloatTextField */,
 				5272E9991E6F087500F26A23 /* BeginScreen.swift */,
 				52041C001E4541A7008CD4DF /* Keyboard.swift */,
-				525EB2B51E422E0E000A8F09 /* NameEntry.swift */,
-				525EB2B71E422E21000A8F09 /* AgeEntry.swift */,
-				52D79C821E4B812A007B4E58 /* Gender.swift */,
-				525EB2B91E422E2D000A8F09 /* WeightEntry.swift */,
-				525A09DB1E6DCFF600BC2A23 /* photoEntry.swift */,
+				524AED4A1EAD03810071D954 /* LaunchScreen */,
 				524AED3A1EA2EEB50071D954 /* Extras */,
 				524AED3D1EA2F4C60071D954 /* Activity */,
 				5229D22F1E8032BC00A5F328 /* SettingsViewController.swift */,

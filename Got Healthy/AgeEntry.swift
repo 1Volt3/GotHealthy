@@ -55,5 +55,6 @@ class AgeEntry: UIViewController, UITextFieldDelegate {
     @IBAction func backButtonPressed(_ sender: Any) {
         birthDate = dateOfBirthPicker.date
         ageDefaults.set(dateOfBirthPicker.date, forKey: "birthDateSelected")
+        _ = navigationController?.popViewController(animated: true)
     }
 }

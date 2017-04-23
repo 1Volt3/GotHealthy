@@ -337,6 +337,7 @@ class WeightEntry: UIViewController, UIPickerViewDelegate {
             weightMeasurement = weightChosenMetric
             heightWeightDefaults.set(weightRowChosenMetric, forKey: "weightRowChosenMetric")
         }
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

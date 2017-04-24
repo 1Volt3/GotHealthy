@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import UserNotifications
 
 class NotificationHelper {
 
@@ -26,6 +27,22 @@ class NotificationHelper {
     while (hour < endHour) {
       let cal = Calendar(identifier: Calendar.Identifier.gregorian)
       let date = (cal as NSCalendar).date(bySettingHour: hour, minute: 0, second: 0, of: Date(), options: NSCalendar.Options())
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
+        // Swift
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                // Notifications not allowed
+            }
+        }
+      let content = UNMutableNotificationContent()
+      content.sound = UNNotificationSound.default()
+      
+        
       let reminder = UILocalNotification()
 
       reminder.fireDate = date

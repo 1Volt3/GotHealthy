@@ -8,6 +8,8 @@
 
 import UIKit
 
+var selectedIndex: Int = 1
+
 class TabViewController: UIViewController{
     
     @IBOutlet var Buttons: [FaveButton]!

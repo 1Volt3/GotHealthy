@@ -35,6 +35,11 @@ class RunDetailViewController: UIViewController {
         UserDefaults.standard.setValue(finalDistance, forKey: "Final Distance")
     }
     
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        selectedIndex = 3
+        self.performSegue(withIdentifier: "RunHome", sender: nil)
+    }
+    
     func configureView() {
         distanceLabel.text = "Distance: \(String(format: "%.2f", self.finalDistance))"
         

@@ -73,8 +73,7 @@ class TimeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
         if  "Saturday"  == dayOfWeek || "Sunday" == dayOfWeek {
             timeOfDay.append("Lunch")
             timeOfDay.append("Dinner")

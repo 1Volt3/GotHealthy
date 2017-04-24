@@ -27,8 +27,7 @@ class ItemViewController: UIViewController {
     var dietRestrictions = ""
     var dietRestructionsString = ""
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
         if dietRestrictions.range(of: "Mindful = Yes;") != nil {          dietRestructionsString = "Mindful Item"
         }
         if dietRestrictions.range(of: "Vegan = Yes;") != nil {

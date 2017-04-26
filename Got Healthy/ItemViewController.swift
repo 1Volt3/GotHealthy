@@ -137,6 +137,10 @@ class ItemViewController: UIViewController {
     
     }
     
+
+    @IBAction func enterServingsButtonPressed(_ sender: Any) {
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         

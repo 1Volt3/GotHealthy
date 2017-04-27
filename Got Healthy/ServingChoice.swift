@@ -8,9 +8,15 @@
 
 import UIKit
 
+var descriptionValue = ""
+var caloriesValue = ""
+var dayValue = ""
+
 class ServingChoice: UIViewController{
  
     @IBOutlet weak var servingsTextField: UITextField!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var caloriesLabel: UILabel!
     
     override func viewDidLoad() {
         
@@ -23,6 +29,10 @@ class ServingChoice: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if descriptionValue != "" && caloriesValue != ""{
+            descriptionLabel.text = descriptionValue
+            caloriesLabel.text = caloriesValue
+        }
     }
     
     override func didReceiveMemoryWarning() {

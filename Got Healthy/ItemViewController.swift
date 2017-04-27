@@ -15,6 +15,7 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
+    @IBOutlet var servingButton: UIBarButtonItem!
 
     @IBOutlet weak var servingSizeLabel: UILabel!
     var foodItem = ""
@@ -100,7 +101,7 @@ class ItemViewController: UIViewController {
                         self.servingSizeLabel.text = "N/A"
                         self.caloriesLabel.text = "N/A"
                         self.specialLabel.text = "N/A"
-
+                        self.servingButton.isEnabled = false
 
                         }
                         
@@ -125,7 +126,7 @@ class ItemViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -139,6 +140,8 @@ class ItemViewController: UIViewController {
     
 
     @IBAction func enterServingsButtonPressed(_ sender: Any) {
+        descriptionValue = self.foodLabel.text!
+        caloriesValue = self.caloriesLabel.text!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

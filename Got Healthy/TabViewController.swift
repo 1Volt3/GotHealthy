@@ -8,7 +8,7 @@
 
 import UIKit
 
-var selectedIndex: Int = 1
+var selectedIndex: Int = 2
 
 class TabViewController: UIViewController{
     
@@ -28,7 +28,6 @@ class TabViewController: UIViewController{
     var nutritionViewController : UIViewController!
     var settingsViewController: UIViewController!
     var viewControllers: [UIViewController]!
-    var selectedIndex: Int = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()

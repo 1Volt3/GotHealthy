@@ -10,6 +10,9 @@ import UIKit
 
 class ItemViewController: UIViewController {
     
+    var foodTitleChosen = ""
+    var caloriesChosen = ""
+    
     @IBOutlet weak var specialLabel: UILabel!
 
     @IBOutlet weak var foodLabel: UILabel!
@@ -69,12 +72,14 @@ class ItemViewController: UIViewController {
                     if let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSDictionary{
                         
                         print(self.foodItem)
+                        self.foodTitleChosen = self.foodItem
                      if let articlesFromJson = json[self.foodItem] as? [String : String] {
                         self.descriptionLabel.text = articlesFromJson["Description"]!
                         print(articlesFromJson["Description"]!)
                         self.servingSize = articlesFromJson["servingSize"]! + "(" + articlesFromJson["servingSizeInGrams"]! + ")"
                         self.servingSizeLabel.text = self.servingSize
                         self.caloriesLabel.text = articlesFromJson["calories"]!
+                        self.caloriesChosen = articlesFromJson["calories"]!
                         if let special = articlesFromJson["Special"] {
                         
                             
@@ -140,8 +145,8 @@ class ItemViewController: UIViewController {
     
 
     @IBAction func enterServingsButtonPressed(_ sender: Any) {
-        descriptionValue = self.foodLabel.text!
-        caloriesValue = self.caloriesLabel.text!
+        descriptionValue = self.foodTitleChosen
+        caloriesValue = self.caloriesChosen
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -154,6 +159,10 @@ class ItemViewController: UIViewController {
             }
         }
         if segue.identifier == "ServingChoice" {
+            descriptionValue = self.foodTitleChosen
+            caloriesValue = self.caloriesChosen
+            print(descriptionValue)
+            print(caloriesValue)
         }
 
     }

@@ -2483,6 +2483,15 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNc-t5-iiz">
+                                <rect key="frame" x="16" y="334" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Fbr-Bb-y3J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories per Serving:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJX-XO-eK9">
                                 <rect key="frame" x="16" y="293" width="343" height="33"/>
                                 <constraints>
@@ -2501,15 +2510,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNc-t5-iiz">
-                                <rect key="frame" x="16" y="334" width="343" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuD-UH-vSE">
+                                <rect key="frame" x="0.0" y="586" width="375" height="66"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Fbr-Bb-y3J"/>
+                                    <constraint firstAttribute="height" constant="66" id="559-2m-UhG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Add" backgroundImage="blue-btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="Wke-IA-gy0" eventType="touchUpInside" id="Kep-4b-Lc7"/>
+                                    <action selector="servingChangeButtonPressed:" destination="SZ8-yd-HP5" eventType="touchUpInside" id="cww-a6-FnM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2523,8 +2538,11 @@
                             <constraint firstItem="b30-cQ-rLO" firstAttribute="leading" secondItem="Ugi-g7-61q" secondAttribute="leading" id="JoV-Jw-HyB"/>
                             <constraint firstItem="vb1-i4-DT2" firstAttribute="top" secondItem="W9N-AS-yFD" secondAttribute="bottom" id="Kfa-sg-Ts2"/>
                             <constraint firstItem="Ugi-g7-61q" firstAttribute="leading" secondItem="eA4-lj-IHu" secondAttribute="leading" id="LjF-Wr-8L1"/>
+                            <constraint firstItem="uuD-UH-vSE" firstAttribute="trailing" secondItem="vb1-i4-DT2" secondAttribute="trailing" id="PMH-nb-NVJ"/>
                             <constraint firstItem="gNc-t5-iiz" firstAttribute="top" secondItem="YJX-XO-eK9" secondAttribute="bottom" constant="8" symbolic="YES" id="STX-5q-CN1"/>
+                            <constraint firstItem="uuD-UH-vSE" firstAttribute="leading" secondItem="vb1-i4-DT2" secondAttribute="leading" id="TjP-zc-kgu"/>
                             <constraint firstItem="eA4-lj-IHu" firstAttribute="trailing" secondItem="YJX-XO-eK9" secondAttribute="trailing" id="UOQ-8l-VhS"/>
+                            <constraint firstItem="KK6-dH-zPN" firstAttribute="top" secondItem="uuD-UH-vSE" secondAttribute="bottom" constant="15" id="cC7-53-SlL"/>
                             <constraint firstItem="Ugi-g7-61q" firstAttribute="top" secondItem="b30-cQ-rLO" secondAttribute="bottom" constant="9" id="cQr-LL-aHo"/>
                             <constraint firstItem="b30-cQ-rLO" firstAttribute="top" secondItem="pt7-Py-96y" secondAttribute="bottom" constant="8" symbolic="YES" id="g7S-te-jEp"/>
                             <constraint firstItem="YJX-XO-eK9" firstAttribute="trailing" secondItem="gNc-t5-iiz" secondAttribute="trailing" id="haY-I0-m9k"/>
@@ -2539,6 +2557,7 @@
                     <connections>
                         <outlet property="caloriesLabel" destination="gNc-t5-iiz" id="b4Q-Mc-xth"/>
                         <outlet property="descriptionLabel" destination="eA4-lj-IHu" id="MhG-lK-dVG"/>
+                        <outlet property="servingChangeButton" destination="uuD-UH-vSE" id="mjv-Rd-eKh"/>
                         <outlet property="servingsTextField" destination="b30-cQ-rLO" id="ucm-k8-HdD"/>
                     </connections>
                 </viewController>
@@ -2727,10 +2746,10 @@
         <image name="runner" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hW3-Ye-Nah"/>
+        <segue reference="5mL-JT-BiV"/>
         <segue reference="cbV-O0-BaX"/>
         <segue reference="vfB-sv-teo"/>
-        <segue reference="5mL-JT-BiV"/>
+        <segue reference="tPU-JW-CZX"/>
         <segue reference="r8m-6D-28V"/>
     </inferredMetricsTieBreakers>
 </document>

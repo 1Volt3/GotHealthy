@@ -17,6 +17,7 @@ class ServingChoice: UIViewController{
     @IBOutlet weak var servingsTextField: UITextField!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
+    @IBOutlet var servingChangeButton: UIButton!
     
     override func viewDidLoad() {
         
@@ -42,6 +43,31 @@ class ServingChoice: UIViewController{
     
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @IBAction func servingChangeButtonPressed(_ sender: Any) {
+        if Double(servingsTextField.text!) == nil{
+            let servingAlert = UIAlertController(
+                title: "Serving Size",
+                message: "Sorry, only valid serving size!",
+                preferredStyle: .alert)
+            let okServing = UIAlertAction(
+                title: "OK",
+                style:.default,
+                handler: nil)
+            servingAlert.addAction(okServing)
+            present(
+                servingAlert,
+                animated: true,
+                completion: nil)
+        }
+        else{
+            selectedIndex = 3
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "HomePage") as! TabViewController
+            self.present(controller, animated: false, completion: { () -> Void in
+            })
+        }
     }
     
 }

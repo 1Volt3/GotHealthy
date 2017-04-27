@@ -33,6 +33,7 @@
 		523EAAF91E8B1E0E0065DF18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */; };
 		523EAB011E8B24C40065DF18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523EAB001E8B24C40065DF18 /* CoreGraphics.framework */; };
 		5243E9F71EB16C2500CA3805 /* ServingChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243E9F61EB16C2500CA3805 /* ServingChoice.swift */; };
+		5243E9F91EB1706800CA3805 /* DiningOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243E9F81EB1706800CA3805 /* DiningOverView.swift */; };
 		524AED391EA2EE650071D954 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED381EA2EE650071D954 /* Constants.swift */; };
 		524AED3C1EA2F1220071D954 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED3B1EA2F1220071D954 /* NotificationHelper.swift */; };
 		524AED3F1EA3D9110071D954 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED3E1EA3D9110071D954 /* Globals.swift */; };
@@ -113,6 +114,7 @@
 		523EAAF81E8B1E0E0065DF18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		523EAB001E8B24C40065DF18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5243E9F61EB16C2500CA3805 /* ServingChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServingChoice.swift; sourceTree = "<group>"; };
+		5243E9F81EB1706800CA3805 /* DiningOverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningOverView.swift; sourceTree = "<group>"; };
 		524AED381EA2EE650071D954 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		524AED3B1EA2F1220071D954 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		524AED3E1EA3D9110071D954 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				524AED401EA91D6B0071D954 /* FoodTableViewCell.swift */,
 				524AED461EA91D810071D954 /* ItemViewController.swift */,
 				5243E9F61EB16C2500CA3805 /* ServingChoice.swift */,
+				5243E9F81EB1706800CA3805 /* DiningOverView.swift */,
 				524AED411EA91D6B0071D954 /* TimeViewController.swift */,
 				524AED481EA91E440071D954 /* DiningViewController.swift */,
 				524AED421EA91D6B0071D954 /* FoodViewController.swift */,
@@ -522,6 +525,7 @@
 				525EB2B81E422E21000A8F09 /* AgeEntry.swift in Sources */,
 				523EAAB01E8B13680065DF18 /* HomeViewController.swift in Sources */,
 				52791E8A1E3AC10E00E1B7E5 /* Extensions.swift in Sources */,
+				5243E9F91EB1706800CA3805 /* DiningOverView.swift in Sources */,
 				52041C011E4541A7008CD4DF /* Keyboard.swift in Sources */,
 				525EB2B61E422E0E000A8F09 /* NameEntry.swift in Sources */,
 				524AED491EA91E440071D954 /* DiningViewController.swift in Sources */,

@@ -2092,7 +2092,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BNp-w7-P9N">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiningChoices" id="BNp-w7-P9N">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BNp-w7-P9N" id="k6I-jJ-zdi">
@@ -2259,10 +2259,10 @@
             </objects>
             <point key="canvasLocation" x="3966" y="-2968"/>
         </scene>
-        <!--View Controller-->
+        <!--Serving Choice-->
         <scene sceneID="And-vW-QqB">
             <objects>
-                <viewController id="SZ8-yd-HP5" sceneMemberID="viewController">
+                <viewController id="SZ8-yd-HP5" customClass="ServingChoice" customModule="Got_Healthy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W9N-AS-yFD"/>
                         <viewControllerLayoutGuide type="bottom" id="KK6-dH-zPN"/>
@@ -2271,7 +2271,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b30-cQ-rLO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b30-cQ-rLO">
                                 <rect key="frame" x="16" y="162" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2355,6 +2355,9 @@
                             <constraint firstItem="eA4-lj-IHu" firstAttribute="top" secondItem="Ugi-g7-61q" secondAttribute="bottom" constant="8" symbolic="YES" id="upq-uE-B9I"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="servingsTextField" destination="b30-cQ-rLO" id="ucm-k8-HdD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4y0-K4-ORR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

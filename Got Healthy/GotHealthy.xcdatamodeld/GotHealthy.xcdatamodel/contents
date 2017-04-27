@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Dining" representedClassName="Dining" syncable="YES" codeGenerationType="class">
         <attribute name="calories" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="foodDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="servingSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="special" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,8 +20,8 @@
         <relationship name="locations" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Location" inverseName="run" inverseEntity="Location" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Dining" positionX="-567" positionY="18" width="128" height="120"/>
         <element name="Location" positionX="-362" positionY="-18" width="128" height="103"/>
         <element name="Run" positionX="-774" positionY="-18" width="128" height="103"/>
-        <element name="Dining" positionX="-567" positionY="18" width="128" height="120"/>
     </elements>
 </model>

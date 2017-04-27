@@ -150,8 +150,9 @@ class ItemViewController: UIViewController {
                 FoodVC.timeOfDay = timeOfDay
             }
         }
+        if segue.identifier == "ServingChoice" {
+        }
 
-        
     }
     
 

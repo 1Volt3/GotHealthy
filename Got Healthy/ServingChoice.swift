@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 var descriptionValue = ""
 var caloriesValue = ""
@@ -14,10 +15,21 @@ var dayValue = ""
 
 class ServingChoice: UIViewController{
  
+    public var dining : Dining?
+    var item = [Dining]()
+    
     @IBOutlet weak var servingsTextField: UITextField!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet var servingChangeButton: UIButton!
+    
+    struct TableItem {
+        let title: String
+        let creationDate: NSDate
+    }
+    
+    var sections = Dictionary<String, Array<TableItem>>()
+    var sortedSections = [String]()
     
     override func viewDidLoad() {
         
@@ -34,6 +46,7 @@ class ServingChoice: UIViewController{
             descriptionLabel.text = descriptionValue
             caloriesLabel.text = caloriesValue
         }
+        self.loadCoreData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,6 +56,16 @@ class ServingChoice: UIViewController{
     
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func loadCoreData() {
+        
+        let fetchRequest: NSFetchRequest<Dining> = Dining.fetchRequest()
+        do {
+            self.item = try (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.fetch(fetchRequest)
+        } catch {
+            print(String(format: "Error %@: %d",#file, #line))
+        }
     }
     
     @IBAction func servingChangeButtonPressed(_ sender: Any) {
@@ -62,6 +85,23 @@ class ServingChoice: UIViewController{
                 completion: nil)
         }
         else{
+            let date:String = "your date in string..."
+            
+            //if we don't have section for particular date, create new one, otherwise we'll just add item to existing section
+            if self.sections.index(forKey: date) == nil {
+                //self.sections[date] = [TableItem(title: name, creationDate: date)]
+            }
+            else {
+                //self.sections[date]!.append(TableItem(title: name, creationDate: date))
+            }
+            
+            //we are storing our sections in dictionary, so we need to sort it
+            //self.sortedSections = self.sections.keys.array.sorted()
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let userData = Dining(context: context)
+            userData.foodName = descriptionValue
+            userData.totalCalories = caloriesValue
+            //userData.date =
             selectedIndex = 3
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "HomePage") as! TabViewController

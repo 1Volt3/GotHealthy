@@ -36,7 +36,7 @@ class RunDetailViewController: UIViewController {
     }
     
     @IBAction func homeButtonPressed(_ sender: Any) {
-        selectedIndex = 3
+        selectedIndex = 2
         self.performSegue(withIdentifier: "RunHome", sender: nil)
     }
     

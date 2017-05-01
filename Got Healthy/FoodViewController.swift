@@ -10,29 +10,38 @@ import UIKit
 
 class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // the table that displays menu items
     @IBOutlet weak var foodChart: UITableView!
     
+    // holds the day of the week
     var dayOfWeek = ""
+    // holds the time of the day
     var timeOfDay = ""
-    var currentCell = ""
+    // holds the food name of the selected cell
+    var selectedCell = ""
+    // holds the diet restrictions to pass to next page
     var dietRestrictionString = ""
     
-    var foodOptions = [String]()
+    // holds the section headers
     var sectionHeader = [String]()
-    var groups = [[String]]()
+    // holds the menu items
+    var foodMenu = [[String]]()
+    // holds whether it is Vegan, Vegetarian, or Mindful
     var dietRestrictions = [[String]]()
     
     
+    // number of rows in section
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups[section].count
+        return foodMenu[section].count
     }
     
+    // design section headers
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
         let cell2 = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! FoodTableViewCell
-        
+        // fill section header with text
         cell2.headerLabel?.text = sectionHeader[section]
         
+        // assign images to header
         if "Chef's Table" == sectionHeader[section]{
             cell2.foodImage.image = #imageLiteral(resourceName: "chef.png")
         }
@@ -51,150 +60,118 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         if "Magellan's" == sectionHeader[section]{
             cell2.foodImage.image = #imageLiteral(resourceName: "tray.png")
         }
-        
         return cell2
     }
     
+    // get information when the cell is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        
-        
-        currentCell = groups[(indexPath.section)][(indexPath.row)]
+        // get the selected cell
+        selectedCell = foodMenu[(indexPath.section)][(indexPath.row)]
+        // get dietRestrictions to pass to next page
         dietRestrictionString =  dietRestrictions[indexPath.section][indexPath.row]
-
-        
-        
+        // pass the info to the next page
         performSegue(withIdentifier: "selectItem", sender: self)
-        
     }
     
+    // number of section headers
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionHeader.count
     }
     
+    // height of the header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
-   
-
-
-  
     
+    // if back button pressed
     @IBAction func pressBackButton(_ sender: Any) {
-        
         performSegue(withIdentifier: "backButton", sender: self)
-        
     }
     
+    // fill the table cells
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FoodTableViewCell
         
-        cell.textLabel?.text = groups[indexPath.section][indexPath.row]
-            cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-
+        // fill cell with menu item
+        cell.textLabel?.text = foodMenu[indexPath.section][indexPath.row]
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
         
     }
     
+    // pass data to the next or previous page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
+        // if back selected
         if segue.identifier == "backButton" {
             if let TimeVC = segue.destination as? TimeViewController {
-                TimeVC.dayOfWeek = dayOfWeek 
-                TimeVC.timeOfDayString = timeOfDay
+                TimeVC.dayOfWeek = dayOfWeek
             }
         }
+        // pass to the item page
         if segue.identifier == "selectItem" {
             if let ItemVC = segue.destination as? ItemViewController {
-                ItemVC.foodItem = currentCell
+                ItemVC.foodItem = selectedCell
                 ItemVC.dayOfWeek = dayOfWeek
                 ItemVC.timeOfDay = timeOfDay
                 ItemVC.dietRestrictions = dietRestrictionString
             }
         }
-       
+        
     }
     
-
-
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
+        // load the food options
+        viewDidAppear(true)
+        super.viewDidLoad()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // server link
         let requestURL: NSURL = NSURL(string: "http://mathcs.muhlenberg.edu/~ag249083/foodJson9")!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest as URLRequest) {
             (data, response, error) -> Void in
-            
             let httpResponse = response as! HTTPURLResponse
             let statusCode = httpResponse.statusCode
-            
             if (statusCode == 200) {
-                print("Everyone is fine, file downloaded successfully.")
-            }
-            
-            if (statusCode == 200) {
-                
                 do{
-                    
+                    // format json as a NSDictionary
                     if let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSDictionary{
-                        
-                        
+                        // format as [String: NSDictionary]
                         if let articlesFromJson = json[self.dayOfWeek + self.timeOfDay] as? [String : NSDictionary] {
                             for (key,value) in articlesFromJson {
+                                // add to Section Header Dictionary
                                 self.sectionHeader.append(String(describing: key))
+                                // hold the foods served in a section
                                 var food = [String]()
-                               var temp = [String]()
-                                
+                                // holds whether the food item is Vegan, Vegetarian
+                                var dietRest = [String]()
                                 for (key2, value2) in value {
-                          
+                                    // add to arrays
                                     food.append(key2 as! String)
-                                    temp.append(String(describing: value2))
-                                    
-                                    
+                                    dietRest.append(String(describing: value2))
                                 }
-                                self.groups.append(food)
-                                self.dietRestrictions.append(temp)
+                                // add to the Double Array foodMenu
+                                self.foodMenu.append(food)
+                                // add to the Double Array dietRestrictions
+                                self.dietRestrictions.append(dietRest)
                             }
-                            self.foodChart.reloadData()
-                            
                         }
-                            
-                        else{
-                            print("This did not work")
-                        }
-                        
                     }
-                    
-                    
-                    
                 }
                 
-            }
-        }
-        
+            } // end status 200 if statement
+        } // end task
         task.resume()
         
-
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

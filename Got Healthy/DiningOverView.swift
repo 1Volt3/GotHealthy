@@ -9,88 +9,38 @@
 import UIKit
 import CoreData
 
-class DiningOverView: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DiningOverView: UITableView {
     
-    public var dining : Dining? = nil
+    struct TableItem {
+        let title: String
+        let creationDate: NSDate
+    }
     
-    var item = [Dining]()
+    var sections = Dictionary<String, Array<TableItem>>()
+    var sortedSections = [String]()
     
-    @IBOutlet var tableView: UITableView!
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return sections.count
+    }
     
-    func loadCoreData() {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sections[sortedSections[section]]!.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let fetchRequest: NSFetchRequest<Dining> = Dining.fetchRequest()
-        if self.dining != nil {
-            fetchRequest.predicate = NSPredicate(format: "Dining = %@", self.dining!)
-        }
-        do {
-            item = try (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.fetch(fetchRequest)
-        } catch {
-            print(String(format: "Error %@: %d",#file, #line))
-        }
+        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.loadCoreData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return item.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiningChoices", for: indexPath)
+        let tableSection = sections[sortedSections[indexPath.section]]
+        let tableItem = tableSection![indexPath.row]
         
-        cell.textLabel!.text = item[indexPath.row].date
+        //cell.titleLabel?.text = tableItem.title
         
-        return cell
+        return cell!
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            
-            let alert: UIAlertController =
-                UIAlertController(title: "Warning!", message: "Remove data?", preferredStyle:  UIAlertControllerStyle.alert)
-            let defaultAction: UIAlertAction =
-                UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
-                    (action: UIAlertAction!) -> Void in
-                    
-                    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                    context.delete(self.item[indexPath.row])
-                    do {
-                        try context.save()
-                    } catch {
-                        print(String(format: "Error %@: %d",#file, #line))
-                    }
-                    
-                    self.loadCoreData()
-                    tableView.deleteRows(at: [indexPath], with: .fade)
-                })
-            let cancelAction: UIAlertAction =
-                UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler:{
-                    (action: UIAlertAction!) -> Void in
-                    self.tableView.reloadData()
-                })
-            alert.addAction(cancelAction)
-            alert.addAction(defaultAction)
-            present(alert, animated: true, completion: nil)
-            
-        } else if editingStyle == .insert {
-        }
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sortedSections[section]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

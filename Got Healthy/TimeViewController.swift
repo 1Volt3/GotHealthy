@@ -9,75 +9,57 @@
 import UIKit
 
 class TimeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    // holds the day of week, from previous page
     var dayOfWeek: String?
     
-    var timeOfDayString = ""
-    
+    // holds the time of day
     var timeOfDay = [String]()
     
-    var currentCell = ""
-
-        
+    // holds the time of day the user selected
+    var selectedCell = ""
     
+    
+    // size of table
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-
-            return timeOfDay.count
-        
-        
-        
+        return timeOfDay.count
     }
     
-    
+    // populate cells with text
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-
+        // populate cell with array info
         cell.textLabel?.text = timeOfDay[indexPath.row]
-        
         return cell
-
     }
     
-
+    // when user selects a cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-       
-        
-        let indexPath = tableView.indexPathForSelectedRow
-        
-        let arrayVal = (indexPath?[1])! as Int
-        
-        currentCell = timeOfDay[arrayVal]
-        
+        // get cell that the user clicked on
+        selectedCell = timeOfDay[indexPath.row]
+        // go to next page, pass information
         performSegue(withIdentifier: "showFood", sender: self)
-   
     }
     
+    // pass the day of the week and time of day to next day
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
         if segue.identifier == "showFood" {
+            // pass day of week and time of day through segue
             if let FoodVC = segue.destination as? FoodViewController {
                 FoodVC.dayOfWeek = dayOfWeek!
-                FoodVC.timeOfDay = currentCell
+                FoodVC.timeOfDay = selectedCell
             }
         }
-        else{
-            print("This did not work")
-        }
     }
- 
     
-    
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // if weekend, display only lunch and dinner
         if  "Saturday"  == dayOfWeek || "Sunday" == dayOfWeek {
             timeOfDay.append("Lunch")
             timeOfDay.append("Dinner")
-         }
+        }
+            // else it is a week day, display breakfast, lunch and dinner
         else{
             timeOfDay.append("Breakfast")
             timeOfDay.append("Lunch")
@@ -85,21 +67,10 @@ class TimeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

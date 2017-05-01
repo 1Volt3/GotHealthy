@@ -32,16 +32,21 @@ class ItemViewController: UIViewController {
     var dietRestructionsString = ""
 
     override func viewWillAppear(_ animated: Bool) {
-        if dietRestrictions.range(of: "Mindful = Yes;") != nil {          dietRestructionsString = "Mindful Item"
+        // if Mindful
+        if dietRestrictions.range(of: "Mindful = Yes;") != nil {
+            dietRestructionsString = "Mindful Item"
         }
+        // if Vegan
         if dietRestrictions.range(of: "Vegan = Yes;") != nil {
             if dietRestructionsString.isEmpty {
-                 dietRestructionsString = "Vegan Item"
+                dietRestructionsString = "Vegan Item"
             }
+                // if Vegan and Mindful
             else{
                 dietRestructionsString = dietRestructionsString +  ", Vegan Item"
             }
         }
+        // if Vegetarian
         if dietRestrictions.range(of: "Vegetarian = Yes;") != nil {
             if dietRestructionsString.isEmpty {
                 dietRestructionsString = "Vegetarian Item"
@@ -123,12 +128,6 @@ class ItemViewController: UIViewController {
         }
         
         task.resume()
-
-       
-        
-        
-        
-        
         // Do any additional setup after loading the view.
     }
     

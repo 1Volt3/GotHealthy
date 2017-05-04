@@ -2050,7 +2050,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuoteCell" rowHeight="67" id="Bjr-AC-vhY" customClass="DiningTableViewCell" customModule="Got_Healthy" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiningCell" rowHeight="67" id="Bjr-AC-vhY" customClass="DiningTableViewCell" customModule="Got_Healthy">
                                         <rect key="frame" x="0.0" y="28" width="375" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bjr-AC-vhY" id="kJY-lZ-AyP">
@@ -2080,8 +2080,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="authorLabel" destination="grC-SI-ZKt" id="1gg-aZ-DS0"/>
-                                            <outlet property="contentsLabel" destination="3UE-Wy-YGG" id="eR1-tO-mHN"/>
+                                            <outlet property="caloriesLabel" destination="grC-SI-ZKt" id="pAn-ib-aRu"/>
+                                            <outlet property="dayOfWeekLabel" destination="3UE-Wy-YGG" id="ATj-jf-cha"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2329,7 +2329,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuD-UH-vSE">
-                                <rect key="frame" x="0.0" y="586" width="375" height="66"/>
+                                <rect key="frame" x="0.0" y="601" width="375" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="559-2m-UhG"/>
                                 </constraints>
@@ -2360,7 +2360,7 @@
                             <constraint firstItem="gNc-t5-iiz" firstAttribute="top" secondItem="YJX-XO-eK9" secondAttribute="bottom" constant="8" symbolic="YES" id="STX-5q-CN1"/>
                             <constraint firstItem="uuD-UH-vSE" firstAttribute="leading" secondItem="vb1-i4-DT2" secondAttribute="leading" id="TjP-zc-kgu"/>
                             <constraint firstItem="eA4-lj-IHu" firstAttribute="trailing" secondItem="YJX-XO-eK9" secondAttribute="trailing" id="UOQ-8l-VhS"/>
-                            <constraint firstItem="KK6-dH-zPN" firstAttribute="top" secondItem="uuD-UH-vSE" secondAttribute="bottom" constant="15" id="cC7-53-SlL"/>
+                            <constraint firstItem="KK6-dH-zPN" firstAttribute="top" secondItem="uuD-UH-vSE" secondAttribute="bottom" id="cC7-53-SlL"/>
                             <constraint firstItem="Ugi-g7-61q" firstAttribute="top" secondItem="b30-cQ-rLO" secondAttribute="bottom" constant="9" id="cQr-LL-aHo"/>
                             <constraint firstItem="b30-cQ-rLO" firstAttribute="top" secondItem="pt7-Py-96y" secondAttribute="bottom" constant="8" symbolic="YES" id="g7S-te-jEp"/>
                             <constraint firstItem="YJX-XO-eK9" firstAttribute="trailing" secondItem="gNc-t5-iiz" secondAttribute="trailing" id="haY-I0-m9k"/>

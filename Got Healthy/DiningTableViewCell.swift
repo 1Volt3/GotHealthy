@@ -16,7 +16,8 @@ class DiningTableViewCell: UITableViewCell {
 
     // MARK: -
 
-
+    @IBOutlet var dayOfWeekLabel: UILabel!
+    @IBOutlet var caloriesLabel: UILabel!
 
     // MARK: - Initialization
 

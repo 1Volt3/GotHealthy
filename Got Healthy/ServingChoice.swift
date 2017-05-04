@@ -17,19 +17,12 @@ class ServingChoice: UIViewController{
  
     public var dining : Dining?
     var item = [Dining]()
+    var managedObjectContext: NSManagedObjectContext?
     
     @IBOutlet weak var servingsTextField: UITextField!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet var servingChangeButton: UIButton!
-    
-    struct TableItem {
-        let title: String
-        let creationDate: NSDate
-    }
-    
-    var sections = Dictionary<String, Array<TableItem>>()
-    var sortedSections = [String]()
     
     override func viewDidLoad() {
         
@@ -69,6 +62,9 @@ class ServingChoice: UIViewController{
     }
     
     @IBAction func servingChangeButtonPressed(_ sender: Any) {
+        print(managedObjectContext)
+        guard let managedObjectContext = managedObjectContext else { return }
+        
         if Double(servingsTextField.text!) == nil{
             let servingAlert = UIAlertController(
                 title: "Serving Size",
@@ -85,25 +81,23 @@ class ServingChoice: UIViewController{
                 completion: nil)
         }
         else{
-            let date:String = "your date in string..."
-            
-            //if we don't have section for particular date, create new one, otherwise we'll just add item to existing section
-            if self.sections.index(forKey: date) == nil {
-                //self.sections[date] = [TableItem(title: name, creationDate: date)]
+            if dining == nil {
+                // Create Quote
+                let newDining = Dining(context: managedObjectContext)
+                
+                // Configure Quote
+                newDining.date = dayValue
+                
+                // Set Quote
+                dining = newDining
             }
-            else {
-                //self.sections[date]!.append(TableItem(title: name, creationDate: date))
+            if let dining = dining {
+                // Configure Quote
+                dining.foodName = descriptionValue
+                let totalCalories = Int(caloriesValue)! * Int(servingsTextField.text!)!
+                dining.totalCalories = String(totalCalories)
+                dining.servings = servingsTextField.text!
             }
-            
-            //we are storing our sections in dictionary, so we need to sort it
-            //self.sortedSections = self.sections.keys.array.sorted()
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let userData = Dining(context: context)
-            let totalCalories = Int(caloriesValue)! * Int(servingsTextField.text!)!
-            userData.foodName = descriptionValue
-            userData.totalCalories = String(totalCalories)
-            userData.servings = servingsTextField.text!
-            userData.date = dayValue
             selectedIndex = 3
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "HomePage") as! TabViewController

@@ -98,7 +98,7 @@ class DiningOverView: UIViewController {
     
 }
 
-extension ViewController: NSFetchedResultsControllerDelegate {
+extension DiningOverView: NSFetchedResultsControllerDelegate {
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
@@ -123,7 +123,7 @@ extension ViewController: NSFetchedResultsControllerDelegate {
             }
             break;
         case .update:
-            if let indexPath = indexPath, let cell = tableView.cellForRow(at: indexPath) as? QuoteTableViewCell {
+            if let indexPath = indexPath, let cell = tableView.cellForRow(at: indexPath) as? DiningTableViewCell {
                 configure(cell, at: indexPath)
             }
             break;
@@ -152,7 +152,7 @@ extension ViewController: NSFetchedResultsControllerDelegate {
     
 }
 
-extension ViewController: UITableViewDataSource {
+extension DiningOverView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let sections = fetchedResultsController.sections else { return 0 }
@@ -170,7 +170,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: QuoteTableViewCell.reuseIdentifier, for: indexPath) as? QuoteTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DiningTableViewCell.reuseIdentifier, for: indexPath) as? DiningTableViewCell else {
             fatalError("Unexpected Index Path")
         }
         
@@ -182,11 +182,11 @@ extension ViewController: UITableViewDataSource {
     
     func configure(_ cell: DiningTableViewCell, at indexPath: IndexPath) {
         // Fetch Quote
-        let quote = fetchedResultsController.object(at: indexPath)
+        let dining = fetchedResultsController.object(at: indexPath)
         
         // Configure Cell
-        cell.authorLabel.text = quote.author
-        cell.contentsLabel.text = quote.contents
+        cell.dayOfWeekLabel.text = dining.date
+        cell.caloriesLabel.text = dining.totalCalories
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -201,7 +201,7 @@ extension ViewController: UITableViewDataSource {
     
 }
 
-extension ViewController: UITableViewDelegate {
+extension DiningOverView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

@@ -8,6 +8,10 @@
 	<string>Got Healthy</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Got Healthy needs your location for measuring exercise.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

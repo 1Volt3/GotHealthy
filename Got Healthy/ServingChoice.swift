@@ -15,7 +15,7 @@ var dayValue = ""
 
 class ServingChoice: UIViewController{
  
-    public var dining : Dining?
+    var dining : Dining?
     var managedObjectContext: NSManagedObjectContext?
     
     @IBOutlet weak var servingsTextField: UITextField!
@@ -66,10 +66,10 @@ class ServingChoice: UIViewController{
                 completion: nil)
         }
         else{
-            guard managedObjectContext != nil else { return }
+            guard let managedObjectContext = managedObjectContext else { return }
             if dining == nil {
                 // Create Dining
-                let newDining = Dining(context: managedObjectContext!)
+                let newDining = Dining(context: managedObjectContext)
                 
                 // Configure Dining
                 newDining.date = dayValue
@@ -85,13 +85,6 @@ class ServingChoice: UIViewController{
                 dining.totalCalories = String(totalCalories)
                 dining.servings = servingsTextField.text!
             }
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let userData = Dining(context: context)
-            let totalCalories = Int(caloriesValue)! * Int(servingsTextField.text!)!
-            userData.foodName = descriptionValue
-            userData.totalCalories = String(totalCalories)
-            userData.servings = servingsTextField.text!
-            userData.date = dayValue
             selectedIndex = 3
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "HomePage") as! TabViewController

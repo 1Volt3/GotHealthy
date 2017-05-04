@@ -16,7 +16,6 @@ var dayValue = ""
 class ServingChoice: UIViewController{
  
     public var dining : Dining?
-    var item = [Dining]()
     var managedObjectContext: NSManagedObjectContext?
     
     @IBOutlet weak var servingsTextField: UITextField!
@@ -39,7 +38,6 @@ class ServingChoice: UIViewController{
             descriptionLabel.text = descriptionValue
             caloriesLabel.text = caloriesValue
         }
-        self.loadCoreData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,20 +49,7 @@ class ServingChoice: UIViewController{
         view.endEditing(true)
     }
     
-    func loadCoreData() {
-        
-        let fetchRequest: NSFetchRequest<Dining> = Dining.fetchRequest()
-        do {
-            self.item = try (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.fetch(fetchRequest)
-        } catch {
-            print(String(format: "Error %@: %d",#file, #line))
-        }
-    }
-    
     @IBAction func servingChangeButtonPressed(_ sender: Any) {
-        print(managedObjectContext)
-        guard let managedObjectContext = managedObjectContext else { return }
-        
         if Double(servingsTextField.text!) == nil{
             let servingAlert = UIAlertController(
                 title: "Serving Size",
@@ -81,23 +66,32 @@ class ServingChoice: UIViewController{
                 completion: nil)
         }
         else{
+            guard managedObjectContext != nil else { return }
             if dining == nil {
-                // Create Quote
-                let newDining = Dining(context: managedObjectContext)
+                // Create Dining
+                let newDining = Dining(context: managedObjectContext!)
                 
-                // Configure Quote
+                // Configure Dining
                 newDining.date = dayValue
                 
-                // Set Quote
+                // Set Dining
                 dining = newDining
             }
+            
             if let dining = dining {
-                // Configure Quote
-                dining.foodName = descriptionValue
+                // Configure Dining
                 let totalCalories = Int(caloriesValue)! * Int(servingsTextField.text!)!
+                dining.foodName = descriptionValue
                 dining.totalCalories = String(totalCalories)
                 dining.servings = servingsTextField.text!
             }
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let userData = Dining(context: context)
+            let totalCalories = Int(caloriesValue)! * Int(servingsTextField.text!)!
+            userData.foodName = descriptionValue
+            userData.totalCalories = String(totalCalories)
+            userData.servings = servingsTextField.text!
+            userData.date = dayValue
             selectedIndex = 3
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "HomePage") as! TabViewController

@@ -35,6 +35,7 @@
 		5243E9F71EB16C2500CA3805 /* ServingChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243E9F61EB16C2500CA3805 /* ServingChoice.swift */; };
 		5243E9F91EB1706800CA3805 /* DiningOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243E9F81EB1706800CA3805 /* DiningOverView.swift */; };
 		5243EA031EB7B72100CA3805 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243EA021EB7B72100CA3805 /* FoodTableViewController.swift */; };
+		5243EA051EBB894600CA3805 /* DiningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243EA041EBB894600CA3805 /* DiningTableViewCell.swift */; };
 		524AED391EA2EE650071D954 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED381EA2EE650071D954 /* Constants.swift */; };
 		524AED3C1EA2F1220071D954 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED3B1EA2F1220071D954 /* NotificationHelper.swift */; };
 		524AED3F1EA3D9110071D954 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AED3E1EA3D9110071D954 /* Globals.swift */; };
@@ -117,6 +118,7 @@
 		5243E9F61EB16C2500CA3805 /* ServingChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServingChoice.swift; sourceTree = "<group>"; };
 		5243E9F81EB1706800CA3805 /* DiningOverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningOverView.swift; sourceTree = "<group>"; };
 		5243EA021EB7B72100CA3805 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
+		5243EA041EBB894600CA3805 /* DiningTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningTableViewCell.swift; sourceTree = "<group>"; };
 		524AED381EA2EE650071D954 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		524AED3B1EA2F1220071D954 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		524AED3E1EA3D9110071D954 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				524AED461EA91D810071D954 /* ItemViewController.swift */,
 				5243E9F61EB16C2500CA3805 /* ServingChoice.swift */,
 				5243E9F81EB1706800CA3805 /* DiningOverView.swift */,
+				5243EA041EBB894600CA3805 /* DiningTableViewCell.swift */,
 				524AED411EA91D6B0071D954 /* TimeViewController.swift */,
 				524AED481EA91E440071D954 /* DiningViewController.swift */,
 				524AED421EA91D6B0071D954 /* FoodViewController.swift */,
@@ -571,6 +574,7 @@
 				520683B21E7C24620062CE92 /* Easing.swift in Sources */,
 				523CCDF41E95C60300CB9D10 /* Location.swift in Sources */,
 				52791E861E3ABECD00E1B7E5 /* TodayViewController.swift in Sources */,
+				5243EA051EBB894600CA3805 /* DiningTableViewCell.swift in Sources */,
 				52F48BB41E4E3F9300E8ACCA /* FloatingTextFieldIcon.swift in Sources */,
 				52F48BB31E4E3F9300E8ACCA /* FloatingTextField.swift in Sources */,
 			);

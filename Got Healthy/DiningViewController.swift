@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class DiningViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let cellContent = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -39,8 +37,8 @@ class DiningViewController:  UIViewController, UITableViewDelegate, UITableViewD
         if segue.identifier == "pickDayOfWeek" {
             if let timeVC = segue.destination as? TimeViewController {
                 
-               
                 timeVC.dayOfWeek = currentCell
+                dayValue = currentCell
             }
         }
         else{

@@ -166,6 +166,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             } // end status 200 if statement
         } // end task
+        foodChart.reloadData()
         task.resume()
         
     }

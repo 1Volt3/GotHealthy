@@ -99,9 +99,11 @@ class ServingChoice: UIViewController{
             //self.sortedSections = self.sections.keys.array.sorted()
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let userData = Dining(context: context)
+            let totalCalories = Int(caloriesValue)! * Int(servingsTextField.text!)!
             userData.foodName = descriptionValue
-            userData.totalCalories = caloriesValue
-            //userData.date =
+            userData.totalCalories = String(totalCalories)
+            userData.servings = servingsTextField.text!
+            userData.date = dayValue
             selectedIndex = 3
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "HomePage") as! TabViewController
